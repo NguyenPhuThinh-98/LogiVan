@@ -110,6 +110,11 @@
     <Content Include="HinhAnh\HinhAnhChuXe\IMG_0053-1.jpg" />
     <Content Include="HinhAnh\HinhAnhChuXe\IMG_1353.jpg" />
     <Content Include="HinhAnh\HinhAnhChuXe\qr-chu-xe.png" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image1.jpg" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image2.jpg" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image3.png" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image4.jpg" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image5.jpg" />
     <Content Include="HinhAnh\HinhAnhGioiThieu\anh-team.png" />
     <Content Include="HinhAnh\HinhAnhGioiThieu\background.jpg" />
     <Content Include="HinhAnh\HinhAnhGioiThieu\bao-tien-phong.png" />

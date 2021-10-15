@@ -5,11 +5,25 @@
             color: orangered;
             font-weight: bold;
         }
+
+        #cover {
+            background-image: url("HinhAnh/HinhAnhGioiThieu/cover.jpg");
+            background-size: auto;
+            background-repeat: no-repeat;
+            font-size: xx-large;
+            color: white;
+            text-align: center;
+            padding: 100px 0 100px 0;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="cover" style="margin-bottom:50px;">
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/HinhAnh/HinhAnhGioiThieu/cover.jpg" Height="300px" Width="100%" />
+        <p>
+            "With LOGIVAN,
+            <br />
+            no truck will ever run empty"
+        </p>
     </div>
     <div id="content-1">
         <h1 style="text-align: center;">LOGIVAN là ai ?</h1>
