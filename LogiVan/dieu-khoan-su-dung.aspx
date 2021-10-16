@@ -34,23 +34,31 @@
             text-align: justify;
             padding-right: 10%;
         }
-        #info h1{
-            text-align:center;
-        }
-        #info ol li{
-            font-weight:bold;
-        }
-        #info ol li p{
-            font-weight:normal;
-        }
-        #info table{
-            border-collapse:collapse;
-        }
-        #info table tr td{
-            border: 1px solid black;
-            padding-left:1%;
-            padding-right:1%;
-        }
+
+            #info h1 {
+                text-align: center;
+            }
+
+            #info ol li {
+                font-weight: bold;
+            }
+
+                #info ol li p {
+                    font-weight: normal;
+                }
+
+            #info table {
+                border-collapse: collapse;
+            }
+
+                #info table tr td {
+                    border: 1px solid black;
+                    padding-left: 1%;
+                    padding-right: 1%;
+                }
+                #info a{
+                    color:orange;
+                }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -704,6 +712,537 @@
                 </ul>
                 <ol start="3">
                     <li>DỰ ÁN</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Giá vận chuyển</p>
+                    </li>
+                </ol>
+                <p>Giá Vận Chuyển là giá được thống nhất giữa các Bên cho từng Đơn Hàng, được xác nhận đồng ý của hai Bên thông qua một trong hai hình thức sau:</p>
+                <ol>
+                    <li>
+                        <p>hoặc Chủ xe xác nhận đồng ý cung cấp Dịch vụ cho Đơn Hàng theo giá trên Ứng dụng;</p>
+                    </li>
+                    <li>
+                        <p>hoặc LOGIVAN chấp nhận giá mà Chủ xe đề xuất mới trên Ứng dụng.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>
+                        <p>Thời gian thanh toán</p>
+                    </li>
+                </ol>
+                <p>Khi hoàn thành việc vận chuyển Hàng Hóa và không có bất kỳ khiếu nại nào từ Chủ Hàng, Chủ xe sẽ cung cấp đủ bản gốc các hóa đơn/chứng từ hợp lệ theo quy định mục d dưới đây muộn nhất vào ngày 15 hàng tháng đối với các đơn hàng phát sinh từ ngày 1 đến ngày 15 tháng đó và muộn nhất vào ngày làm việc cuối cùng mỗi tháng đối với các đơn hàng phát sinh từ ngày 16 đến ngày cuối cùng trong tháng đó, LOGIVAN sẽ thanh toán cho Chủ xe qua hình thức chuyển khoản trong vòng mười lăm (15) ngày làm việc kể từ khi LOGIVAN nhận đủ hóa đơn/chứng từ hợp lệ.</p>
+                <ol start="3">
+                    <li>
+                        <p>Phương thức thanh toán</p>
+                    </li>
+                </ol>
+                <p>
+                    LOGIVAN thanh toán bằng chuyển khoản vào tài khoản ngân hàng mà Chủ xe đã đăng ký trên ứng dụng.
+                    <br />
+                    <br />
+                    Lưu ý: chỉ thanh toán vào tài khoản mà Chủ xe đã đăng ký trên ứng dụng và là tài khoản ngân hàng có tên chủ tài khoản trùng với Chứng minh nhân dân/Căn cước công dân của Chủ xe hoặc Chủ phương tiện vận tải. LOGIVAN không chịu trách nhiệm thanh toán vào các tài khoản khác như tài khoản của người thân, bạn bè Chủ xe.
+                </p>
+                <ol start="4">
+                    <li>
+                        <p>Hồ sơ thanh toán</p>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Hoàn thành chuyến hàng: Chủ xe bấm hoàn thành chuyển hàng trên ứng dụng, cập nhật đầy đủ Biên bản giao nhận hàng có chữ ký của Chủ xe & Người nhận hàng trên ứng dụng</p>
+                    </li>
+                    <li>
+                        <p>Gửi bộ hồ sơ thanh toán về văn phòng LOGIVAN</p>
+                    </li>
+                    <li>
+                        <p>Bộ hồ sơ thanh toán bao gồm:</p>
+                    </li>
+                </ol>
+                <ul>
+                    <li>Biên bản giao nhận hàng có chữ ký của Chủ xe và người nhận hàng (Bản gốc);</li>
+                    <li>Hóa đơn vận chuyển xuất kho cho LOGIVAN bằng với giá trị cước vận chuyển chuyến hàng và cước phát sinh (nếu có);</li>
+                    <li>Bảng kê các tuyến vận chuyển trong một kỳ.</li>
+                </ul>
+                <ol start="5">
+                    <li>Bảo hiểm</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Chủ xe có nghĩa vụ mua bảo hiểm bắt buộc đầy đủ cho phương tiện của mình.</p>
+                    </li>
+                    <li>
+                        <p>Tùy vào yêu cầu của từng dự án (nếu có), LOGIVAN bằng quyết định của mình có thể hỗ trợ Chủ xe mua Bảo hiểm trách nhiệm dân sự của chủ xe cơ giới đối với hàng hóa vận chuyển trên xe hoặc Bảo hiểm hàng hóa (gọi chung là “Bảo hiểm hàng hóa”) để hạn chế tối đa các thiệt hại khi vận hành.</p>
+                    </li>
+                    <li>
+                        <p>Với các Chủ xe được LOGIVAN hỗ trợ mua Bảo hiểm hàng hóa, Chủ xe tại đây cam kết với LOGIVAN, các xe được mua Bảo hiểm hàng hóa (bằng chi phí của LOGIVAN) sẽ tuyệt đối đảm bảo yêu cầu vận chuyển cho LOGIVAN trong thời gian Bảo hiểm hàng hóa còn hiệu lực. Dù bất cứ lý do gì, Chủ xe không được phép hủy ngang Thỏa thuận hoặc ngưng phục vụ LOGIVAN trong thời gian còn thời hạn của Bảo hiểm hàng hóa. Nếu vi phạm điều khoản này, Chủ xe sẽ bồi thường cho LOGIVAN 100% chi phí mua Bảo hiểm hàng hóa và bất kỳ thiệt hại, chi phí phát sinh nào cho LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Khi phát sinh tai nạn, sự cố, Chủ xe có trách nhiệm thông báo ngay lập tức cho LOGIVAN (muộn nhất không quá 01 tiếng kể từ thời điểm phát sinh) và phối hợp với LOGIVAN trong quá trình xác minh các điều kiện để được bồi hoàn chi phí từ bảo hiểm. Nếu chậm cung cấp hồ sơ hoặc thông báo dẫn tới thiệt hại bị từ chối bảo hiểm thì LOGIVAN có quyền yêu cầu Chủ xe bồi thường toàn bộ giá trị thiệt hại và các chi phí phát sinh (nếu có).</p>
+                    </li>
+                </ol>
+                <ol start="6">
+                    <li>Đảm bảo an toàn giao dịch</li>
+                </ol>
+                <p>Tất cả các Chủ xe khi tham gia vào hệ thống LOGIVAN đều phải tuân thủ các quy định đảm bảo an toàn giao dịch, bao gồm nhưng không giới hạn:</p>
+                <ol>
+                    <li>
+                        <p>LOGIVAN áp dụng các biện pháp cần thiết để bảo mật thông tin của các Chủ xe trên Website, Ứng Dụng và luôn nỗ lực hạn chế tối đa rủi ro có thể phát sinh để đảm bảo các giao dịch được tiến hành thuận lợi và thành công.</p>
+                    </li>
+                    <li>
+                        <p>Khi đăng ký sử dụng Ứng Dụng, các Chủ xe phải kê khai cho LOGIVAN các thông tin theo yêu cầu của Hệ thống. Các thông tin này được LOGIVAN thẩm định và lưu trữ trong hệ thống để đảm bảo rằng giao dịch được thực hiện thành công và giảm thiểu rủi ro có thể phát sinh.</p>
+                    </li>
+                    <li>
+                        <p>Các Chủ xe có trách nhiệm không tiết lộ thông tin chi tiết về bản thân, cũng như chi tiết về việc thanh toán với bất kỳ bên thứ ba nào qua email, điện thoại hoặc bất kỳ hình thức liên lạc nào khác. LOGIVAN và các công ty liên kết không chịu trách nhiệm về những thiệt hại hay rủi ro mà các Thành viên có thể gánh chịu trong việc trao đổi thông tin với bất kỳ bên thứ ba nào ngoài LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Mọi thông tin giao dịch được bảo mật, trừ trường hợp cung cấp cho cơ quan pháp luật có thẩm quyền khi được yêu cầu.</p>
+                    </li>
+                </ol>
+                <ol start="7">
+                    <li>Quyền và nghĩa vụ của LOGIVAN</li>
+                </ol>
+                <ol>
+                    <li>Quyền của LOGIVAN</li>
+                </ol>
+                <ol>
+                    <li>Quyền chung trên Hệ thống</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Có quyền yêu cầu các Chủ xe cung cấp các thông tin, giấy tờ, tài liệu cần thiết cho việc kiểm chứng các giao dịch phát sinh trên hệ thống của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Có quyền tạm dừng hợp tác với một hoặc nhiều Chủ xe trong trường hợp vi phạm các <strong>Điều Khoản Sử Dụng</strong> của LOGIVAN hoặc có những hành vi trái với bộ <a href="#">Quy tắc ứng xử</a> dành cho các Thành viên trên hệ thống LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Có quyền đơn phương tạm dừng hợp tác với những Chủ xe vi phạm mà không cần báo trước.</p>
+                    </li>
+                    <li>
+                        <p>LOGIVAN có quyền từ chối giải quyết tranh chấp, khiếu nại khi Chủ xe không thực hiện đúng hướng dẫn.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Quyền đối với Dịch Vụ LOGINOW và Dịch Vụ DỰ ÁN:</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Thay mặt Chủ xe để ký kết hợp đồng vận tải hàng hóa với Chủ hàng, thu tiền Giá Vận Chuyển và các chi phí từ Chủ hàng, xuất hóa đơn và thực hiện các công đoạn khác trong quá trình hỗ trợ vận tải (trừ công đoạn trực tiếp điều hành phương tiện, lái xe vận chuyển hàng hóa, quyết định giá cước vận tải);</p>
+                    </li>
+                    <li>
+                        <p>Hướng dẫn Chủ xe tuân thủ các quy định nội bộ của Chủ hàng khi giao, nhận, và vận chuyển Hàng Hóa;</p>
+                    </li>
+                    <li>
+                        <p>Kiểm tra điều kiện kinh doanh vận tải và phương tiện, năng lực tài xế của Chủ xe;</p>
+                    </li>
+                    <li>
+                        <p>Đơn phương chấm dứt Thỏa Thuận, và/hoặc ngừng cho phép Chủ xe tham gia vào Hệ Thống nếu Chủ xe không đáp ứng đủ các điều kiện kinh doanh vận tải, vi phạm nghiêm trọng Thỏa Thuận hoặc có hành vi vi phạm pháp luật khác;</p>
+                    </li>
+                    <li>
+                        <p>Được thực hiện các chương trình xúc tiến thương mại tại từng thời điểm theo quyết định của LOGIVAN và phù hợp với các quy định pháp luật liên quan;</p>
+                    </li>
+                    <li>
+                        <p>LOGIVAN có quyền thực hiện đánh giá chất lượng dịch vụ của Chủ xe sau khi thực hiện Đơn Hàng;</p>
+                    </li>
+                    <li>
+                        <p>Các quyền khác theo quy định của Thỏa Thuận và pháp luật liên quan.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Nghĩa vụ của LOGIVAN</li>
+                </ol>
+                <ol>
+                    <li>Nghĩa vụ chung trên Hệ thống</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Kiểm tra và xác thực thông tin đăng ký các tài khoản tham gia hoạt động trên LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Lưu giữ thông tin đăng ký của các Thành viên ngay từ ngày đăng ký tham gia LOGIVAN và thường xuyên cập nhật các thông tin thay đổi, bổ sung có liên quan.</p>
+                    </li>
+                    <li>
+                        <p>Áp dụng các biện pháp cần thiết để đảm bảo an toàn thông tin, không được tiết lộ, chuyển nhượng, cho thuê hoặc bán các thông tin liên quan đến người dùng khi chưa được sự đồng ý của các bên liên quan, trừ trường hợp pháp luật có quy định khác.</p>
+                    </li>
+                    <li>
+                        <p>Xử lý kịp thời khi phát hiện hoặc nhận được phản ánh về hành vi vi phạm pháp luật, vi phạm chính sách của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Yêu cầu các Thành viên phải cung cấp đầy đủ giấy tờ cần thiết để xác minh tài khoản.</p>
+                    </li>
+                    <li>
+                        <p>Phối hợp và hỗ trợ cơ quan quản lý Nhà nước điều tra các hành vi vi phạm pháp luật, cung cấp thông tin đăng ký, lịch sử giao dịch và các tài liệu khác về đối tượng có hành vi vi phạm pháp luật.</p>
+                    </li>
+                    <li>
+                        <p>Công bố công khai cơ chế giải quyết các khiếu nại phát sinh trong quá trình giao dịch trên LOGIVAN. Khi các Thành viên bị tổn hại lợi ích hợp pháp, LOGIVAN phải tích cực hỗ trợ khách hàng bảo vệ quyền và lợi ích hợp pháp của mình.</p>
+                    </li>
+                    <li>
+                        <p>Duy trì hoạt động bình thường của LOGIVAN và nhanh chóng khắc phục các sự cố xảy ra ảnh hưởng tới hoạt động như: sự cố kỹ thuật về máy móc, lỗi phần mềm, hệ thống đường truyền internet, nhân sự. Trường hợp xảy ra các sự kiện bất khả kháng như: thiên tai, hỏa hoạn, biến động xã hội, các quyết định của cơ quan chức năng... nằm ngoài khả năng kiểm soát thì LOGIVAN không phải chịu trách nhiệm liên đới.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Nghĩa vụ đối với Dịch Vụ LOGINOW và Dịch Vụ DỰ ÁN:</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Phân chia kết quả kinh doanh cho Chủ xe theo đúng quy định của Thỏa Thuận này;</p>
+                    </li>
+                    <li>
+                        <p>LOGIVAN có trách nhiệm thay mặt Chủ xe thực hiện khấu trừ, kê khai và nộp thuế thay Chủ xe vào ngân sách nhà nước; và</p>
+                    </li>
+                    <li>
+                        <p>Các nghĩa vụ và trách nhiệm khác theo quy định của Thỏa Thuận này và pháp luật liên quan.</p>
+                    </li>
+                    <li>
+                        <p>Hỗ trợ trực tiếp cho Chủ xe theo thỏa thuận riêng của từng đơn hàng để khuyến khích Chủ xe thực hiện khai thác doanh thu từ Chủ hàng.</p>
+                    </li>
+                </ol>
+                <ol start="8">
+                    <li>Quyền và nghĩa vụ của Chủ xe</li>
+                </ol>
+                <ol>
+                    <li>Quyền của Chủ xe</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Chủ xe được phép cài đặt Ứng Dụng trên thiết bị di động cá nhân cho mục đích sử dụng cá nhân hợp pháp.</p>
+                    </li>
+                    <li>
+                        <p>Chủ xe có quyền đóng góp ý kiến cho LOGIVAN trong quá trình hoạt động. Các kiến nghị được gửi trực tiếp bằng thư, điện thoại, email hoặc các kênh phản ánh khác không trái pháp luật đến LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Chủ xe được LOGIVAN bảo mật các thông tin cá nhân theo quy định về Bảo mật thông tin Chủ xe của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Kiểm tra tính phù hợp của Hàng Hóa vận chuyển so với Đơn Hàng, các chứng từ vận chuyển tương đương khác liên quan đến Hàng Hóa vận chuyển;</p>
+                    </li>
+                    <li>
+                        <p>Các quyền khác theo quy định của Thỏa Thuận và quy định pháp luật liên quan.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Nghĩa vụ của Chủ xe</li>
+                </ol>
+                <ol>
+                    <li>Nghĩa vụ chung trên Hệ thống</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Chịu toàn bộ trách nhiệm trong việc sử dụng tài khoản của mình trên Hệ thống của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Cung cấp đầy đủ và chính xác các thông tin cá nhân theo yêu cầu của LOGIVAN khi đăng ký và trong suốt quá trình sử dụng Ứng Dụng của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Thực hiện đúng các thao tác cần thực hiện, chấp nhận những Đơn Hàng mà mình thực sự có thể vận chuyển. LOGIVAN được miễn trừ trách nhiệm với các thiệt hại xảy ra do thao tác được thực hiện không đúng.</p>
+                    </li>
+                    <li>
+                        <p>Trong trường hợp Chủ xe mất điện thoại hoặc thay đổi số điện thoại đăng ký tài khoản, Chủ xe có nghĩa vụ thông báo cho LOGIVAN để LOGIVAN tiến hành thủ tục thay đổi hoặc tạm thời chặn các giao dịch có liên quan giúp Chủ xe quản lý quá trình sử dụng Dịch Vụ của mình. LOGIVAN sẽ không chịu trách nhiệm hoặc giải quyết khiếu nại trong trường hợp Chủ xe không thông báo cho LOGIVAN dẫn đến việc có bên thứ ba sử dụng tài khoản đó của Chủ xe.</p>
+                    </li>
+                    <li>
+                        <p>Không được ủy quyền, chuyển nhượng hay chuyển giao tài khoản của mình với bất kỳ hình thức nào cho bên thứ ba bất kỳ.</p>
+                    </li>
+                    <li>
+                        <p>Không được sử dụng tài khoản không phải của mình để thực hiện Dịch Vụ.</p>
+                    </li>
+                    <li>
+                        <p>Chịu trách nhiệm trước pháp luật đối với những trường hợp phát sinh trong quá trình vận chuyển hàng hóa mà mình chấp nhận trên LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Cung cấp đầy đủ hóa đơn, chứng từ hợp pháp cho Chủ hàng và LOGIVAN khi có yêu cầu.</p>
+                    </li>
+                    <li>
+                        <p>Không được sử dụng Ứng Dụng nhằm mục đích trái pháp luật.</p>
+                    </li>
+                    <li>
+                        <p>Chịu trách nhiệm về tính chính xác của các thông tin được Chủ xe cung cấp hoặc bổ sung tiếp tục (nếu có) khi đang sử dụng Ứng Dụng của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Không được sử dụng Dịch Vụ hoặc Ứng Dụng để gây phiền toái hoặc làm khó Chủ hàng trên hệ thống của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Không được cố tình bôi nhọ danh dự, vu khống, hoặc bịa đặt những điều làm tổn hại đến danh dự, uy tín của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Cung cấp và chịu trách nhiệm về tính chính xác về thông tin của phương tiện khi thực hiện Đơn Hàng trên LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Không được sao chép, sử dụng các thông tin, nội dung trên Ứng Dụng của LOGIVAN mà không có sự cho phép bằng văn bản của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Đồng ý ủy quyền cho LOGIVAN thực hiện đầy đủ nghĩa vụ thuế theo quy định của pháp luật.</p>
+                    </li>
+                    <li>
+                        <p>Đảm bảo việc vận chuyển Hàng hóa tuân thủ theo quy định pháp luật và không xâm phạm quyền, lợi ích hợp pháp của bất kỳ bên thứ ba nào khác. Nếu vi phạm Chủ xe sẽ tự chịu trách nhiệm và bồi thường mọi thiệt hại (nếu có).</p>
+                    </li>
+                    <li>
+                        <p>Chủ xe xác nhận vận chuyển Đơn Hàng trên Hệ thống và/hoặc Tài xế trực tiếp thực hiện vận chuyển Đơn Hàng liên đới chịu trách nhiệm trước pháp luật về các nghĩa vụ với LOGIVAN và/hoặc Chủ hàng theo Thỏa Thuận này.</p>
+                    </li>
+                    <li>
+                        <p>Thực hiện đúng theo hướng dẫn của nhân viên LOGIVAN trong quá trình vận hành Đơn Hàng.</p>
+                    </li>
+                    <li>
+                        <p>Chủ xe tuyệt đối không sử dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ thống hay làm thay đổi cấu trúc dữ liệu. Mọi hình thức phát tán, truyền bá hay cổ vũ cho bất kỳ hoạt động nào nhằm can thiệp, phá hoại hay xâm hại hệ thống của LOGIVAN đều bị nghiêm cấm. Mọi vi phạm sẽ bị xử lý theo Quy chế và quy định của pháp luật.</p>
+                    </li>
+                    <li>
+                        <p>Tuân thủ các Chính sách của LOGIVAN, trong đó có Quy tắc ứng xử dành cho Đối tác của LOGIVAN.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Nghĩa vụ đối với Dịch Vụ LOGINOW và Dịch Vụ DỰ ÁN:</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Trong suốt quá trình thực hiện Đơn Hàng, Chủ xe cần:</p>
+                    </li>
+                </ol>
+                <ul>
+                    <li>phải sử dụng điện thoại thông minh và cập nhật lên Hệ Thống một cách đầy đủ, chính xác (1) tiến độ giao hàng; (2) trạng thái của Đơn Hàng; (3) các chứng từ, hóa đơn liên quan đến Đơn Hàng;</li>
+                    <li>thực hiện đầy đủ các yêu cầu kĩ thuật của Hệ Thống trong quá trình thực hiện dịch vụ để đảm bảo hệ thống Track & Trace hoạt động liên tục, bao gồm các yêu cầu sau: (1) Bật Hệ thống liên tục; (2) Bật mạng di động (3G/4G) liên tục; (3) Cho phép Hệ thống quyền truy cập vị trí (nếu có yêu cầu);</li>
+                </ul>
+                <ol start="2">
+                    <li>
+                        <p>Khi thực hiện Đơn Hàng hoặc khi được LOGIVAN yêu cầu, Chủ xe phải cung cấp cho LOGIVAN hình ảnh, thông tin và các giấy tờ pháp lý của xe và lái xe thực hiện Đơn Hàng (bao gồm nhưng không giới hạn Giấy đăng kiểm xe, giấy phép lái xe, chứng minh nhân dân của lái xe, bảo hiểm xe, giấy tờ xe khác (nếu có));</p>
+                    </li>
+                    <li>
+                        <p>Chịu trách nhiệm trước pháp luật và đảm bảo về (1) điều kiện kinh doanh vận tải theo quy định của pháp luật, (2) các thông tin, giấy tờ về xe và tài xế là chính xác;</p>
+                    </li>
+                    <li>
+                        <p>Chủ xe, bao gồm tài xế trực tiếp chạy chuyến, và tổ chức chủ quản của tài xế đăng ký sử dụng Ứng dụng sẽ liên đới chịu trách nhiệm và bồi thường toàn bộ thiệt hại cho LOGIVAN hoặc bên thứ ba có liên quan khi gây thiệt hại, mất mát, hư hỏng cho Hàng Hóa, phương tiện, … bao gồm nhưng không giới hạn các thiệt hại do tai nạn giao thông, các thiệt hại trong quá trình lưu thông trên đường, và quá trình giao nhận hàng;</p>
+                    </li>
+                    <li>
+                        <p>Kiểm tra, đối chiếu, xác nhận thông tin, tình trạng hàng hóa theo Đơn Hàng tại thời điểm giao và nhận, ký các Biên Bản Giao Nhận Hàng Hóa. Nếu vi phạm nghĩa vụ này, Chủ xe sẽ tự chịu mọi trách nhiệm liên quan đến Đơn Hàng;</p>
+                    </li>
+                    <li>
+                        <p>Nếu Hàng Hóa không đúng với thông tin theo Đơn Hàng hoặc Hàng Hóa thuộc danh mục cấm theo quy định của pháp luật, Chủ xe phải ngay lập tức thông báo cho LOGIVAN. Trường hợp biết mà không thông báo cho LOGIVAN, Chủ xe và Chủ hàng phải tự giải quyết và tự chịu trách nhiệm trước pháp luật liên quan đến Hàng Hóa vận chuyển này;</p>
+                    </li>
+                    <li>
+                        <p>Cung cấp tài khoản của mình trên Hệ Thống và mật khẩu truy cập tài khoản đó cho LOGIVAN khi được yêu cầu;</p>
+                    </li>
+                    <li>
+                        <p>Đảm bảo phương tiện vận tải được mua và duy trì bảo hiểm trách nhiệm dân sự của Chủ xe cơ giới trong quá trình vận chuyển Đơn Hàng theo yêu cầu của luật pháp Việt Nam;</p>
+                    </li>
+                    <li>
+                        <p>Tuyệt đối tuân thủ các nội quy của Chủ hàng khi ra vào địa điểm giao hàng, nhận hàng, bao gồm nhưng không giới hạn các quy định về giới hạn tốc độ, trang phục bảo hộ, sử dụng còi xe;</p>
+                    </li>
+                    <li>
+                        <p>Hóa đơn, chứng từ gốc về Khoản Chi Hộ phải được Chủ xe (i) cập nhật hình ảnh lên Hệ Thống ngay sau khi phát sinh; và (ii) chuyển lại cho Chủ hàng trong vòng ba (03) ngày làm việc kể từ khi hoàn thành Đơn Hàng LOGINOW và Đơn Hàng DỰ ÁN.</p>
+                    </li>
+                    <li>
+                        <p>Tuân thủ thời gian vận chuyển hàng hóa, giao nhận đúng đủ chứng từ theo xác nhận Hệ Thống hoặc xác nhận bằng văn bản khác.</p>
+                    </li>
+                    <li>
+                        <p>Các nghĩa vụ và trách nhiệm khác theo quy định của Thỏa Thuận này và pháp luật liên quan.</p>
+                    </li>
+                </ol>
+                <ol start="9">
+                    <li>Quy trình giải quyết khiếu nại, tranh chấp</li>
+                </ol>
+                <ol>
+                    <li>Đối với Đơn Hàng Marketplace, Chủ hàng và Chủ xe tự thỏa thuận trên Ứng Dụng</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Chủ hàng và Chủ xe thực hiện giao dịch và thỏa thuận trực tiếp với nhau. Trong trường hợp phát sinh tranh chấp, LOGIVAN đề cao giải pháp thương lượng, hòa giải giữa các bên. Do đó, Chủ hàng và Chủ xe nên làm việc dựa trên giấy tờ rõ ràng để giải quyết thỏa đáng nhất.</p>
+                    </li>
+                    <li>
+                        <p>Chủ hàng và Chủ xe có trách nhiệm trong việc tích cực giải quyết vấn đề. LOGIVAN sẽ chỉ đóng vai trò phối hợp, hỗ trợ việc xử lý và giải quyết khiếu nại giữa các bên. LOGIVAN sẽ cung cấp những thông tin cần thiết để giải quyết tranh chấp giữa các bên liên quan hoặc khi cơ quan pháp luật có thẩm quyền yêu cầu. Sau khi các Thành viên đã giải quyết xong tranh chấp, khiếu nại nên thông báo cho LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>LOGIVAN tôn trọng và nghiêm túc thực hiện các quy định của pháp luật về bảo vệ quyền lợi của người tiêu dùng. Vì vậy, đề nghị các Thành viên có những hành vi phù hợp và nghiêm túc tuân thủ các quy định của pháp luật. Bất cứ hành vi lừa đảo, gian lận trong kinh doanh, cũng như hành vi gây tổn hại đến người khác đều đáng lên án và phải chịu hoàn toàn trách nhiệm trước pháp luật.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Đối với Đơn Hàng LOGINOW và Đơn Hàng DỰ ÁN</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>
+                            <strong>Bước 1:</strong>
+                            Phản hồi với LOGIVAN bằng cách gọi điện thoại đến số 0333131618, gửi phản hồi qua mục “Hỗ trợ” trong Ứng Dụng, từ trang mạng xã hội Facebook chính thức của LOGIVAN, và/hoặc các hình thức khác không trái quy định pháp luật. Thời hạn có hiệu lực để LOGIVAN tiếp nhận khiếu nại là <strong>ba (03) ngày làm việc</strong> kể từ ngày phát sinh sự việc.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Bước 2:</strong>
+                            Trong vòng <strong>mười (10) ngày làm việc</strong>, kể từ khi nhận được khiếu nại, LOGIVAN sẽ kiểm tra, xác nhận thông tin về khiếu nại và thông báo cho các bên có liên quan. LOGIVAN cũng sẽ đồng thời tiến hành xác minh nội dung khiếu nại, xem xét và phân tích nguyên nhân dẫn đến khiếu nại, phạm vi khiếu nại và trách nhiệm xử lý để phối hợp với Chủ hàng/Chủ xe để đưa ra giải pháp xử lý phù hợp.
+                        </p>
+                    </li>
+                    <li>Khiếu nại khác</li>
+                </ol>
+                <p>Trường hợp giao dịch phát sinh mâu thuẫn liên quan đến hành vi vi phạm <a href="#">Quy tắc ứng xử</a> và nội dung thỏa thuận mà Chủ xe và Chủ hàng đã cam kết, LOGIVAN sẽ áp dụng các biện pháp xử lý vi phạm tương ứng.</p>
+                <ol start="10">
+                    <li>Bồi thường thiệt hại phát sinh.</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Nếu có tranh chấp phát sinh giữa các Thành viên, người dùng với nhau thì các bên sẽ giải quyết trên cơ sở tự thỏa thuận, thương lượng và hoà giải. LOGIVAN sẽ hỗ trợ người khiếu nại bằng cách cử nhân viên liên lạc, hoà giải nếu tập hợp bằng chứng cụ thể và xác thực về việc bị vi phạm gửi đến cho LOGIVAN. Nếu vụ việc vượt quá thẩm quyền và khả năng, LOGIVAN sẽ đề nghị người bị vi phạm chuyển vụ việc cho các cơ quan chức năng có thẩm quyền. Trong trường hợp này, LOGIVAN vẫn hỗ trợ để bảo vệ tốt nhất bên bị vi phạm.</p>
+                    </li>
+                    <li>
+                        <p>Trường hợp Chủ xe chậm trễ trong việc nhận hàng, trả hàng theo kế hoạch đã xác nhận, ngoài việc bồi thường mọi chi phí, thiệt hại phát sinh, Chủ xe sẽ chịu tiền phạt với mức 50% Giá Vận Chuyển cho việc chậm nhận hàng hoặc chậm giao hàng cứ mỗi 3 giờ đồng hồ.</p>
+                    </li>
+                    <li>
+                        <p>Trường hợp Chủ xe làm hư hỏng, mất hàng hóa, không giao hàng hoặc giao hàng thiếu sót so với thông tin Đơn Hàng và Biên Bản Giao Nhận Hàng Hóa, ngoài việc bồi thường mọi chi phí, thiệt hại phát sinh, Chủ xe sẽ chịu phạt vi phạm với mức 8% giá trị phần nghĩa vụ vi phạm.</p>
+                    </li>
+                    <li>
+                        <p>Trường hợp vi phạm quy định tại Điểm a Khoản 2.2 Điều 2 Mục VIII mà không phải do sự kiện bất khả kháng, Chủ xe sẽ chịu một khoản phạt vi phạm với mức 8% giá trị phần nghĩa vụ vi phạm.</p>
+                    </li>
+                    <li>
+                        <p>Các trường hợp được xem xét là các trường hợp bất khả kháng trong chậm trễ giao nhận hàng hóa là trường hợp thuộc nguyên nhân khách quan gây ra, không có bất kỳ lỗi chủ quan nào của Chủ xe. Chủ xe cần cung cấp đủ bằng chứng chứng minh sự kiện bất khả kháng và thông báo ngay lập tức cho LOGIVAN, yêu cầu sự hướng dẫn, điều phối của nhân viên LOGIVAN để chứng minh được đây là trường hợp Bất khả kháng. Các trường hợp bất khả kháng bao gồm, nhưng không giới hạn, các trường hợp sau:</p>
+                    </li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Tai nạn giao thông xảy ra trực tiếp không do lỗi của Chủ xe (theo xác nhận của cơ quan công an/Cơ quan nhà nước có thẩm quyền);</p>
+                    </li>
+                    <li>
+                        <p>Thiên tai và các sự cố bất khả kháng gây trễ kế hoạch (theo đánh giá của LOGIVAN sau khi Chủ xe cung cấp đầy đủ bằng chứng);</p>
+                    </li>
+                    <li>
+                        <p>Cơ quan chức năng kiểm tra đột xuất đối với hàng hóa trên xe (không có lỗi thuộc Chủ xe, theo xác nhận của cơ quan công an/Cơ quan nhà nước có thẩm quyền);</p>
+                    </li>
+                    <li>
+                        <p>Sự cố kỹ thuật khách quan đột xuất đối với phương tiện vận chuyển gây trễ kế hoạch (theo đánh giá của LOGIVAN sau khi Chủ xe cung cấp đầy đủ bằng chứng);</p>
+                    </li>
+                    <li>
+                        <p>Sự cố nghiêm trọng về sức khỏe của Tài xế ngay trong quá trình vận chuyển hàng hóa gây trễ kế hoạch (có giấy chứng nhận của cơ quan y tế đủ thẩm quyền).</p>
+                    </li>
+                </ol>
+                <ol start="11">
+                    <li>Chính sách bảo vệ thông tin cá nhân của Thành viên</li>
+                </ol>
+                <p>Tùy theo từng thời điểm, LOGIVAN có thể điều chỉnh, sửa đổi Chính sách bảo vệ thông tin. Nếu như bạn quan tâm về quyền riêng tư cá nhân của mình, xin bạn vui lòng truy cập trang này thường xuyên hơn để được cập nhật những thông tin mới nhất có thể. Nếu như LOGIVAN thực hiện các thay đổi đối với Chính sách bảo vệ thông tin và tất nhiên điều này sẽ ảnh hưởng đến quyền lợi của bạn (ví dụ: nếu LOGIVAN có ý định xử lý dữ liệu cá nhân của bạn cho các mục đích khác so với thông báo trước đây trong Chính sách bảo vệ thông tin này), LOGIVAN sẽ thông báo cho bạn về những thay đổi này trước khi các hoạt động mới bắt đầu.</p>
+                <ol>
+                    <li>Mục đích và phạm vi thu thập thông tin</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Để đảm bảo rằng giao dịch được thực hiện một cách thành công nhất và giảm thiểu tối đa rủi ro có thể phát sinh và nhằm đảm bảo quyền lợi tốt nhất cho Thành viên LOGIVAN, khi đăng ký sử dụng Dịch Vụ mà do LOGIVAN cung cấp. Đối với Chủ xe sẽ phải cung cấp thông tin ban đầu gồm: tên, địa chỉ, số điện thoại, email, các giấy tờ liên quan đến cung cấp Dịch Vụ vận tải… Các thông tin này sẽ được bảo mật tuyệt đối, sẽ được thẩm định và lưu trữ trong hệ thống của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Chủ xe sẽ tự chịu trách nhiệm về bảo mật và lưu giữ mọi hoạt động sử dụng Dịch Vụ dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình. Ngoài ra, Chủ xe có trách nhiệm thông báo kịp thời cho LOGIVAN về những hành vi sử dụng trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của bên thứ ba để có biện pháp giải quyết phù hợp.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Địa chỉ đơn vị thu thập và bảo quản thông tin</li>
+                </ol>
+                <p>
+                    CÔNG TY TNHH LOGITRUCK.
+                    <br />
+                    <br />
+                    Địa chỉ: Văn phòng 02, Tầng 08, Tòa nhà Pearl plaza, số 561A Điện Biên Phủ, phường 25, quận Bình Thạnh, TP. Hồ Chí Minh, Việt Nam.
+                    <br />
+                    <br />
+                    Điện thoại: (024) 73 00 18 28 hoặc qua Email: <a href="mailto:hotro@logivan.com">hotro@logivan.com</a>.
+                </p>
+                <ol start="3">
+                    <li>Phạm vi sử dụng thông tin</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Việc thu thập thông tin nhằm mục đích:</p>
+                    </li>
+                    <li>
+                        <p>Cung cấp Dịch Vụ đến cho các Thành viên;</p>
+                    </li>
+                    <li>
+                        <p>Gửi thông báo về các hoạt động trao đổi thông tin giữa Thành viên và LOGIVAN;</p>
+                    </li>
+                    <li>
+                        <p>Ngăn chặn các hoạt động phá hủy tài khoản người dùng của Thành viên và các hoạt động giả mạo Chủ xe;</p>
+                    </li>
+                    <li>
+                        <p>Liên lạc và giải quyết với các Chủ xe trong những trường hợp đặc biệt;</p>
+                    </li>
+                    <li>
+                        <p>Giới thiệu sản phẩm, dịch vụ mới, các chương trình khuyến mại của LOGIVAN tới các Thành viên;</p>
+                    </li>
+                    <li>
+                        <p>Không sử dụng các thông tin cá nhân của Thành viên ngoài mục đích xác nhận và liên hệ có liên quan đến giao dịch tại LOGIVAN;</p>
+                    </li>
+                    <li>
+                        <p>Trong trường hợp pháp luật có yêu cầu: LOGIVAN có trách nhiệm hợp tác, cung cấp thông tin cá nhân Thành viên. Ngoài ra, không một ai có quyền xâm phạm vào thông tin cá nhân của Thành viên.</p>
+                    </li>
+                </ol>
+                <ol start="4">
+                    <li>Cam kết bảo mật thông tin</li>
+                </ol>
+                <p>LOGIVAN cam kết sẽ không tiết lộ thông tin của các Thành viên cho bất kỳ tổ chức, cá nhân nào khác. Trong một vài trường hợp đặc biệt, LOGIVAN có thể bị yêu cầu phải tiết lộ thông tin cá nhân, ví dụ như khi có căn cứ cho việc tiết lộ thông tin là cần thiết để ngăn chặn các mối đe dọa về tính mạng và sức khỏe, hay cho mục đích thực thi pháp luật. LOGIVAN cam kết tuân thủ tuyệt đối các quy tắc bảo mật thông tin, chính sách bảo mật và an toàn thông tin này.</p>
+                <ol start="5">
+                    <li>Thời gian lưu trữ thông tin</li>
+                </ol>
+                <p>LOGIVAN sẽ lưu trữ các thông tin do khách hàng cung cấp trên các hệ thống nội bộ của chúng tôi trong quá trình khách hàng sử dụng tối thiểu 02 năm hoặc khi khách hàng có yêu cầu hủy các thông tin đã cung cấp trong quá trình sử dụng.</p>
+                <ol start="6">
+                    <li>Cơ chế tiếp nhận và giải quyết khiếu nại liên quan đến việc thông tin cá nhân của Thành viên</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>
+                            Thành viên có quyền gửi khiếu nại về việc lộ thông tin các nhân cho bên thứ 3 đến LOGIVAN bằng việc gửi thư hoặc qua email:
+                            <a href="mailto:hotro@logivan.com">hotro@logivan.com</a>
+                            .
+                        </p>
+                    </li>
+                    <li>
+                        <p>LOGIVAN có trách nhiệm thực hiện các biện pháp kỹ thuật, nghiệp vụ để xác minh các nội dung được phản ánh.</p>
+                    </li>
+                    <li>
+                        <p>Thời gian xử lý phản ánh liên quan đến thông tin cá nhân khách hàng là 15 ngày.</p>
+                    </li>
+                </ol>
+                <ol start="12">
+                    <li>Trách nhiệm trong trường hợp phát sinh lỗi kỹ thuật</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>LOGIVAN cam kết nỗ lực đảm bảo sự an toàn và ổn định của toàn bộ hệ thống kỹ thuật. Tuy nhiên, trong trường hợp xảy ra sự cố do lỗi của LOGIVAN, LOGIVAN sẽ ngay lập tức áp dụng các biện pháp kỹ thuật cần thiết để đảm bảo an toàn, ổn định của toàn bộ hệ thống và quyền lợi cho Thành viên.</p>
+                    </li>
+                    <li>
+                        <p>LOGIVAN cam kết cung cấp chất lượng Dịch Vụ tốt nhất cho các Thành viên tham gia giao dịch. Trong trường hợp phát hiện các lỗi kỹ thuật, lỗi phần mềm hoặc các lỗi khách quan khác trong quá trình tham gia giao dịch thì các Chủ xe thông báo cho LOGIVAN qua địa chỉ email: <a href="mailto:hotro@logivan.com">hotro@logivan.com</a> hoặc tổng đài 0333131618, LOGIVAN sẽ khắc phục lỗi trong thời gian sớm nhất. Tuy nhiên, LOGIVAN sẽ không chịu trách nhiệm giải quyết trong trường hợp thông báo của các Chủ xe không đến được LOGIVAN, phát sinh từ lỗi kỹ thuật, lỗi đường truyền, phần mềm hoặc các lỗi khác không do LOGIVAN gây ra.</p>
+                    </li>
+                    <li>
+                        <p>Khi thực hiện các giao dịch trên sàn, các Thành viên bắt buộc phải thực hiện đúng theo các quy trình hướng dẫn.</p>
+                    </li>
+                </ol>
+                <ol start="13">
+                    <li>Điều khoản chung.</li>
+                </ol>
+                <ol>
+                    <li>Hiệu lực áp dụng</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Điều Khoản Sử Dụng Ứng Dụng của LOGIVAN có hiệu lực từ khi được ban hành công khai và có hiệu lực khi Chủ xe xác nhận trên Ứng Dụng. LOGIVAN có quyền điều chỉnh, thay đổi các quy chế để phù hợp với các hoạt động của LOGIVAN cũng như thuận tiện cho các Thành viên. Những thay đổi này sẽ được thông báo trên Website và trên các Ứng Dụng của LOGIVAN. Quy chế được sửa đổi hoặc điều chỉnh sẽ có hiệu lực kể từ ngày có thông báo thay đổi. Việc Thành viên tiếp tục sử dụng Dịch Vụ sau khi quy chế đã điều chỉnh hoặc thay đổi được công bố đồng nghĩa với việc Thành viên đã đọc, hiểu và đồng ý với quy chế sửa đổi đó. Thành viên của LOGIVAN có trách nhiệm tuân thủ quy chế hiện hành khi sử dụng Dịch Vụ của LOGIVAN.</p>
+                    </li>
+                    <li>
+                        <p>Thỏa Thuận có hiệu kể từ ngày Chủ xe xác nhận trên Hệ Thống dưới dạng hợp đồng điện tử, và sẽ chấm dứt khi Chủ xe xóa tài khoản khỏi Hệ Thống, hoặc khi LOGIVAN đơn phương chấm dứt Thỏa Thuận theo các quy định tại đây.</p>
+                    </li>
+                    <li>
+                        <p>Việc chấm dứt Thỏa Thuận theo Điều khoản sẽ không phương hại đến quyền và nghĩa vụ của mỗi Bên phát sinh trước khi chấm dứt Thỏa Thuận.</p>
+                    </li>
+                </ol>
+                <ol start="2">
+                    <li>Điều khoản cam kết</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>VỀ PHÍA CHỦ XE: mọi Thành viên tham gia sử dụng Ứng Dụng của LOGIVAN đồng nghĩa với việc Thành viên đã đọc và chấp nhận những quy định và Chính sách mà LOGIVAN đã đưa ra.</p>
+                    </li>
+                    <li>
+                        <p>VỀ PHÍA LOGIVAN: Chúng tôi cam kết thực hiện đúng những quy định và trách nhiệm được nêu ra trong quy chế.</p>
+                    </li>
+                </ol>
+                <ol start="3">
+                    <li>Điều khoản khác</li>
+                </ol>
+                <ol>
+                    <li>
+                        <p>Thỏa Thuận được giải thích và điều chỉnh theo pháp luật Việt Nam. Mọi tranh chấp phát sinh từ hoặc liên quan đến Thỏa Thuận sẽ được Các Bên giải quyết trước tiên bằng hình thức thương lượng, hòa giải trên tinh thần thiện chí và hợp tác. Nếu Các Bên không thể giải quyết được theo hình thức thương lượng, hòa giải, tranh chấp sẽ được đưa ra giải quyết tại Tòa Án có thẩm quyền của Việt Nam.</p>
+                    </li>
+                    <li>
+                        <p>Nếu bất kỳ điều khoản nào của Thỏa Thuận không có hiệu lực theo pháp luật Việt Nam, việc vô hiệu của điều khoản đó vẫn sẽ không ảnh hưởng đến hiệu lực của các điều khoản còn lại của Thỏa Thuận, trừ khi pháp luật Việt Nam có quy định khác.</p>
+                    </li>
                 </ol>
             </td>
         </tr>
