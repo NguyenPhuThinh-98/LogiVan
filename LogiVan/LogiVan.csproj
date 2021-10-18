@@ -81,12 +81,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cam-nang-bac-tai-5-sao.aspx" />
     <Content Include="chinh-sach-bao-mat.aspx" />
     <Content Include="chu-hang.aspx" />
     <Content Include="chu-xe.aspx" />
     <Content Include="dieu-khoan-su-dung.aspx" />
     <Content Include="gioi-thieu.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\1-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\2.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\2639.svg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\3.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\4.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\5.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\6.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\7.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\9.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\arrow.png" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\cam-nang-bac-tai-5-sao-banner.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\truck.png" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\WEB_A.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\WEB_B.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\WEB_C.jpg" />
     <Content Include="HinhAnh\HinhAnhChuHang\Chu-Hang-Android.png" />
     <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-gia-minh-bach.png" />
     <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-on.svg" />
@@ -173,6 +189,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="cam-nang-bac-tai-5-sao.aspx.cs">
+      <DependentUpon>cam-nang-bac-tai-5-sao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cam-nang-bac-tai-5-sao.aspx.designer.cs">
+      <DependentUpon>cam-nang-bac-tai-5-sao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="chinh-sach-bao-mat.aspx.cs">
       <DependentUpon>chinh-sach-bao-mat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
