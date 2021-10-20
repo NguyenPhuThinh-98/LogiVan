@@ -11,7 +11,37 @@ namespace LogiVan
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            MaintainScrollPositionOnPostBack = true;
+        }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (div_gt.Style["display"].ToString() == "block")
+            {
+                div_gt.Style["display"] = "none";
+            }
+            else
+                div_gt.Style["display"] = "block";
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if (div_ux.Style["display"].ToString() == "block")
+            {
+                div_ux.Style["display"] = "none";
+            }
+            else
+                div_ux.Style["display"] = "block";
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            if (div_meo.Style["display"].ToString() == "block")
+            {
+                div_meo.Style["display"] = "none";
+            }
+            else
+                div_meo.Style["display"] = "block";
         }
     }
 }

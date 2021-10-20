@@ -66,7 +66,7 @@
         <tr>
             <td id="sidebar">
                 <p>THÔNG TIN</p>
-                <a href="dieu-khoan-su-dung.aspx">Chính sách bảo mật</a>
+                <a href="chinh-sach-bao-mat.aspx">Chính sách bảo mật</a>
                 <br />
                 <a href="#">Chính sách thanh toán</a>
                 <br />
