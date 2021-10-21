@@ -60,8 +60,6 @@
                 display: inline-block;
             }
 
-        
-
         #div-5-table-1-table {
             width: 100%;
         }
@@ -70,12 +68,17 @@
             width: 100%;
         }
 
+        #div-6{
+            background-color:#f3f4f8;
+            background-image:url(/HinhAnh/HinhAnhTrangChu/img13.png);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
         #div-6-table-1 {
             margin-top: 100px;
             margin-bottom: 100px;
             width: 100%;
             height: 200px;
-            background-color: lightgray;
         }
 
             #div-6-table-1 th {
@@ -86,13 +89,14 @@
                 padding-left: 50px;
             }
 
-        #div-8 a{
-            text-decoration:none;
+        #div-8 a {
+            text-decoration: none;
             color: black;
         }
-        #div-8 a:hover{
-            color:orange;
-        }
+
+            #div-8 a:hover {
+                color: orange;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -280,33 +284,9 @@
                 <td>
                     <table id="div-5-table-1-table">
                         <tr>
-                            <td colspan="7" style="background-image:url(HinhAnh/HinhAnhTrangChu/truck-background.png); background-repeat:no-repeat; background-size:cover; height:180px; width:100%; border-bottom:5px dashed black; vertical-align:bottom;">
-                                <table style="width: 100%; margin: 0;">
-                                    <tr style="vertical-align: bottom;">
-                                        <td>
-                                            <asp:Image ID="imgTruck_1" runat="server" Width="100px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/truck.svg" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_2" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_3" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_4" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_5" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_6" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_7" runat="server" Width="100px" />
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
+                            <th colspan="7" style="background-image:url(HinhAnh/HinhAnhTrangChu/truck-background.png); background-repeat:no-repeat; background-size:cover; height:180px; width:100%; border-bottom:1px dashed black; vertical-align:bottom; text-align:left;">
+                                <asp:Image ID="imgTruck" runat="server" ImageUrl="~/HinhAnh/HinhAnhTrangChu/truck.svg" Width="150px" />
+                            </th>
                         </tr>
                         <tr>
                             <td>
