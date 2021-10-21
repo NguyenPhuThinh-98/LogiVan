@@ -201,5 +201,19 @@ namespace LogiVan
                 MultiView3.ActiveViewIndex = j - 1;
             }
         }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            int i = MultiView1.ActiveViewIndex;
+            int j = MultiView1.Views.Count;
+            if (i < j - 1)
+            {
+                MultiView1.ActiveViewIndex = i + 1;
+            }
+            else
+            {
+                MultiView1.ActiveViewIndex = 0;
+            }
+        }
     }
 }

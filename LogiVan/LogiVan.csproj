@@ -110,6 +110,7 @@
     <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-tim-gia-de.png" />
     <Content Include="HinhAnh\HinhAnhChuHang\chu-xe-off.svg" />
     <Content Include="HinhAnh\HinhAnhChuHang\HAQ_3577.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\img10.png" />
     <Content Include="HinhAnh\HinhAnhChuHang\IMG_0128.jpg" />
     <Content Include="HinhAnh\HinhAnhChuHang\IMG_0768.jpg" />
     <Content Include="HinhAnh\HinhAnhChuHang\IMG_1350.jpg" />
@@ -123,6 +124,7 @@
     <Content Include="HinhAnh\HinhAnhChuXe\chu-xe-tang-thu-nhap.png" />
     <Content Include="HinhAnh\HinhAnhChuXe\chu-xe-thoai-mai-chon-lua.png" />
     <Content Include="HinhAnh\HinhAnhChuXe\chu-xe.mp4" />
+    <Content Include="HinhAnh\HinhAnhChuXe\img10.png" />
     <Content Include="HinhAnh\HinhAnhChuXe\IMG_0053-1.jpg" />
     <Content Include="HinhAnh\HinhAnhChuXe\IMG_1353.jpg" />
     <Content Include="HinhAnh\HinhAnhChuXe\qr-chu-xe.png" />

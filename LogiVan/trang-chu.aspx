@@ -97,6 +97,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="div-1">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" ></asp:ScriptManager>
+        <asp:Timer ID="Timer1" runat="server" Interval="10000" OnTick="Timer1_Tick"></asp:Timer>
         <asp:MultiView ID="MultiView1" runat="server">
             <asp:View ID="View1" runat="server">
                 <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/HinhAnh/HinhAnhTrangChu/loginow2h.jpg" Width="100%" Height="500px" />

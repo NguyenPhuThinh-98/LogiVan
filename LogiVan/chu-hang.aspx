@@ -19,7 +19,10 @@
 
         #div-6 {
             text-align: center;
-            background-color: blue;
+            background-color: #1d60bf;
+            background-image: url("/HinhAnh/HinhAnhChuHang/img10.png");
+            background-repeat:no-repeat;
+            background-size:cover;
             color: white;
             padding: 20px 0 20px 0;
             margin-bottom:0;
