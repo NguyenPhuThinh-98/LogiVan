@@ -148,6 +148,10 @@
     <Content Include="HinhAnh\HinhAnhGioiThieu\vnexpress.jpg" />
     <Content Include="HinhAnh\HinhAnhGioiThieu\vtv1.png" />
     <Content Include="HinhAnh\HinhAnhGioiThieu\world-economic-forum.png" />
+    <Content Include="HinhAnh\HinhAnhLienHe\bg-top-landing.png" />
+    <Content Include="HinhAnh\HinhAnhLienHe\icon-locate.svg" />
+    <Content Include="HinhAnh\HinhAnhLienHe\icon-mail.svg" />
+    <Content Include="HinhAnh\HinhAnhLienHe\icon-phone.svg" />
     <Content Include="HinhAnh\HinhAnhMasterPage\app_android.png" />
     <Content Include="HinhAnh\HinhAnhMasterPage\app_ios.png" />
     <Content Include="HinhAnh\HinhAnhTrangChu\2021927-111325.png" />
@@ -187,6 +191,7 @@
     <Content Include="HinhAnh\HinhAnhTrangChu\truck-background.png" />
     <Content Include="HinhAnh\HinhAnhTrangChu\truck.svg" />
     <Content Include="ho-tro.aspx" />
+    <Content Include="lien-he.aspx" />
     <Content Include="trang-chu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -243,6 +248,13 @@
     </Compile>
     <Compile Include="ho-tro.aspx.designer.cs">
       <DependentUpon>ho-tro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lien-he.aspx.cs">
+      <DependentUpon>lien-he.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lien-he.aspx.designer.cs">
+      <DependentUpon>lien-he.aspx</DependentUpon>
     </Compile>
     <Compile Include="LogiVan.Master.cs">
       <DependentUpon>LogiVan.Master</DependentUpon>

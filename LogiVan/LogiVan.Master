@@ -156,7 +156,7 @@
                     <a href="#">Tuyển dụng</a>
                 </li>
                 <li>
-                    <a href="#">Liên hệ</a>
+                    <a href="lien-he.aspx">Liên hệ</a>
                     <ul>
                         <li>
                             <a href="ho-tro.aspx">Hỗ trợ</a>
