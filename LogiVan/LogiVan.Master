@@ -73,7 +73,6 @@
 
         #menu {
             list-style: none;
-            width: 100%;
             font-size: large;
         }
 
@@ -106,7 +105,7 @@
                 #menu ul li {
                     display: block;
                     background-color: lightgrey;
-                    width: 150%;
+                    width: 125%;
                     height: 150%;
                     padding-left: 5px;
                     padding-top: 10%;

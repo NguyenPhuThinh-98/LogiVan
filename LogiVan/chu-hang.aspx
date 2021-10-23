@@ -48,7 +48,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="text-align:center;">
+    <div style="text-align: center;">
         <video src="HinhAnh/HinhAnhChuHang/video-chu-hang.mp4" height="500" autoplay="autoplay" loop="loop" muted="muted"></video>
     </div>
     <div style="text-align:center; margin-top:50px;" id="div-2">
