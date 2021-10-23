@@ -148,58 +148,67 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton12;
         
         /// <summary>
-        /// ImageButton1 control.
+        /// btnList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnList;
         
         /// <summary>
-        /// ImageButton2 control.
+        /// btnBanner1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
+        protected global::System.Web.UI.WebControls.Button btnBanner1;
         
         /// <summary>
-        /// ImageButton3 control.
+        /// btnBanner2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
+        protected global::System.Web.UI.WebControls.Button btnBanner2;
         
         /// <summary>
-        /// ImageButton4 control.
+        /// btnBanner3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
+        protected global::System.Web.UI.WebControls.Button btnBanner3;
         
         /// <summary>
-        /// ImageButton5 control.
+        /// btnBanner4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton5;
+        protected global::System.Web.UI.WebControls.Button btnBanner4;
         
         /// <summary>
-        /// ImageButton6 control.
+        /// btnBanner5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton6;
+        protected global::System.Web.UI.WebControls.Button btnBanner5;
+        
+        /// <summary>
+        /// btnBanner6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBanner6;
         
         /// <summary>
         /// Image1 control.

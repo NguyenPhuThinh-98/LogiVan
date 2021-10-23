@@ -18,36 +18,7 @@ namespace LogiVan
                 MultiView3.ActiveViewIndex = 0;
             }
             Page.MaintainScrollPositionOnPostBack = true;
-        }
-
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 0;
-        }
-
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 1;
-        }
-
-        protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 2;
-        }
-
-        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 3;
-        }
-
-        protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 4;
-        }
-
-        protected void ImageButton6_Click(object sender, ImageClickEventArgs e)
-        {
-            MultiView1.ActiveViewIndex = 5;
+            
         }
 
         protected void ImageButton22_Click(object sender, ImageClickEventArgs e)
@@ -239,6 +210,36 @@ namespace LogiVan
             {
                 MultiView1.ActiveViewIndex = 0;
             }
+        }
+
+        protected void btnBanner1_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 0;
+        }
+
+        protected void btnBanner2_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 1;
+        }
+
+        protected void btnBanner3_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 2;
+        }
+
+        protected void btnBanner4_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 3;
+        }
+
+        protected void btnBanner5_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 4;
+        }
+
+        protected void btnBanner6_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 5;
         }
     }
 }

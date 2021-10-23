@@ -97,6 +97,15 @@
             #div-8 a:hover {
                 color: orange;
             }
+            .btn{
+                border:none;
+                width:20px;
+                height:20px;
+                border-radius:50%;
+            }
+            .btn:hover{
+                background-color:black;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -128,39 +137,24 @@
                     ImageUrl="~/HinhAnh/HinhAnhTrangChu/HUONG-DAN-CHO-TX-SU-DUNG-APP-LOGIVAN-CHU-XE-FILE-TONG-1.png" />
             </asp:View>
         </asp:MultiView>
-        <ul>
+        <ul id="btnList" runat="server">
             <li>
-                <asp:ImageButton ID="ImageButton1" runat="server" 
-                    ImageUrl="~/HinhAnh/HinhAnhTrangChu/circle.png" Width="20px" OnClick="ImageButton1_Click" BackColor="Gray" 
-                    style="border-radius:50%;" />
+                <asp:Button ID="btnBanner1" runat="server" CssClass="btn" OnClick="btnBanner1_Click" />
             </li>
             <li>
-                <asp:ImageButton ID="ImageButton2" runat="server" 
-                    ImageUrl="~/HinhAnh/HinhAnhTrangChu/circle.png" Width="20px" OnClick="ImageButton2_Click" BackColor="Gray" 
-                    style="border-radius:50%;" />
+                <asp:Button ID="btnBanner2" runat="server" CssClass="btn" OnClick="btnBanner2_Click" />
             </li>
             <li>
-                <asp:ImageButton ID="ImageButton3" runat="server" 
-                    ImageUrl="~/HinhAnh/HinhAnhTrangChu/circle.png" Width="20px" OnClick="ImageButton3_Click" BackColor="Gray" 
-                    style="border-radius:50%;" />
+                <asp:Button ID="btnBanner3" runat="server" CssClass="btn" OnClick="btnBanner3_Click" />
             </li>
             <li>
-                <asp:ImageButton ID="ImageButton4" runat="server" 
-                    ImageUrl="~/HinhAnh/HinhAnhTrangChu/circle.png" Width="20px" OnClick="ImageButton4_Click" BackColor="Gray" 
-                    style="border-radius:50%;" />
+                <asp:Button ID="btnBanner4" runat="server" CssClass="btn" OnClick="btnBanner4_Click" />
             </li>
             <li>
-                <asp:ImageButton ID="ImageButton5" runat="server" 
-                    ImageUrl="~/HinhAnh/HinhAnhTrangChu/circle.png" Width="20px" OnClick="ImageButton5_Click" BackColor="Gray" 
-                    style="border-radius:50%;" />
+                <asp:Button ID="btnBanner5" runat="server" CssClass="btn" OnClick="btnBanner5_Click" />
             </li>
             <li>
-                <asp:ImageButton ID="ImageButton6" runat="server" 
-                    ImageUrl="~/HinhAnh/HinhAnhTrangChu/circle.png" 
-                    Width="20px" 
-                    OnClick="ImageButton6_Click" 
-                    BackColor="Gray" 
-                    style="border-radius:50%;" />
+                <asp:Button ID="btnBanner6" runat="server" CssClass="btn" OnClick="btnBanner6_Click" />
             </li>
         </ul>
     </div>
