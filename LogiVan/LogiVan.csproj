@@ -194,6 +194,7 @@
     <Content Include="HinhAnh\HinhAnhTrangChu\truck.svg" />
     <Content Include="ho-tro.aspx" />
     <Content Include="lien-he.aspx" />
+    <Content Include="tin-tuc.aspx" />
     <Content Include="trang-chu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -266,6 +267,13 @@
       <DependentUpon>LogiVan.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tin-tuc.aspx.cs">
+      <DependentUpon>tin-tuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tin-tuc.aspx.designer.cs">
+      <DependentUpon>tin-tuc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="trang-chu.aspx.cs">
       <DependentUpon>trang-chu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
