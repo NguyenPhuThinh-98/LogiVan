@@ -113,6 +113,9 @@
             #contact a:hover{
                 text-decoration:underline;
             }
+            #contact h1{
+                color:blue;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
