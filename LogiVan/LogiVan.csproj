@@ -81,6 +81,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin-login.aspx" />
+    <Content Include="admin-menu.aspx" />
     <Content Include="cam-nang-bac-tai-5-sao.aspx" />
     <Content Include="chinh-sach-bao-mat.aspx" />
     <Content Include="chu-hang.aspx" />
@@ -193,12 +195,28 @@
     <Content Include="HinhAnh\HinhAnhTrangChu\truck-background.png" />
     <Content Include="HinhAnh\HinhAnhTrangChu\truck.svg" />
     <Content Include="ho-tro.aspx" />
+    <Content Include="khuyen-mai.aspx" />
     <Content Include="lien-he.aspx" />
+    <Content Include="tin-tuc-logivan.aspx" />
     <Content Include="tin-tuc.aspx" />
     <Content Include="trang-chu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-login.aspx.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-login.aspx.designer.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-menu.aspx.cs">
+      <DependentUpon>admin-menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-menu.aspx.designer.cs">
+      <DependentUpon>admin-menu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="cam-nang-bac-tai-5-sao.aspx.cs">
       <DependentUpon>cam-nang-bac-tai-5-sao.aspx</DependentUpon>
@@ -252,6 +270,13 @@
     <Compile Include="ho-tro.aspx.designer.cs">
       <DependentUpon>ho-tro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="khuyen-mai.aspx.cs">
+      <DependentUpon>khuyen-mai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khuyen-mai.aspx.designer.cs">
+      <DependentUpon>khuyen-mai.aspx</DependentUpon>
+    </Compile>
     <Compile Include="lien-he.aspx.cs">
       <DependentUpon>lien-he.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +292,13 @@
       <DependentUpon>LogiVan.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tin-tuc-logivan.aspx.cs">
+      <DependentUpon>tin-tuc-logivan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tin-tuc-logivan.aspx.designer.cs">
+      <DependentUpon>tin-tuc-logivan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tin-tuc.aspx.cs">
       <DependentUpon>tin-tuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

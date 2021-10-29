@@ -778,30 +778,21 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton25;
         
         /// <summary>
-        /// Image23 control.
+        /// DataList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image23;
+        protected global::System.Web.UI.WebControls.DataList DataList1;
         
         /// <summary>
-        /// Image24 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image24;
-        
-        /// <summary>
-        /// Image25 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image25;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

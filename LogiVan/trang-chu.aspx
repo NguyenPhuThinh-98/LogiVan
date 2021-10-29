@@ -106,6 +106,9 @@
             .btn:hover{
                 background-color:black;
             }
+        .auto-style1 {
+            width: 30%;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -530,29 +533,30 @@
     </div>
     <div id="div-8">
         <h1 style="text-align:center;">Tin tức</h1>
-        <div style="width:30%; float:left;">
-            <a href="https://www.logivan.com/logivan-news-tong-hop-tin-tuc-tuan-1-thang-10-2021/">
-                <asp:Image ID="Image23" runat="server" Width="100%" Height="200px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/nen-tang-cua-khau-so.png" />
-                <h3>LOGIVAN News: Tổng hợp tin tức Tuần 1 - Tháng 10/2021</h3>
-            </a>
-            <p>Bảng tin Covid-19 - Tính đến hết ngày 03/10/2021, số ca dương tính trên toàn quốc đã đạt đến con số 808,500 ca tăng 51,000 ca trong 1 tuần vừa qua. Trong đó, Số ca đã khỏi bệnh là 696,800…</p>
-        </div>
-        <div style="width:30%; float:left; margin-left:5%; margin-right:5%;">
-            <a href="https://www.logivan.com/logivan-news-tong-hop-tin-tuc-tuan-4-thang-9-2021/">
-                <asp:Image ID="Image24" runat="server" Width="100%" Height="200px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/new-normal4.png" />
-                <h3>LOGIVAN News: Tổng hợp tin tức Tuần 4 - Tháng 9/2021</h3>
-            </a>
-            <p>Về số liệu tiêm vắc xin thì tính đến ngày 26/09/2021, chúng ta đã về được tổng cộng 44,7 triệu liều vắc xin, và đã tiêm chủng cho 30.4 triệu người trên toàn quốc, đạt 31,5% dân số. Trong đó,…</p>
-        </div>
-        <div style="width:30%; float:left;">
-            <a href="https://www.logivan.com/logivan-news-tong-hop-tin-tuc-tuan-3-thang-9-2021/">
-                <asp:Image ID="Image25" runat="server" Width="100%" Height="200px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/2021927-111325.png" />
-                <h3>LOGIVAN News: Tổng hợp tin tức Tuần 3 - Tháng 9/2021</h3>
-            </a>
-            <p>Về số liệu tiêm vắc xin thì tính đến ngày 19/09/2021, chúng ta đã về được tổng cộng 31,7 triệu liều vắc xin, và đã tiêm chủng cho 27,6 triệu người trên toàn quốc, đạt 28,6% dân số. Trong đó,…</p>
-        </div>
+        <asp:DataList ID="DataList1" runat="server" Width="100%" DataKeyField="MaTinTuc" DataSourceID="SqlDataSource1" RepeatColumns="3" ShowFooter="False" ShowHeader="False">
+            <ItemTemplate>
+                <table class="auto-style1">
+                    <tr>
+                        <td>
+                            <asp:Image ID="Image23" runat="server" ImageUrl='<%# "data:image/jpg;base64,"+Convert.ToBase64String((byte[])Eval("AnhBia")) %>' Height="200px" Width="400px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("TieuDe") %>' href="#" Font-Bold="true"></asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("TomTat") %>' Style="text-align:justify;"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </ItemTemplate>
+        </asp:DataList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LogivanWebConnectionString %>" SelectCommand="SELECT TOP (3) MaTinTuc, AnhBia, TieuDe, TomTat, NgayTao FROM TinTuc ORDER BY NgayTao DESC"></asp:SqlDataSource>
         <div style="text-align:right; margin-bottom:20px; clear:both;">
-            <a href="#" style="color:orange; font-weight:bold;">Xem Thêm ></a>
+            <a href="tin-tuc-logivan.aspx" style="color:orange; font-weight:bold;">Xem Thêm ></a>
         </div>
     </div>
 </asp:Content>

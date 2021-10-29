@@ -69,7 +69,7 @@
                         <strong>
                             TIN TỨC HOẠT ĐỘNG
                         </strong>
-                        <a href="#" style="margin-left:50%; color:orange">Xem thêm ></a>
+                        <a href="tin-tuc-logivan.aspx" style="margin-left:50%; color:orange">Xem thêm ></a>
                     </p>
                     <div id="divider"></div>
                     <table>

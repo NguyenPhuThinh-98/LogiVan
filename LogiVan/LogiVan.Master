@@ -111,11 +111,30 @@
                     padding-top: 10%;
                     padding-bottom: 5%;
                 }
+                #header{
+                    border-bottom:1px solid lightgray;
+                }
+                #tbl_admin{
+                    width:100%;
+                }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="header">
+            <table id="tbl_admin" runat="server">
+                <tr>
+                    <td style="width:80%;">
+                        <asp:Button ID="btnAdminMenu" runat="server" Text="quản lý" Width="100%" OnClick="btnAdminMenu_Click" Visible="False" />
+                    </td>
+                    <td style="width:10%;">
+                        <asp:Button ID="btnAdminLogin" runat="server" Text="đăng nhập" Width="100%" OnClick="btnAdminLogin_Click" />
+                    </td>
+                    <td style="width:10%;">
+                        <asp:Button ID="btnAdminLogout" runat="server" Text="đăng xuất" Width="100%" OnClick="btnAdminLogout_Click" Visible="False" />
+                    </td>
+                </tr>
+            </table>
             <ul id="menu">
                 <li>
                     <asp:ImageButton ID="btnLogiVan_header" runat="server" ImageUrl="~/HinhAnh/HinhAnhMasterPage/logo.png" Width="200px" Height="50px" OnClick="btnLogiVan_header_Click" />
@@ -138,10 +157,10 @@
                     <a href="tin-tuc.aspx">Tin tức</a>
                     <ul>
                         <li>
-                            <a href="#">Tin tức Logivan</a>
+                            <a href="tin-tuc-logivan.aspx">Tin tức Logivan</a>
                         </li>
                         <li>
-                            <a href="#">Khuyến mãi</a>
+                            <a href="khuyen-mai.aspx">Khuyến mãi</a>
                         </li>
                         <li>
                             <a href="#">LOGINOW</a>
