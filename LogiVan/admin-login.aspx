@@ -7,15 +7,16 @@
             margin-top:50px;
             margin-bottom:50px;
             border-collapse:collapse;
+            background-color:orange;
         }
         #tbl h1{
             text-align:center;
         }
         #tbl th{
-            width:50%;
+            width:20%;
         }
-        #tbl th, #tbl td{
-            border:1px solid lightgray;
+        .validation{
+            text-align:center;
         }
     </style>
 </asp:Content>
@@ -30,20 +31,28 @@
             <tr>
                 <th>TÀI KHOẢN</th>
                 <td>
-                    <asp:TextBox ID="txtTaiKhoan" runat="server" width="97%"></asp:TextBox>
+                    <asp:TextBox ID="txtTaiKhoan" runat="server" width="98%"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="validation">
                     <asp:requiredfieldvalidator runat="server" errormessage="tài khoản không được để trống" ControlToValidate="txtTaiKhoan" ForeColor="Red"></asp:requiredfieldvalidator>
                 </td>
             </tr>
             <tr>
                 <th>MẬT KHẨU</th>
                 <td>
-                    <asp:TextBox ID="txtMatKhau" runat="server" width="97%" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtMatKhau" runat="server" width="98%" TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="validation">
                     <asp:requiredfieldvalidator runat="server" errormessage="mật khẩu không được để trống" ControlToValidate="txtMatKhau" ForeColor="Red"></asp:requiredfieldvalidator>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:button runat="server" text="đăng nhập" width="100%" />
+                    <asp:button runat="server" text="ĐĂNG NHẬP" width="100%" ID="btnDangNhap" OnClick="btnDangNhap_Click" Font-Size="XX-Large" />
                 </td>
             </tr>
         </table>
