@@ -217,6 +217,7 @@
     <Compile Include="admin-menu.aspx.designer.cs">
       <DependentUpon>admin-menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Alert.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="cam-nang-bac-tai-5-sao.aspx.cs">
       <DependentUpon>cam-nang-bac-tai-5-sao.aspx</DependentUpon>
