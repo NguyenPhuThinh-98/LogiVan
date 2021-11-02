@@ -8,13 +8,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-        <asp:DataList ID="DataList1" runat="server" Width="100%" DataSourceID="SqlDataSource1" RepeatColumns="4" RepeatDirection="Horizontal" ShowFooter="False" ShowHeader="False" CellSpacing="20">
+        <asp:DataList ID="DataList1" runat="server" Width="100%" RepeatColumns="4" RepeatDirection="Horizontal" ShowFooter="False" ShowHeader="False" CellSpacing="20" OnItemCommand="DataList1_ItemCommand">
         <ItemTemplate>
-            <asp:Button ID="btnTableName" runat="server" Text='<%# Eval("TABLE_NAME") %>' Height="100px" Width="200px" Font-Size="X-Large"/>
+            <asp:Button ID="btnTableName" runat="server" Text='<%# Eval("TABLE_NAME") %>' Height="100px" Width="200px" Font-Size="X-Large" CommandName="ButtonClick"/>
             <br />
         </ItemTemplate>
     </asp:DataList>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LogivanWebConnectionString %>" SelectCommand="SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES where table_name not like 'sys%' order by table_name"></asp:SqlDataSource>
     </div>
     <div id="div_2">
         <asp:Button ID="Button2" runat="server" Text="Thống Kê Báo Cáo" Height="100px" Width="100%" Font-Size="X-Large" PostBackUrl="admin-thong-ke.aspx" />

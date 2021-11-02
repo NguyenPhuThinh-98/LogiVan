@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin-chi-tiet-don-hang.aspx" />
     <Content Include="admin-login.aspx" />
     <Content Include="admin-menu.aspx" />
     <Content Include="cam-nang-bac-tai-5-sao.aspx" />
@@ -203,6 +204,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-chi-tiet-don-hang.aspx.cs">
+      <DependentUpon>admin-chi-tiet-don-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-chi-tiet-don-hang.aspx.designer.cs">
+      <DependentUpon>admin-chi-tiet-don-hang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin-login.aspx.cs">
       <DependentUpon>admin-login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

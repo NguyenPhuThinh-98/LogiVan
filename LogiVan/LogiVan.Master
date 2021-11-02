@@ -299,10 +299,11 @@
                                 </td>
                                 <td style="vertical-align: middle;">hoặc</td>
                                 <td>
-                                    <asp:ImageButton ID="btnOpenAppStore" runat="server" ImageUrl="~/HinhAnh/HinhAnhMasterPage/app_ios.png" PostBackUrl="https://apps.apple.com/us/app/logivan-ch%E1%BB%A7-h%C3%A0ng/id1386678770" />
+                                    <asp:ImageButton ID="btnOpenAppStore" runat="server" ImageUrl="~/HinhAnh/HinhAnhMasterPage/app_ios.png" PostBackUrl="https://apps.apple.com/us/app/logivan-ch%E1%BB%A7-h%C3%A0ng/id1386678770" Width="100px" />
+                                    <br />
                                     <br />
                                     <a href="https://play.google.com/store/apps/details?id=com.logivan.shipper">
-                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/HinhAnh/HinhAnhMasterPage/app_android.png" />
+                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/HinhAnh/HinhAnhMasterPage/app_android.png" Width="100px" />
                                     </a>
                                 </td>
                             </tr>
