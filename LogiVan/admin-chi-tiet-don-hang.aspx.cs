@@ -62,10 +62,10 @@ namespace LogiVan
         protected void btnOpenViewInsert_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 0;
-            NapLieuInsert();
+            NapLieu_DropDownList(ddl_MaDonHang_insert, ddl_MaHang_insert, ddl_MaDichVu_insert);
         }
 
-        private void NapLieuInsert()
+        private void NapLieu_DropDownList(DropDownList MaDonHang, DropDownList MaHang, DropDownList MaDichVu)
         {
             con = new SqlConnection(Session["admin"].ToString());
             try
@@ -73,32 +73,41 @@ namespace LogiVan
                 con.Open();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select MaDonHang from DonHang";
-                da = new SqlDataAdapter(cmd);
-                DataTable dt_DonHang = new DataTable();
-                da.Fill(dt_DonHang);
-                ddl_DonHang.DataSource = dt_DonHang;
-                ddl_DonHang.DataTextField = "MaDonHang";
-                ddl_DonHang.DataValueField = "MaDonHang";
-                ddl_DonHang.DataBind();
+                if (MaDonHang != null)
+                {
+                    cmd.CommandText = "select MaDonHang from DonHang";
+                    da = new SqlDataAdapter(cmd);
+                    DataTable dt_DonHang = new DataTable();
+                    da.Fill(dt_DonHang);
+                    MaDonHang.DataSource = dt_DonHang;
+                    MaDonHang.DataTextField = "MaDonHang";
+                    MaDonHang.DataValueField = "MaDonHang";
+                    MaDonHang.DataBind();
+                }
 
-                cmd.CommandText = "select MaHang from Hang";
-                da = new SqlDataAdapter(cmd);
-                DataTable dt_Hang = new DataTable();
-                da.Fill(dt_Hang);
-                ddl_Hang.DataSource = dt_Hang;
-                ddl_Hang.DataTextField = "MaHang";
-                ddl_Hang.DataValueField = "MaHang";
-                ddl_Hang.DataBind();
+                if (MaHang != null)
+                {
+                    cmd.CommandText = "select MaHang from Hang";
+                    da = new SqlDataAdapter(cmd);
+                    DataTable dt_Hang = new DataTable();
+                    da.Fill(dt_Hang);
+                    MaHang.DataSource = dt_Hang;
+                    MaHang.DataTextField = "MaHang";
+                    MaHang.DataValueField = "MaHang";
+                    MaHang.DataBind();
+                }
 
-                cmd.CommandText = "select MaDV from DichVu";
-                da = new SqlDataAdapter(cmd);
-                DataTable dt_DichVu = new DataTable();
-                da.Fill(dt_DichVu);
-                ddl_DichVu.DataSource = dt_DichVu;
-                ddl_DichVu.DataTextField = "MaDV";
-                ddl_DichVu.DataValueField = "MaDV";
-                ddl_DichVu.DataBind();
+                if (MaDichVu != null)
+                {
+                    cmd.CommandText = "select MaDV from DichVu";
+                    da = new SqlDataAdapter(cmd);
+                    DataTable dt_DichVu = new DataTable();
+                    da.Fill(dt_DichVu);
+                    MaDichVu.DataSource = dt_DichVu;
+                    MaDichVu.DataTextField = "MaDV";
+                    MaDichVu.DataValueField = "MaDV";
+                    MaDichVu.DataBind();
+                }
 
                 con.Close();
             }
@@ -106,16 +115,86 @@ namespace LogiVan
             {
                 Alert.Show(ex.Message);
             }
+            
         }
 
         protected void btnOpenViewDelete_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 1;
+            NapLieu_DropDownList(ddl_MaDonHang_delete, ddl_MaHang_delete, ddl_MaDichVu_delete);
         }
 
         protected void btnOpenViewUpdate_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 2;
+            NapLieu_DropDownList(ddl_MaDonHang_update, ddl_MaHang_update, ddl_MaDichVu_update_old);
+            NapLieu_DropDownList(null, null, ddl_MaDichVu_update_new);
+        }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = "insert into ChiTietDonHang values(" 
+                    + ddl_MaDonHang_insert.SelectedValue + "," 
+                    + ddl_MaHang_insert.SelectedValue + "," 
+                    + ddl_MaDichVu_insert.SelectedValue + ")";
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+            }
+            NapLieu();
+            MultiView1.ActiveViewIndex = -1;
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = "delete from ChiTietDonHang where MaDonHang = " + ddl_MaDonHang_delete.SelectedValue 
+                    + " and MaHang = " + ddl_MaHang_delete.SelectedValue 
+                    + " and MaDV = " + ddl_MaDichVu_delete.SelectedValue;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (SqlException ex)
+            {
+                Alert.Show(ex.Message);
+            }
+            NapLieu();
+            MultiView1.ActiveViewIndex = -1;
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = "update ChiTietDonHang set MaDV = " 
+                    + ddl_MaDichVu_update_new.SelectedValue 
+                    + " where MaDonHang = " + ddl_MaDonHang_update.SelectedValue 
+                    + " and MaHang = " + ddl_MaHang_update.SelectedValue 
+                    + " and MaDV = " + ddl_MaDichVu_update_old.SelectedValue;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (SqlException ex)
+            {
+                Alert.Show(ex.Message);
+            }
+            NapLieu();
+            MultiView1.ActiveViewIndex = -1;
         }
     }
 }

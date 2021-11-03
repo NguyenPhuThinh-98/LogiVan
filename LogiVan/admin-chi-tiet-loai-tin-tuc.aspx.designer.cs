@@ -10,7 +10,7 @@
 namespace LogiVan {
     
     
-    public partial class admin_chi_tiet_don_hang {
+    public partial class admin_chi_tiet_loai_tin_tuc {
         
         /// <summary>
         /// GridView1 control.
@@ -31,31 +31,31 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.Button btnSelect;
         
         /// <summary>
-        /// btnOpenViewInsert control.
+        /// btnViewInsert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOpenViewInsert;
+        protected global::System.Web.UI.WebControls.Button btnViewInsert;
         
         /// <summary>
-        /// btnOpenViewDelete control.
+        /// btnViewDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOpenViewDelete;
+        protected global::System.Web.UI.WebControls.Button btnViewDelete;
         
         /// <summary>
-        /// btnOpenViewUpdate control.
+        /// btnViewUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOpenViewUpdate;
+        protected global::System.Web.UI.WebControls.Button btnViewUpdate;
         
         /// <summary>
         /// MultiView1 control.
@@ -76,31 +76,22 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.View ViewInsert;
         
         /// <summary>
-        /// ddl_MaDonHang_insert control.
+        /// ddlMaTinTuc_insert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDonHang_insert;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaTinTuc_insert;
         
         /// <summary>
-        /// ddl_MaHang_insert control.
+        /// ddlMaLoai_insert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaHang_insert;
-        
-        /// <summary>
-        /// ddl_MaDichVu_insert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDichVu_insert;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaLoai_insert;
         
         /// <summary>
         /// btnInsert control.
@@ -121,31 +112,22 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.View ViewDelete;
         
         /// <summary>
-        /// ddl_MaDonHang_delete control.
+        /// ddlMaTinTuc_delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDonHang_delete;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaTinTuc_delete;
         
         /// <summary>
-        /// ddl_MaHang_delete control.
+        /// ddlMaLoai_delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaHang_delete;
-        
-        /// <summary>
-        /// ddl_MaDichVu_delete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDichVu_delete;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaLoai_delete;
         
         /// <summary>
         /// btnDelete control.
@@ -166,40 +148,31 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.View ViewUpdate;
         
         /// <summary>
-        /// ddl_MaDonHang_update control.
+        /// ddlMaTinTuc_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDonHang_update;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaTinTuc_update;
         
         /// <summary>
-        /// ddl_MaHang_update control.
+        /// ddlMaLoai_update_old control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaHang_update;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaLoai_update_old;
         
         /// <summary>
-        /// ddl_MaDichVu_update_old control.
+        /// ddlMaLoai_update_new control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDichVu_update_old;
-        
-        /// <summary>
-        /// ddl_MaDichVu_update_new control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaDichVu_update_new;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMaLoai_update_new;
         
         /// <summary>
         /// btnUpdate control.
