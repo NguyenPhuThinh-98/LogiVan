@@ -1,0 +1,274 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using LogiVan.App_Code;
+
+namespace LogiVan
+{
+    public partial class admin_don_hang : System.Web.UI.Page
+    {
+        SqlConnection cnn = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+        SqlDataAdapter da = new SqlDataAdapter();
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                NapLieuGridView();
+            }
+            MaintainScrollPositionOnPostBack = true;
+        }
+
+        protected void btnSelect_Click(object sender, EventArgs e)
+        {
+            NapLieuGridView();
+            MultiView1.ActiveViewIndex = -1;
+        }
+
+        private void NapLieuGridView()
+        {
+            GridView1.DataSource = null;
+            GridView1.DataBind();
+
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("select * from DonHang", cnn);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cnn.Close();
+
+                EditTenCot(dt);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void EditTenCot(DataTable dt)
+        {
+            dt.Columns[0].ColumnName = "Mã đơn hàng";
+            dt.Columns[1].ColumnName = "Địa chỉ lấy hàng";
+            dt.Columns[2].ColumnName = "Địa chỉ giao hàng";
+            dt.Columns[3].ColumnName = "Thời gian nhận hàng";
+            dt.Columns[4].ColumnName = "Tổng khối lượng";
+            dt.Columns[5].ColumnName = "Người liên hệ";
+            dt.Columns[6].ColumnName = "SDT liên hệ";
+            dt.Columns[7].ColumnName = "Thành tiền";
+            dt.Columns[8].ColumnName = "Mã chủ hàng";
+            dt.Columns[9].ColumnName = "Mã xe";
+        }
+
+        protected void btnOpenViewInsert_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 0;
+            NapLieuMaChuHang(insert_MaChuHang);
+            NapLieuMaXe(insert_MaXe);
+        }
+
+        private void NapLieuMaChuHang(DropDownList MaChuHang)
+        {
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("select MaChuHang from ChuHang", cnn);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cnn.Close();
+
+                MaChuHang.DataSource = dt;
+                MaChuHang.DataTextField = insert_MaChuHang.DataValueField = "MaChuHang";
+                MaChuHang.DataBind();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        private void NapLieuMaXe(DropDownList MaXe)
+        {
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("select MaXe from Xe", cnn);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cnn.Close();
+
+                MaXe.DataSource = dt;
+                MaXe.DataTextField = insert_MaChuHang.DataValueField = "MaXe";
+                MaXe.DataBind();
+            }
+            catch (SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        protected void btnOpenViewDelete_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 1;
+            NapLieuMaDonHang(delete_MaDonHang);
+        }
+
+        private void NapLieuMaDonHang(DropDownList MaDonHang)
+        {
+            MaDonHang.DataSource = null;
+            MaDonHang.DataBind();
+
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("select MaDonHang from DonHang", cnn);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cnn.Close();
+
+                MaDonHang.DataSource = dt;
+                MaDonHang.DataTextField = delete_MaDonHang.DataValueField = "MaDonHang";
+                MaDonHang.DataBind();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        protected void btnOpenViewUpdate_Click(object sender, EventArgs e)
+        {
+            MultiView1.ActiveViewIndex = 2;
+        }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("sp_ThemDonHang", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@DiaChiLayHang", SqlDbType.NVarChar).Value = insert_DiaChiLayHang.Text;
+                cmd.Parameters.Add("@DiaChiGiaoHang", SqlDbType.NVarChar).Value = insert_DiaChiGiaoHang.Text;
+                cmd.Parameters.Add("@ThoiGianNhanHang", SqlDbType.DateTime).Value = DateTime.Parse(insert_ThoiGianNhanHang.Text);
+                cmd.Parameters.Add("@TongKhoiLuong", SqlDbType.NVarChar).Value = insert_TongKhoiLuong.Text;
+                cmd.Parameters.Add("@NguoiLienHe", SqlDbType.NVarChar).Value = insert_NguoiLienHe.Text;
+                cmd.Parameters.Add("@SDT", SqlDbType.VarChar).Value = insert_SDT.Text;
+                cmd.Parameters.Add("@ThanhTien", SqlDbType.Int).Value = insert_ThanhTien.Text;
+                cmd.Parameters.Add("@MaChuHang", SqlDbType.Int).Value = insert_MaChuHang.SelectedValue;
+                cmd.Parameters.Add("@MaXe", SqlDbType.Int).Value = insert_MaXe.SelectedValue;
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+
+            NapLieuGridView();
+            MultiView1.ActiveViewIndex = -1;
+            XoaViewInsert();
+        }
+
+        private void XoaViewInsert()
+        {
+            insert_DiaChiGiaoHang.Text = "";
+            insert_DiaChiLayHang.Text = "";
+            insert_NguoiLienHe.Text = "";
+            insert_SDT.Text = "";
+            insert_ThanhTien.Text = "";
+            insert_ThoiGianNhanHang.Text = "";
+            insert_TongKhoiLuong.Text = "";
+        }
+
+        protected void delete_MaDonHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string MaDonHang = delete_MaDonHang.SelectedValue;
+            XemDuLieu(MaDonHang, delete_DiaChiLayHang, delete_DiaChiGiaoHang, delete_ThoiGian, delete_KhoiLuong, delete_NguoiLienHe, delete_SDT, delete_ThanhTien, delete_ChuHang, delete_Xe);
+        }
+
+        private void XemDuLieu(string maDonHang, TextBox DiaChiLayHang, TextBox DiaChiGiaoHang, TextBox ThoiGian, TextBox KhoiLuong, TextBox NguoiLienHe, TextBox SDT, TextBox ThanhTien, TextBox ChuHang, TextBox Xe)
+        {
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("select * from DonHang where MaDonHang = " + maDonHang, cnn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    DiaChiGiaoHang.Text = dr["DiaChiGiaoHang"].ToString();
+                    DiaChiLayHang.Text = dr["DiaChiLayHang"].ToString();
+                    ThoiGian.Text = dr["ThoiGianNhanHang"].ToString();
+                    KhoiLuong.Text = dr["TongKhoiLuong"].ToString();
+                    NguoiLienHe.Text = dr["NguoiLienHe"].ToString();
+                    SDT.Text = dr["SDTNguoiLienHe"].ToString();
+                    ThanhTien.Text = dr["ThanhTien"].ToString();
+                    ChuHang.Text = dr["MaChuHang"].ToString();
+                    Xe.Text = dr["MaXe"].ToString();
+                }
+                cnn.Close();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd = new SqlCommand("delete from DonHang where MaDonHang = " + delete_MaDonHang.SelectedValue, cnn);
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+            NapLieuGridView();
+            XoaViewDelete();
+            MultiView1.ActiveViewIndex = -1;
+        }
+
+        private void XoaViewDelete()
+        {
+            delete_ChuHang.Text = "";
+            delete_DiaChiGiaoHang.Text = "";
+            delete_DiaChiLayHang.Text = "";
+            delete_KhoiLuong.Text = "";
+            delete_NguoiLienHe.Text = "";
+            delete_SDT.Text = "";
+            delete_ThanhTien.Text = "";
+            delete_ThoiGian.Text = "";
+            delete_Xe.Text = "";
+        }
+    }
+}

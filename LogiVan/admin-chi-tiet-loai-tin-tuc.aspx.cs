@@ -50,6 +50,7 @@ namespace LogiVan
             catch(SqlException ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -100,6 +101,7 @@ namespace LogiVan
             catch(SqlException ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -132,6 +134,7 @@ namespace LogiVan
             catch (SqlException ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             MultiView1.ActiveViewIndex = -1;
@@ -152,6 +155,7 @@ namespace LogiVan
             catch (SqlException ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             MultiView1.ActiveViewIndex = -1;
@@ -173,6 +177,7 @@ namespace LogiVan
             catch (SqlException ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             MultiView1.ActiveViewIndex = -1;

@@ -84,6 +84,8 @@
     <Content Include="admin-chi-tiet-don-hang.aspx" />
     <Content Include="admin-chi-tiet-loai-tin-tuc.aspx" />
     <Content Include="admin-chu-hang.aspx" />
+    <Content Include="admin-dich-vu.aspx" />
+    <Content Include="admin-don-hang.aspx" />
     <Content Include="admin-login.aspx" />
     <Content Include="admin-menu.aspx" />
     <Content Include="cam-nang-bac-tai-5-sao.aspx" />
@@ -226,6 +228,20 @@
     </Compile>
     <Compile Include="admin-chu-hang.aspx.designer.cs">
       <DependentUpon>admin-chu-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-dich-vu.aspx.cs">
+      <DependentUpon>admin-dich-vu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-dich-vu.aspx.designer.cs">
+      <DependentUpon>admin-dich-vu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-don-hang.aspx.cs">
+      <DependentUpon>admin-don-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-don-hang.aspx.designer.cs">
+      <DependentUpon>admin-don-hang.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-login.aspx.cs">
       <DependentUpon>admin-login.aspx</DependentUpon>
