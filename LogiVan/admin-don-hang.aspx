@@ -190,6 +190,82 @@
                 </tr>
             </table>
         </asp:View>
-        <asp:View ID="ViewUpdate" runat="server"></asp:View>
+        <asp:View ID="ViewUpdate" runat="server">
+            <table class="tbl">
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <td colspan="2">
+                        <asp:DropDownList ID="updateMaDonHang" runat="server" CssClass="ddlist" AutoPostBack="True" OnSelectedIndexChanged="updateMaDonHang_SelectedIndexChanged"></asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Địa chỉ lấy hàng mới</th>
+                    <td>
+                        <asp:TextBox ID="updateDiaChiLayHang_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Địa chỉ giao hàng mới</th>
+                    <td>
+                        <asp:TextBox ID="updateDiaChiGiaoHang_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Thời gian nhận hàng mới</th>
+                    <td>
+                        <asp:TextBox ID="updateThoiGian_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Tổng khối lượng mới</th>
+                    <td>
+                        <asp:TextBox ID="updateTongKhoiLuong_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Người liên hệ mới</th>
+                    <td>
+                        <asp:TextBox ID="updateNguoi_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Số điện thoại liên hệ mới</th>
+                    <td>
+                        <asp:TextBox ID="updateSDT_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Thành tiền mới</th>
+                    <td>
+                        <asp:TextBox ID="updateThanhTien_new" runat="server" CssClass="textbox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Mã chủ hàng mới</th>
+                    <td>
+                        <asp:TextBox ID="updateMaChuHang_old" runat="server" CssClass="textbox" ReadOnly="true"></asp:TextBox>
+                        <br />
+                        <asp:DropDownList ID="updateMaChuHang_new" runat="server" CssClass="ddlist"></asp:DropDownList>
+                        <br />
+                        <asp:CheckBox ID="cbUpdateMaChuHang" runat="server" Text="cập nhật mã chủ hàng"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Mã xe mới</th>
+                    <td>
+                        <asp:TextBox ID="updateMaXe_old" runat="server" CssClass="textbox" ReadOnly="true"></asp:TextBox>
+                        <br />
+                        <asp:DropDownList ID="updateMaXe_new" runat="server" CssClass="ddlist"></asp:DropDownList>
+                        <br />
+                        <asp:CheckBox ID="cbUpdateMaXe" runat="server" Text="cập nhật mã xe"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <asp:Button ID="btnUpdate" runat="server" Text="cập nhật dữ liệu" CssClass="btn" OnClick="btnUpdate_Click" />
+                    </td>
+                </tr>
+            </table>
+        </asp:View>
     </asp:MultiView>
 </asp:Content>

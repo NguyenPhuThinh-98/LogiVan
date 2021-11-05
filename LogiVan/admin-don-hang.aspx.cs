@@ -159,6 +159,9 @@ namespace LogiVan
         protected void btnOpenViewUpdate_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 2;
+            NapLieuMaDonHang(updateMaDonHang);
+            NapLieuMaChuHang(updateMaChuHang_new);
+            NapLieuMaXe(updateMaXe_new);
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
@@ -206,10 +209,28 @@ namespace LogiVan
         protected void delete_MaDonHang_SelectedIndexChanged(object sender, EventArgs e)
         {
             string MaDonHang = delete_MaDonHang.SelectedValue;
-            XemDuLieu(MaDonHang, delete_DiaChiLayHang, delete_DiaChiGiaoHang, delete_ThoiGian, delete_KhoiLuong, delete_NguoiLienHe, delete_SDT, delete_ThanhTien, delete_ChuHang, delete_Xe);
+            XemDuLieu(MaDonHang, 
+                delete_DiaChiLayHang, 
+                delete_DiaChiGiaoHang, 
+                delete_ThoiGian, 
+                delete_KhoiLuong, 
+                delete_NguoiLienHe, 
+                delete_SDT, 
+                delete_ThanhTien, 
+                delete_ChuHang, 
+                delete_Xe);
         }
 
-        private void XemDuLieu(string maDonHang, TextBox DiaChiLayHang, TextBox DiaChiGiaoHang, TextBox ThoiGian, TextBox KhoiLuong, TextBox NguoiLienHe, TextBox SDT, TextBox ThanhTien, TextBox ChuHang, TextBox Xe)
+        private void XemDuLieu(string maDonHang, 
+            TextBox DiaChiLayHang, 
+            TextBox DiaChiGiaoHang, 
+            TextBox ThoiGian, 
+            TextBox KhoiLuong, 
+            TextBox NguoiLienHe, 
+            TextBox SDT, 
+            TextBox ThanhTien, 
+            TextBox ChuHang, 
+            TextBox Xe)
         {
             cnn = new SqlConnection(Session["admin"].ToString());
             try
@@ -269,6 +290,77 @@ namespace LogiVan
             delete_ThanhTien.Text = "";
             delete_ThoiGian.Text = "";
             delete_Xe.Text = "";
+        }
+
+        protected void updateMaDonHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string MaDonHang = updateMaDonHang.SelectedValue;
+            XemDuLieu(MaDonHang, 
+                updateDiaChiLayHang_new, 
+                updateDiaChiGiaoHang_new, 
+                updateThoiGian_new, 
+                updateTongKhoiLuong_new, 
+                updateNguoi_new, 
+                updateSDT_new, 
+                updateThanhTien_new, 
+                updateMaChuHang_old, 
+                updateMaXe_old);
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            cnn = new SqlConnection(Session["admin"].ToString());
+            try
+            {
+                cnn.Open();
+                cmd.Connection = cnn;
+                cmd.CommandText = "update DonHang set DiaChiLayHang = N'" + updateDiaChiLayHang_new.Text
+                    + "', DiaChiGiaoHang = N'" + updateDiaChiGiaoHang_new.Text
+                    + "', ThoiGianNhanHang = '" + DateTime.Parse(updateThoiGian_new.Text) 
+                    + "', TongKhoiLuong = N'" + updateTongKhoiLuong_new.Text 
+                    + "', NguoiLienHe = N'" + updateNguoi_new.Text 
+                    + "', SDTNguoiLienHe = '" + updateSDT_new.Text 
+                    + "', ThanhTien = " + updateThanhTien_new.Text 
+                    + " where MaDonHang = " + updateMaDonHang.SelectedValue;
+                cmd.ExecuteNonQuery();
+
+                if (cbUpdateMaChuHang.Checked)
+                {
+                    cmd.CommandText = "update DonHang set MaChuHang = " + updateMaChuHang_new.SelectedValue 
+                        + " where MaDonHang = " + updateMaDonHang.SelectedValue;
+                    cmd.ExecuteNonQuery();
+                }
+
+                if (cbUpdateMaXe.Checked)
+                {
+                    cmd.CommandText = "update DonHang set MaXe = " + updateMaXe_new.SelectedValue
+                        + " where MaDonHang = " + updateMaDonHang.SelectedValue;
+                    cmd.ExecuteNonQuery();
+                }
+
+                cnn.Close();
+            }
+            catch(SqlException ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+            NapLieuGridView();
+            XoaViewUpdate();
+            MultiView1.ActiveViewIndex = -1;
+        }
+
+        private void XoaViewUpdate()
+        {
+            updateDiaChiGiaoHang_new.Text = "";
+            updateDiaChiLayHang_new.Text = "";
+            updateMaChuHang_old.Text = "";
+            updateMaXe_old.Text = "";
+            updateNguoi_new.Text = "";
+            updateSDT_new.Text = "";
+            updateThanhTien_new.Text = "";
+            updateThoiGian_new.Text = "";
+            updateTongKhoiLuong_new.Text = "";
         }
     }
 }
