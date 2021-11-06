@@ -10,7 +10,7 @@
 namespace LogiVan {
     
     
-    public partial class admin_chu_hang {
+    public partial class admin_hang {
         
         /// <summary>
         /// GridView1 control.
@@ -31,31 +31,31 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.Button btnSelect;
         
         /// <summary>
-        /// btnOpenViewInsert control.
+        /// btnViewInsert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOpenViewInsert;
+        protected global::System.Web.UI.WebControls.Button btnViewInsert;
         
         /// <summary>
-        /// btnOpenViewDelete control.
+        /// btnViewDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOpenViewDelete;
+        protected global::System.Web.UI.WebControls.Button btnViewDelete;
         
         /// <summary>
-        /// btnOpenViewUpdate control.
+        /// btnViewUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOpenViewUpdate;
+        protected global::System.Web.UI.WebControls.Button btnViewUpdate;
         
         /// <summary>
         /// MultiView1 control.
@@ -67,58 +67,49 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
-        /// View1 control.
+        /// ViewInsert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected global::System.Web.UI.WebControls.View ViewInsert;
         
         /// <summary>
-        /// txtTenChuHang_insert control.
+        /// insertTenHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenChuHang_insert;
+        protected global::System.Web.UI.WebControls.TextBox insertTenHang;
         
         /// <summary>
-        /// ddlMaLoai_insert control.
+        /// insertKichThuoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMaLoai_insert;
+        protected global::System.Web.UI.WebControls.TextBox insertKichThuoc;
         
         /// <summary>
-        /// txtDiaChi_insert control.
+        /// insertKhoiLuong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChi_insert;
+        protected global::System.Web.UI.WebControls.TextBox insertKhoiLuong;
         
         /// <summary>
-        /// txtSDT_insert control.
+        /// insertMaLoaiHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSDT_insert;
-        
-        /// <summary>
-        /// txtCMND_insert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMND_insert;
+        protected global::System.Web.UI.WebControls.DropDownList insertMaLoaiHang;
         
         /// <summary>
         /// btnInsert control.
@@ -130,67 +121,58 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.Button btnInsert;
         
         /// <summary>
-        /// View2 control.
+        /// ViewDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected global::System.Web.UI.WebControls.View ViewDelete;
         
         /// <summary>
-        /// ddlMaChuHang_delete control.
+        /// delMaHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMaChuHang_delete;
+        protected global::System.Web.UI.WebControls.DropDownList delMaHang;
         
         /// <summary>
-        /// txtTenChuHang_delete control.
+        /// delTenHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenChuHang_delete;
+        protected global::System.Web.UI.WebControls.TextBox delTenHang;
         
         /// <summary>
-        /// txtMaLoai_delete control.
+        /// delKichThuoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaLoai_delete;
+        protected global::System.Web.UI.WebControls.TextBox delKichThuoc;
         
         /// <summary>
-        /// txtDiaChi_delete control.
+        /// delKhoiLuong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChi_delete;
+        protected global::System.Web.UI.WebControls.TextBox delKhoiLuong;
         
         /// <summary>
-        /// txtSDT_delete control.
+        /// delMaLoaiHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSDT_delete;
-        
-        /// <summary>
-        /// txtCMND_delete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMND_delete;
+        protected global::System.Web.UI.WebControls.TextBox delMaLoaiHang;
         
         /// <summary>
         /// btnDelete control.
@@ -202,112 +184,76 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// View3 control.
+        /// ViewUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View3;
+        protected global::System.Web.UI.WebControls.View ViewUpdate;
         
         /// <summary>
-        /// ddlMaChuHang_update control.
+        /// updateMaHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMaChuHang_update;
+        protected global::System.Web.UI.WebControls.DropDownList updateMaHang;
         
         /// <summary>
-        /// txtTenChuHang_update_old control.
+        /// updateTenHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenChuHang_update_old;
+        protected global::System.Web.UI.WebControls.TextBox updateTenHang;
         
         /// <summary>
-        /// txtTenChuHang_update_new control.
+        /// updateKichThuoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenChuHang_update_new;
+        protected global::System.Web.UI.WebControls.TextBox updateKichThuoc;
         
         /// <summary>
-        /// txtMaLoai_update_old control.
+        /// updateKhoiLuong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaLoai_update_old;
+        protected global::System.Web.UI.WebControls.TextBox updateKhoiLuong;
         
         /// <summary>
-        /// ddl_MaLoai_update_new control.
+        /// updateMaLoaiHang_old control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_MaLoai_update_new;
+        protected global::System.Web.UI.WebControls.TextBox updateMaLoaiHang_old;
         
         /// <summary>
-        /// txtDiaChi_update_old control.
+        /// cbUpdateMaLoaiHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChi_update_old;
+        protected global::System.Web.UI.WebControls.CheckBox cbUpdateMaLoaiHang;
         
         /// <summary>
-        /// txtDiaChi_update_new control.
+        /// updateMaLoaiHang_new control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChi_update_new;
-        
-        /// <summary>
-        /// txtSDT_update_old control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSDT_update_old;
-        
-        /// <summary>
-        /// txtSDT_update_new control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSDT_update_new;
-        
-        /// <summary>
-        /// txtCMND_update_old control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMND_update_old;
-        
-        /// <summary>
-        /// txtCMND_update_new control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMND_update_new;
+        protected global::System.Web.UI.WebControls.DropDownList updateMaLoaiHang_new;
         
         /// <summary>
         /// btnUpdate control.

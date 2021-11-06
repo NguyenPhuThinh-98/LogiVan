@@ -11,7 +11,6 @@
         }
         #tblInsert, #tblDelete, #tblUpdate{
             width:100%;
-            font-size:xx-large;
         }
         #tblInsert th{
             width:20%;

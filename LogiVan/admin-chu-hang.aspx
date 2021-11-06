@@ -67,7 +67,7 @@
                         <td>
                             <asp:TextBox ID="txtTenChuHang_insert" runat="server" Width="99%"></asp:TextBox>
                             <br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="chưa nhập họ tên" ControlToValidate="txtTenChuHang_insert"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="chưa nhập họ tên" ControlToValidate="txtTenChuHang_insert"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>
@@ -83,7 +83,7 @@
                         <td>
                             <asp:TextBox ID="txtDiaChi_insert" runat="server" Width="99%"></asp:TextBox>
                             <br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="chưa nhập địa chỉ" ControlToValidate="txtDiaChi_insert"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="chưa nhập địa chỉ" ControlToValidate="txtDiaChi_insert"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>
@@ -91,7 +91,7 @@
                         <td>
                             <asp:TextBox ID="txtSDT_insert" runat="server" Width="99%"></asp:TextBox>
                             <br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="chưa nhập số điện thoại" ControlToValidate="txtSDT_insert"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="chưa nhập số điện thoại" ControlToValidate="txtSDT_insert"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +99,7 @@
                         <td>
                             <asp:TextBox ID="txtCMND_insert" runat="server" Width="99%"></asp:TextBox>
                             <br />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="chưa nhập CMND" ControlToValidate="txtCMND_insert"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="chưa nhập CMND" ControlToValidate="txtCMND_insert"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>

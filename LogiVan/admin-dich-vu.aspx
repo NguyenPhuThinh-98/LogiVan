@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         #main {
-            font-size: xx-large;
+            
         }
 
         .btn {
-            font-size: xx-large;
+            
             margin-bottom: 20px;
             margin-top: 20px;
             width: 100%;
@@ -22,13 +22,13 @@
             }
 
         .txt {
-            font-size: xx-large;
+            
             width: 98%;
         }
 
         .ddl {
             width: 99%;
-            font-size: xx-large;
+            
         }
     </style>
 </asp:Content>

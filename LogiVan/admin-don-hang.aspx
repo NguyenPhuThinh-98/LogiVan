@@ -2,16 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         #main{
-            font-size:xx-large;
+            
         }
         .btn{
             width:100%;
-            font-size:xx-large;
+            
             margin:20px 0 20px 0;
         }
         .tbl{
             width:100%;
-            font-size:xx-large;
+            
         }
         .tbl th{
             width:30%;
@@ -19,11 +19,11 @@
         }
         .textbox{
             width:99%;
-            font-size:xx-large;
+            
         }
         .ddlist{
             width:99%;
-            font-size:xx-large;
+            
         }
     </style>
 </asp:Content>
