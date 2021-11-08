@@ -80,13 +80,21 @@ namespace LogiVan
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "select MaLoai from LoaiChuHang";
+                cmd.CommandText = "select MaLoai,TenLoai from LoaiChuHang";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
+
                 ddlMaLoai_insert.DataSource = dt;
-                ddlMaLoai_insert.DataTextField = ddlMaLoai_insert.DataValueField = "MaLoai";
+                ddlMaLoai_insert.DataTextField = "TenLoai";
+                ddlMaLoai_insert.DataValueField = "MaLoai";
                 ddlMaLoai_insert.DataBind();
+
                 con.Close();
             }
             catch (SqlException ex)
@@ -143,13 +151,21 @@ namespace LogiVan
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "select MaChuHang from ChuHang";
+                cmd.CommandText = "select MaChuHang, TenChuHang from ChuHang";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+
+                foreach(DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
+
                 ddlMaChuHang_delete.DataSource = dt;
-                ddlMaChuHang_delete.DataTextField = ddlMaChuHang_delete.DataValueField = "MaChuHang";
+                ddlMaChuHang_delete.DataTextField = "TenChuHang";
+                ddlMaChuHang_delete.DataValueField = "MaChuHang";
                 ddlMaChuHang_delete.DataBind();
+
                 con.Close();
             }
             catch (SqlException ex)
@@ -199,20 +215,35 @@ namespace LogiVan
                 con.Open();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select MaChuHang from ChuHang";
+                cmd.CommandText = "select MaChuHang, TenChuHang from ChuHang";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt_MaChuHang = new DataTable();
                 da.Fill(dt_MaChuHang);
+
+                foreach (DataRow dr in dt_MaChuHang.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
+
+
                 ddlMaChuHang_update.DataSource = dt_MaChuHang;
-                ddlMaChuHang_update.DataTextField = ddlMaChuHang_update.DataValueField = "MaChuHang";
+                ddlMaChuHang_update.DataTextField = "TenChuHang";
+                ddlMaChuHang_update.DataValueField = "MaChuHang";
                 ddlMaChuHang_update.DataBind();
 
-                cmd.CommandText = "select MaLoai from LoaiChuHang";
+                cmd.CommandText = "select MaLoai, TenLoai from LoaiChuHang";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt_MaLoai = new DataTable();
                 da.Fill(dt_MaLoai);
+
+                foreach (DataRow dr in dt_MaLoai.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
+
                 ddl_MaLoai_update_new.DataSource = dt_MaLoai;
-                ddl_MaLoai_update_new.DataTextField = ddl_MaLoai_update_new.DataValueField = "MaLoai";
+                ddl_MaLoai_update_new.DataTextField = "TenLoai";
+                ddl_MaLoai_update_new.DataValueField = "MaLoai";
                 ddl_MaLoai_update_new.DataBind();
 
                 con.Close();

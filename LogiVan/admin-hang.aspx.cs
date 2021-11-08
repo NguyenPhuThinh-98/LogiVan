@@ -77,14 +77,18 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select MaLoaiHang from LoaiHang", cnn);
+                cmd = new SqlCommand("select MaLoaiHang, TenLoaiHang from LoaiHang", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
                 MaLoaiHang.DataSource = dt;
-                MaLoaiHang.DataTextField = MaLoaiHang.DataValueField = "MaLoaiHang";
+                MaLoaiHang.DataTextField = "TenLoaiHang";
+                MaLoaiHang.DataValueField = "MaLoaiHang";
                 MaLoaiHang.DataBind();
             }
             catch(Exception ex)
@@ -105,14 +109,20 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select MaHang from Hang", cnn);
+                cmd = new SqlCommand("select MaHang, TenHang from Hang", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
 
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
+
                 MaHang.DataSource = dt;
-                MaHang.DataTextField = MaHang.DataValueField = "MaHang";
+                MaHang.DataTextField = "TenHang";
+                MaHang.DataValueField = "MaHang";
                 MaHang.DataBind();
             }
             catch (Exception ex)

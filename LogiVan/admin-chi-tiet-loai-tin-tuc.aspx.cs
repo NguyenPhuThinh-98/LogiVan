@@ -76,23 +76,37 @@ namespace LogiVan
 
                 if (MaTinTuc != null)
                 {
-                    cmd.CommandText = "select MaTinTuc from TinTuc";
+                    cmd.CommandText = "select MaTinTuc, TieuDe from TinTuc";
                     da = new SqlDataAdapter(cmd);
                     DataTable dt_MaTinTuc = new DataTable();
                     da.Fill(dt_MaTinTuc);
+
+                    foreach (DataRow dr in dt_MaTinTuc.Rows)
+                    {
+                        dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                    }
+
                     MaTinTuc.DataSource = dt_MaTinTuc;
-                    MaTinTuc.DataTextField = ddlMaTinTuc_insert.DataValueField = "MaTinTuc";
+                    MaTinTuc.DataTextField = "TieuDe";
+                    MaTinTuc.DataValueField = "MaTinTuc";
                     MaTinTuc.DataBind();
                 }
 
                 if (MaLoai != null)
                 {
-                    cmd.CommandText = "select MaLoai from LoaiTinTuc";
+                    cmd.CommandText = "select MaLoai, TenLoai from LoaiTinTuc";
                     da = new SqlDataAdapter(cmd);
                     DataTable dt_MaLoai = new DataTable();
                     da.Fill(dt_MaLoai);
+
+                    foreach (DataRow dr in dt_MaLoai.Rows)
+                    {
+                        dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                    }
+
                     MaLoai.DataSource = dt_MaLoai;
-                    MaLoai.DataTextField = ddlMaLoai_insert.DataValueField = "MaLoai";
+                    MaLoai.DataTextField = "TenLoai";
+                    MaLoai.DataValueField = "MaLoai";
                     MaLoai.DataBind();
                 }
 

@@ -60,7 +60,7 @@
             <asp:View ID="ViewInsert" runat="server">
                 <table id="tblInsert">
                     <tr>
-                        <th>Mã Đơn Hàng</th>
+                        <th>Mã Đơn Hàng - Chủ Hàng - Xe</th>
                         <td>
                             <asp:DropDownList ID="ddl_MaDonHang_insert" runat="server" Width="70%" Font-Size="XX-Large"></asp:DropDownList>
                         </td>
@@ -88,7 +88,7 @@
             <asp:View ID="ViewDelete" runat="server">
                 <table id="tblDelete">
                     <tr>
-                        <th class="col_1">Mã Đơn Hàng</th>
+                        <th class="col_1">Mã Đơn Hàng - Chủ Hàng - Xe</th>
                         <th class="col_2">Mã Hàng</th>
                         <th class="col_3">Mã Dịch Vụ</th>
                     </tr>
@@ -114,7 +114,7 @@
             <asp:View ID="ViewUpdate" runat="server">
                 <table id="tblUpdate">
                     <tr>
-                        <th class="col_b1">Đơn Hàng</th>
+                        <th class="col_b1">Đơn Hàng - Chủ Hàng - Xe</th>
                         <th class="col_b2">Hàng</th>
                         <th class="col_b3">Dịch Vụ Cũ</th>
                         <th class="col_b4">Dịch Vụ Mới</th>

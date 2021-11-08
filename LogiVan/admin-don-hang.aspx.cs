@@ -84,14 +84,18 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select MaChuHang from ChuHang", cnn);
+                cmd = new SqlCommand("select MaChuHang, TenChuHang from ChuHang", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
                 MaChuHang.DataSource = dt;
-                MaChuHang.DataTextField = insert_MaChuHang.DataValueField = "MaChuHang";
+                MaChuHang.DataTextField = "TenChuHang";
+                MaChuHang.DataValueField = "MaChuHang";
                 MaChuHang.DataBind();
             }
             catch(SqlException ex)
@@ -107,14 +111,18 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select MaXe from Xe", cnn);
+                cmd = new SqlCommand("select MaXe, TenXe, BienSo from Xe", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString() + " - " + dr[2].ToString();
+                }
                 MaXe.DataSource = dt;
-                MaXe.DataTextField = insert_MaChuHang.DataValueField = "MaXe";
+                MaXe.DataTextField = "TenXe";
+                MaXe.DataValueField = "MaXe";
                 MaXe.DataBind();
             }
             catch (SqlException ex)
@@ -139,14 +147,18 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select MaDonHang from DonHang", cnn);
+                cmd = new SqlCommand("select MaDonHang, TenChuHang, BienSo from DonHang, ChuHang, Xe where DonHang.MaChuHang = ChuHang.MaChuHang and DonHang.MaXe = Xe.MaXe", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString() + " - " + dr[2].ToString();
+                }
                 MaDonHang.DataSource = dt;
-                MaDonHang.DataTextField = delete_MaDonHang.DataValueField = "MaDonHang";
+                MaDonHang.DataTextField = "TenChuHang";
+                MaDonHang.DataValueField = "MaDonHang";
                 MaDonHang.DataBind();
             }
             catch(SqlException ex)

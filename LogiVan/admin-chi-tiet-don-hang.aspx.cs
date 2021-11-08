@@ -76,36 +76,55 @@ namespace LogiVan
 
                 if (MaDonHang != null)
                 {
-                    cmd.CommandText = "select MaDonHang from DonHang";
+                    cmd.CommandText = "select MaDonHang, TenChuHang, BienSo from DonHang, ChuHang, Xe "
+                        + "where DonHang.MaChuHang = ChuHang.MaChuHang and DonHang.MaXe = Xe.MaXe";
                     da = new SqlDataAdapter(cmd);
                     DataTable dt_DonHang = new DataTable();
                     da.Fill(dt_DonHang);
+
+                    foreach (DataRow dr in dt_DonHang.Rows)
+                    {
+                        dr[1] = dr[0].ToString() + " - " + dr[1].ToString() + " - " + dr[2].ToString();
+                    }
+
                     MaDonHang.DataSource = dt_DonHang;
-                    MaDonHang.DataTextField = "MaDonHang";
+                    MaDonHang.DataTextField = "TenChuHang";
                     MaDonHang.DataValueField = "MaDonHang";
                     MaDonHang.DataBind();
                 }
 
                 if (MaHang != null)
                 {
-                    cmd.CommandText = "select MaHang from Hang";
+                    cmd.CommandText = "select MaHang, TenHang from Hang";
                     da = new SqlDataAdapter(cmd);
                     DataTable dt_Hang = new DataTable();
                     da.Fill(dt_Hang);
+
+                    foreach (DataRow dr in dt_Hang.Rows)
+                    {
+                        dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                    }
+
                     MaHang.DataSource = dt_Hang;
-                    MaHang.DataTextField = "MaHang";
+                    MaHang.DataTextField = "TenHang";
                     MaHang.DataValueField = "MaHang";
                     MaHang.DataBind();
                 }
 
                 if (MaDichVu != null)
                 {
-                    cmd.CommandText = "select MaDV from DichVu";
+                    cmd.CommandText = "select MaDV, TenDV from DichVu";
                     da = new SqlDataAdapter(cmd);
                     DataTable dt_DichVu = new DataTable();
                     da.Fill(dt_DichVu);
+
+                    foreach (DataRow dr in dt_DichVu.Rows)
+                    {
+                        dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                    }
+
                     MaDichVu.DataSource = dt_DichVu;
-                    MaDichVu.DataTextField = "MaDV";
+                    MaDichVu.DataTextField = "TenDV";
                     MaDichVu.DataValueField = "MaDV";
                     MaDichVu.DataBind();
                 }

@@ -85,12 +85,17 @@ namespace LogiVan
             {
                 cn.Open();
                 cmd.Connection = cn;
-                cmd.CommandText = "select MaDV from DichVu";
+                cmd.CommandText = "select MaDV, TenDV from DichVu";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
+                }
                 MaDV.DataSource = dt;
-                MaDV.DataTextField = MaDV.DataValueField = "MaDV";
+                MaDV.DataTextField = "TenDV";
+                MaDV.DataValueField = "MaDV";
                 MaDV.DataBind();
                 cn.Close();
             }
