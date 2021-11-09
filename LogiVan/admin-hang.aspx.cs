@@ -53,6 +53,7 @@ namespace LogiVan
             catch(Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -94,6 +95,7 @@ namespace LogiVan
             catch(Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -128,6 +130,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -156,6 +159,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             XoaViewInsert();
@@ -194,6 +198,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -210,6 +215,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             XoaViewDelete();
@@ -255,6 +261,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
 
             cbUpdateMaLoaiHang.Checked = false;

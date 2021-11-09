@@ -50,7 +50,7 @@ namespace LogiVan
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -98,7 +98,7 @@ namespace LogiVan
                 MaChuHang.DataValueField = "MaChuHang";
                 MaChuHang.DataBind();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -125,7 +125,7 @@ namespace LogiVan
                 MaXe.DataValueField = "MaXe";
                 MaXe.DataBind();
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -161,7 +161,7 @@ namespace LogiVan
                 MaDonHang.DataValueField = "MaDonHang";
                 MaDonHang.DataBind();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -196,7 +196,7 @@ namespace LogiVan
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -264,7 +264,7 @@ namespace LogiVan
                 }
                 cnn.Close();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -281,7 +281,7 @@ namespace LogiVan
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -352,7 +352,7 @@ namespace LogiVan
 
                 cnn.Close();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;

@@ -73,7 +73,7 @@
                     <tr>
                         <th>Giá Dịch Vụ</th>
                         <td>
-                            <asp:TextBox ID="txtGiaDV_insert" runat="server" CssClass="txt"></asp:TextBox>
+                            <asp:TextBox ID="txtGiaDV_insert" runat="server" CssClass="txt" TextMode="Number"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -135,7 +135,7 @@
                         </td>
                         <th>Giá Mới</th>
                         <td>
-                            <asp:TextBox ID="txtGiaDV_update_new" runat="server" CssClass="txt"></asp:TextBox>
+                            <asp:TextBox ID="txtGiaDV_update_new" runat="server" CssClass="txt" TextMode="Number"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

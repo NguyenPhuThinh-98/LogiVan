@@ -47,7 +47,7 @@ namespace LogiVan
                 GridView1.DataBind();
                 con.Close();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -112,7 +112,7 @@ namespace LogiVan
 
                 con.Close();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -145,7 +145,7 @@ namespace LogiVan
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -166,7 +166,7 @@ namespace LogiVan
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -188,7 +188,7 @@ namespace LogiVan
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;

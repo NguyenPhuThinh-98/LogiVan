@@ -75,7 +75,7 @@
                 <tr>
                     <th>Thời gian nhận hàng</th>
                     <td>
-                        <asp:TextBox ID="insert_ThoiGianNhanHang" runat="server" CssClass="textbox"></asp:TextBox>
+                        <asp:TextBox ID="insert_ThoiGianNhanHang" runat="server" CssClass="textbox" TextMode="DateTime"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -213,7 +213,7 @@
                 <tr>
                     <th>Thời gian nhận hàng mới</th>
                     <td>
-                        <asp:TextBox ID="updateThoiGian_new" runat="server" CssClass="textbox"></asp:TextBox>
+                        <asp:TextBox ID="updateThoiGian_new" runat="server" CssClass="textbox" TextMode="DateTime"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
