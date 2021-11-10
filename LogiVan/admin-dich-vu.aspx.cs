@@ -241,5 +241,11 @@ namespace LogiVan
             string madv = ddlMaDV_update.SelectedValue;
             NapLieuVaoTextBox(madv, txtTenDV_update_old, txtGiaDV_update_old);
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            NapLieu();
+        }
     }
 }

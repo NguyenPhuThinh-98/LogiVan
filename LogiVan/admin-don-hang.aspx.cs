@@ -374,5 +374,11 @@ namespace LogiVan
             updateThoiGian_new.Text = "";
             updateTongKhoiLuong_new.Text = "";
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            NapLieuGridView();
+        }
     }
 }

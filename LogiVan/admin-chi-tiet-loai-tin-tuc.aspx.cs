@@ -196,5 +196,11 @@ namespace LogiVan
             NapLieu();
             MultiView1.ActiveViewIndex = -1;
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            NapLieu();
+        }
     }
 }

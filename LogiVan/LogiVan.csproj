@@ -88,6 +88,7 @@
     <Content Include="admin-don-hang.aspx" />
     <Content Include="admin-hang.aspx" />
     <Content Include="admin-khuyen-mai.aspx" />
+    <Content Include="admin-loai-chu-hang.aspx" />
     <Content Include="admin-login.aspx" />
     <Content Include="admin-menu.aspx" />
     <Content Include="cam-nang-bac-tai-5-sao.aspx" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="admin-khuyen-mai.aspx.designer.cs">
       <DependentUpon>admin-khuyen-mai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-loai-chu-hang.aspx.cs">
+      <DependentUpon>admin-loai-chu-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-loai-chu-hang.aspx.designer.cs">
+      <DependentUpon>admin-loai-chu-hang.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-login.aspx.cs">
       <DependentUpon>admin-login.aspx</DependentUpon>

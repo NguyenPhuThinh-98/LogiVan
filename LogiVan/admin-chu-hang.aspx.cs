@@ -343,5 +343,11 @@ namespace LogiVan
                 txtCMND_update_new.Text = txtCMND_update_old.Text;
             }
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            NapLieu();
+        }
     }
 }
