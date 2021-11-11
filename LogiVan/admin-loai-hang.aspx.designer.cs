@@ -10,7 +10,7 @@
 namespace LogiVan {
     
     
-    public partial class admin_loai_chu_hang {
+    public partial class admin_loai_hang {
         
         /// <summary>
         /// GridView1 control.
@@ -67,22 +67,22 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
-        /// View1 control.
+        /// ViewInsert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected global::System.Web.UI.WebControls.View ViewInsert;
         
         /// <summary>
-        /// inTenLoai control.
+        /// inTenLoaiHang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inTenLoai;
+        protected global::System.Web.UI.WebControls.TextBox inTenLoaiHang;
         
         /// <summary>
         /// btnInsert control.
@@ -94,13 +94,13 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.Button btnInsert;
         
         /// <summary>
-        /// View2 control.
+        /// ViewDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected global::System.Web.UI.WebControls.View ViewDelete;
         
         /// <summary>
         /// delMaLoai control.
@@ -121,13 +121,13 @@ namespace LogiVan {
         protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// View3 control.
+        /// ViewUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View3;
+        protected global::System.Web.UI.WebControls.View ViewUpdate;
         
         /// <summary>
         /// upMaLoai control.

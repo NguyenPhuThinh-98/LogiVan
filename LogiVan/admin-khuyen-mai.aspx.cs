@@ -93,6 +93,7 @@ namespace LogiVan
             catch(Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -180,6 +181,7 @@ namespace LogiVan
             catch(Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -196,6 +198,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             XoaView();
@@ -234,6 +237,7 @@ namespace LogiVan
             catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 
@@ -256,6 +260,7 @@ namespace LogiVan
             catch(Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
             NapLieu();
             XoaView();

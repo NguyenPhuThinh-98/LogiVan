@@ -10,7 +10,7 @@ using LogiVan.App_Code;
 
 namespace LogiVan
 {
-    public partial class admin_loai_chu_hang : System.Web.UI.Page
+    public partial class admin_loai_tin_tuc : System.Web.UI.Page
     {
         SqlConnection cnn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
@@ -25,63 +25,44 @@ namespace LogiVan
             MaintainScrollPositionOnPostBack = true;
         }
 
-        protected void btnSelect_Click(object sender, EventArgs e)
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            GridView1.PageIndex = e.NewPageIndex;
             NapLieu();
         }
 
         private void NapLieu()
         {
-            GridView1.DataSource = null;
-            GridView1.DataBind();
             try
             {
+                GridView1.DataSource = null;
+                GridView1.DataBind();
+
                 cnn = new SqlConnection(Session["admin"].ToString());
-                cmd = new SqlCommand("select * from LoaiChuHang", cnn);
+                cnn.Open();
+                cmd = new SqlCommand("select * from LoaiTinTuc", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-                dt.Columns["MaLoai"].ColumnName = "Mã loại chủ hàng";
-                dt.Columns["TenLoai"].ColumnName = "Tên loại chủ hàng";
+
+                dt.Columns["MaLoai"].ColumnName = "Mã loại tin tức";
+                dt.Columns["TenLoai"].ColumnName = "Tên loại tin tức";
+
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
             }
         }
 
-        protected void btnInsert_Click(object sender, EventArgs e)
+        protected void btnSelect_Click(object sender, EventArgs e)
         {
-            try
-            {
-                cnn = new SqlConnection(Session["admin"].ToString());
-                cnn.Open();
-                cmd = new SqlCommand("sp_ThemLoaiChuHang", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@tenloai", SqlDbType.NVarChar).Value = inTenLoai.Text;
-                cmd.ExecuteNonQuery();
-                cnn.Close();
-            }
-            catch(Exception ex)
-            {
-                Alert.Show(ex.Message);
-                return;
-            }
             NapLieu();
-            XoaView();
             MultiView1.ActiveViewIndex = -1;
-        }
-
-        private void XoaView()
-        {
-            inTenLoai.Text = "";
-
-            upTenLoai_new.Text = "";
-            upTenLoai_old.Text = "";
         }
 
         protected void btnViewInsert_Click(object sender, EventArgs e)
@@ -92,40 +73,74 @@ namespace LogiVan
         protected void btnViewDelete_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 1;
-            NapLieuMaLoaiChuHang(delMaLoai);
+            NapLieu(delMaLoai);
         }
 
-        private void NapLieuMaLoaiChuHang(DropDownList id)
+        private void NapLieu(DropDownList id)
         {
             try
             {
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
-                cmd = new SqlCommand("select * from LoaiChuHang", cnn);
+                cmd = new SqlCommand("select * from LoaiTinTuc", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-                foreach(DataRow dr in dt.Rows)
+
+                foreach (DataRow dr in dt.Rows)
                 {
                     dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
                 }
+
                 id.DataSource = dt;
                 id.DataTextField = "TenLoai";
                 id.DataValueField = "MaLoai";
                 id.DataBind();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
-                return;
             }
         }
 
         protected void btnViewUpdate_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 2;
-            NapLieuMaLoaiChuHang(upMaLoai);
+            NapLieu(upMaLoai);
+        }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            if (inTenLoai.Text == "")
+            {
+                Alert.Show("chưa có tên loại tin tức");
+                return;
+            }
+            try
+            {
+                cnn = new SqlConnection(Session["admin"].ToString());
+                cnn.Open();
+                cmd = new SqlCommand("sp_ThemLoaiTinTuc", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@tenloai", SqlDbType.NVarChar).Value = inTenLoai.Text;
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                Alert.Show(ex.Message);
+            }
+            NapLieu();
+            XoaView();
+            MultiView1.ActiveViewIndex = -1;
+        }
+
+        private void XoaView()
+        {
+            inTenLoai.Text = "";
+            upTenLoai_new.Text = "";
+            upTenLoai_old.Text = "";
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -134,16 +149,13 @@ namespace LogiVan
             {
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
-                cmd = new SqlCommand("sp_XoaLoaiChuHang", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@maloai", SqlDbType.Int).Value = delMaLoai.SelectedValue;
+                cmd = new SqlCommand("delete from LoaiTinTuc where MaLoai = " + delMaLoai.SelectedValue, cnn);
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
-                return;
             }
             NapLieu();
             MultiView1.ActiveViewIndex = -1;
@@ -155,7 +167,7 @@ namespace LogiVan
             {
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
-                cmd = new SqlCommand("select * from LoaiChuHang where MaLoai = " + upMaLoai.SelectedValue, cnn);
+                cmd = new SqlCommand("select * from LoaiTinTuc where MaLoai = " + upMaLoai.SelectedValue, cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -163,10 +175,9 @@ namespace LogiVan
                 DataRow dr = dt.Rows[0];
                 upTenLoai_old.Text = dr["TenLoai"].ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
-                return;
             }
         }
 
@@ -174,7 +185,7 @@ namespace LogiVan
         {
             if (upTenLoai_new.Text == "")
             {
-                Alert.Show("chưa nhập tên loại chủ hàng mới");
+                Alert.Show("chưa có tên loại tin tức mới");
                 return;
             }
             try
@@ -182,24 +193,18 @@ namespace LogiVan
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
                 cmd.Connection = cnn;
-                cmd.CommandText = "update LoaiChuHang set TenLoai = N'" + upTenLoai_new.Text + "' where MaLoai = " + upMaLoai.SelectedValue;
+                cmd.CommandText = "update LoaiTinTuc set TenLoai = N'" + upTenLoai_new.Text
+                    + "' where MaLoai = " + upMaLoai.SelectedValue;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
-                return;
             }
             NapLieu();
             XoaView();
             MultiView1.ActiveViewIndex = -1;
-        }
-
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            GridView1.PageIndex = e.NewPageIndex;
-            NapLieu();
         }
     }
 }

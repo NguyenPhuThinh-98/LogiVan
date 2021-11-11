@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LogiVan.Master" AutoEventWireup="true" CodeBehind="admin-loai-chu-hang.aspx.cs" Inherits="LogiVan.admin_loai_chu_hang" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LogiVan.Master" AutoEventWireup="true" CodeBehind="admin-loai-xe.aspx.cs" Inherits="LogiVan.admin_loai_xe" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .button{
@@ -10,11 +10,11 @@
             width:100%;
         }
         .table th{
-            width:30%;
+            width:20%;
             text-align:left;
         }
         .textbox{
-            width:99%;
+            width:100%;
         }
         .dropdownlist{
             width:99%;
@@ -22,8 +22,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="main">
-        <asp:GridView ID="GridView1" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging">
+    <div>
+        <asp:GridView ID="GridView1" runat="server" Width="100%" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanging="GridView1_PageIndexChanging">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -51,10 +51,10 @@
             </tr>
         </table>
         <asp:MultiView ID="MultiView1" runat="server">
-            <asp:View ID="View1" runat="server">
+            <asp:View ID="ViewInsert" runat="server">
                 <table class="table">
                     <tr>
-                        <th>Tên loại chủ hàng</th>
+                        <th>Tên loại xe mới</th>
                         <td>
                             <asp:TextBox ID="inTenLoai" runat="server" CssClass="textbox"></asp:TextBox>
                         </td>
@@ -66,10 +66,10 @@
                     </tr>
                 </table>
             </asp:View>
-            <asp:View ID="View2" runat="server">
+            <asp:View ID="ViewDelete" runat="server">
                 <table class="table">
                     <tr>
-                        <th>Mã loại - Tên loại chủ hàng</th>
+                        <th>Mã loại - Tên loại xe</th>
                         <td>
                             <asp:DropDownList ID="delMaLoai" runat="server" CssClass="dropdownlist"></asp:DropDownList>
                         </td>
@@ -81,16 +81,16 @@
                     </tr>
                 </table>
             </asp:View>
-            <asp:View ID="View3" runat="server">
+            <asp:View ID="ViewUpdate" runat="server">
                 <table class="table">
                     <tr>
-                        <th>Mã loại chủ hàng</th>
+                        <th>Mã loại xe</th>
                         <td colspan="2">
                             <asp:DropDownList ID="upMaLoai" runat="server" CssClass="dropdownlist" AutoPostBack="True" OnSelectedIndexChanged="upMaLoai_SelectedIndexChanged"></asp:DropDownList>
                         </td>
                     </tr>
                     <tr>
-                        <th>Tên loại chủ hàng cũ - mới</th>
+                        <th>Tên loại xe cũ - mới</th>
                         <td>
                             <asp:TextBox ID="upTenLoai_old" runat="server" CssClass="textbox" ReadOnly="true"></asp:TextBox>
                         </td>
