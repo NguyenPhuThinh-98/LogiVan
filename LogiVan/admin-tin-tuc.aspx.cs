@@ -10,7 +10,7 @@ using LogiVan.App_Code;
 
 namespace LogiVan
 {
-    public partial class admin_khuyen_mai : System.Web.UI.Page
+    public partial class admin_tin_tuc : System.Web.UI.Page
     {
         SqlConnection cnn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
@@ -40,16 +40,16 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select * from khuyenmai", cnn);
+                cmd = new SqlCommand("select * from TinTuc", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-                
+
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -64,10 +64,10 @@ namespace LogiVan
         protected void btnViewDelete_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 1;
-            NapLieuMaKM(delTieuDe);
+            NapLieuMaTinTuc(delTieuDe);
         }
 
-        private void NapLieuMaKM(DropDownList id)
+        private void NapLieuMaTinTuc(DropDownList id)
         {
             id.DataSource = null;
             id.DataBind();
@@ -75,21 +75,21 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select MaKM, TieuDe from KhuyenMai", cnn);
+                cmd = new SqlCommand("select MaTinTuc, TieuDe from TinTuc", cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-                foreach(DataRow dr in dt.Rows)
+                foreach (DataRow dr in dt.Rows)
                 {
                     dr[1] = dr[0].ToString() + " - " + dr[1].ToString();
                 }
                 id.DataSource = dt;
                 id.DataTextField = "TieuDe";
-                id.DataValueField = "MaKM";
+                id.DataValueField = "MaTinTuc";
                 id.DataBind();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -99,7 +99,7 @@ namespace LogiVan
         protected void btnViewUpdate_Click(object sender, EventArgs e)
         {
             MultiView1.ActiveViewIndex = 2;
-            NapLieuMaKM(updateMaKM);
+            NapLieuMaTinTuc(updateMaTinTuc);
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("sp_ThemKhuyenMai", cnn);
+                cmd = new SqlCommand("sp_ThemTinTuc", cnn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@anh", SqlDbType.VarBinary).Value = insertAnh.FileBytes;
                 cmd.Parameters.Add("@tieude", SqlDbType.NVarChar).Value = insertTieuDe.Text;
@@ -150,7 +150,7 @@ namespace LogiVan
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 DataRowView drv = (DataRowView)e.Row.DataItem;
-                string url = "data:image/jpg;base64," + Convert.ToBase64String((byte[])drv["Anh"]);
+                string url = "data:image/jpg;base64," + Convert.ToBase64String((byte[])drv["AnhBia"]);
                 (e.Row.FindControl("Image1") as Image).ImageUrl = url;
             }
         }
@@ -166,18 +166,18 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select * from KhuyenMai where MaKM = " + id, cnn);
+                cmd = new SqlCommand("select * from TinTuc where MaTinTuc = " + id, cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
 
                 DataRow dr = dt.Rows[0];
-                anh.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])dr["Anh"]);
+                anh.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])dr["AnhBia"]);
                 tomtat.Text = dr["TomTat"].ToString();
                 ngay.Text = dr["NgayTao"].ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;
@@ -190,7 +190,7 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("delete from KhuyenMai where MaKM = " + delTieuDe.SelectedValue, cnn);
+                cmd = new SqlCommand("delete from TinTuc where MaTinTuc = " + delTieuDe.SelectedValue, cnn);
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
@@ -210,9 +210,9 @@ namespace LogiVan
             NapLieu();
         }
 
-        protected void updateMaKM_SelectedIndexChanged(object sender, EventArgs e)
+        protected void updateMaTinTuc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            NapLieuView(updateMaKM.SelectedValue, updateAnh_old, updateTomtat_old, updateNgaytao_old, updateTieuDe_old);
+            NapLieuView(updateMaTinTuc.SelectedValue, updateAnh_old, updateTomtat_old, updateNgaytao_old, updateTieuDe_old);
         }
 
         private void NapLieuView(string id, Image anh, TextBox tomtat, TextBox ngay, TextBox tieude)
@@ -221,14 +221,14 @@ namespace LogiVan
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("select * from KhuyenMai where MaKM = " + id, cnn);
+                cmd = new SqlCommand("select * from TinTuc where MaTinTuc = " + id, cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
 
                 DataRow dr = dt.Rows[0];
-                anh.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])dr["Anh"]);
+                anh.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])dr["AnhBia"]);
                 tomtat.Text = dr["TomTat"].ToString();
                 ngay.Text = dr["NgayTao"].ToString();
                 tieude.Text = dr["TieuDe"].ToString();
@@ -249,9 +249,9 @@ namespace LogiVan
                 cnn.Open();
                 if (updateAnh_new.HasFile)
                 {
-                    cmd = new SqlCommand("sp_CapNhatKhuyenMai", cnn);
+                    cmd = new SqlCommand("sp_CapNhatTinTuc", cnn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@makm", SqlDbType.Int).Value = updateMaKM.SelectedValue;
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = updateMaTinTuc.SelectedValue;
                     cmd.Parameters.Add("@anh", SqlDbType.VarBinary).Value = updateAnh_new.FileBytes;
                     cmd.Parameters.Add("@tieude", SqlDbType.NVarChar).Value = updateTieuDe_new.Text;
                     cmd.Parameters.Add("@tomtat", SqlDbType.NVarChar).Value = updateTomtat_new.Text;
@@ -259,9 +259,9 @@ namespace LogiVan
                 }
                 else
                 {
-                    cmd = new SqlCommand("sp_CapNhatKhuyenMaiKhongAnh", cnn);
+                    cmd = new SqlCommand("sp_CapNhatTinTucKhongAnh", cnn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@makm", SqlDbType.Int).Value = updateMaKM.SelectedValue;
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = updateMaTinTuc.SelectedValue;
                     cmd.Parameters.Add("@tieude", SqlDbType.NVarChar).Value = updateTieuDe_new.Text;
                     cmd.Parameters.Add("@tomtat", SqlDbType.NVarChar).Value = updateTomtat_new.Text;
                     cmd.Parameters.Add("@ngaytao", SqlDbType.Date).Value = DateTime.Parse(updateNgaytao_new.Text);
@@ -269,7 +269,7 @@ namespace LogiVan
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
                 return;

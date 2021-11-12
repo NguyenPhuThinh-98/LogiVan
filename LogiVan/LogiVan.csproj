@@ -94,6 +94,8 @@
     <Content Include="admin-loai-xe.aspx" />
     <Content Include="admin-login.aspx" />
     <Content Include="admin-menu.aspx" />
+    <Content Include="admin-tai-xe.aspx" />
+    <Content Include="admin-tin-tuc.aspx" />
     <Content Include="cam-nang-bac-tai-5-sao.aspx" />
     <Content Include="chinh-sach-bao-mat.aspx" />
     <Content Include="chu-hang.aspx" />
@@ -304,6 +306,20 @@
     </Compile>
     <Compile Include="admin-menu.aspx.designer.cs">
       <DependentUpon>admin-menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-tai-xe.aspx.cs">
+      <DependentUpon>admin-tai-xe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-tai-xe.aspx.designer.cs">
+      <DependentUpon>admin-tai-xe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-tin-tuc.aspx.cs">
+      <DependentUpon>admin-tin-tuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-tin-tuc.aspx.designer.cs">
+      <DependentUpon>admin-tin-tuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Alert.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />

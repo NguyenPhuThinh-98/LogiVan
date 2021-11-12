@@ -110,7 +110,7 @@ namespace LogiVan
                         break;
                     case "TaiXe":
                         {
-                            Response.Redirect("admin-TaiXe.aspx");
+                            Response.Redirect("admin-tai-xe.aspx");
                         }
                         break;
                     case "TinTuc":
