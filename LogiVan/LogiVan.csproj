@@ -170,6 +170,12 @@
     <Content Include="HinhAnh\HinhAnhLienHe\icon-locate.svg" />
     <Content Include="HinhAnh\HinhAnhLienHe\icon-mail.svg" />
     <Content Include="HinhAnh\HinhAnhLienHe\icon-phone.svg" />
+    <Content Include="HinhAnh\HinhAnhLoginow\bg_newsletter.png" />
+    <Content Include="HinhAnh\HinhAnhLoginow\facebook.png" />
+    <Content Include="HinhAnh\HinhAnhLoginow\loginow-banner-web-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhLoginow\loginow.mp4" />
+    <Content Include="HinhAnh\HinhAnhLoginow\shutterstock_1450022900_huge.jpg" />
+    <Content Include="HinhAnh\HinhAnhLoginow\twitter-icon.png" />
     <Content Include="HinhAnh\HinhAnhMasterPage\app_android.png" />
     <Content Include="HinhAnh\HinhAnhMasterPage\app_ios.png" />
     <Content Include="HinhAnh\HinhAnhTrangChu\2021927-111325.png" />
@@ -211,6 +217,7 @@
     <Content Include="ho-tro.aspx" />
     <Content Include="khuyen-mai.aspx" />
     <Content Include="lien-he.aspx" />
+    <Content Include="loginow.aspx" />
     <Content Include="tin-tuc-logivan.aspx" />
     <Content Include="tin-tuc.aspx" />
     <Content Include="trang-chu.aspx" />
@@ -396,6 +403,13 @@
     </Compile>
     <Compile Include="lien-he.aspx.designer.cs">
       <DependentUpon>lien-he.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginow.aspx.cs">
+      <DependentUpon>loginow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginow.aspx.designer.cs">
+      <DependentUpon>loginow.aspx</DependentUpon>
     </Compile>
     <Compile Include="LogiVan.Master.cs">
       <DependentUpon>LogiVan.Master</DependentUpon>
