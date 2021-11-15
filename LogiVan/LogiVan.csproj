@@ -104,6 +104,18 @@
     <Content Include="dieu-khoan-su-dung.aspx" />
     <Content Include="gioi-thieu.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="HinhAnh\HinhAnhBlog\banner-tra-cuu-sidebar-2.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\Chu-Hang-Android-1639x2048.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\facebook.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\img6.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\img7.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\linkedin.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\loginow2h-banner-mobile.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\logo.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\search-icon.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\twitter.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\van-tai-logivan.mp4" />
+    <Content Include="HinhAnh\HinhAnhBlog\xe-tai-cho-hang-di-tinh-4.jpg" />
     <Content Include="HinhAnh\HinhAnhCamNangBacTai\1-1.jpg" />
     <Content Include="HinhAnh\HinhAnhCamNangBacTai\2.jpg" />
     <Content Include="HinhAnh\HinhAnhCamNangBacTai\2639.svg" />
@@ -221,6 +233,7 @@
     <Content Include="tin-tuc-logivan.aspx" />
     <Content Include="tin-tuc.aspx" />
     <Content Include="trang-chu.aspx" />
+    <Content Include="van-tai-logivan.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -439,6 +452,13 @@
     </Compile>
     <Compile Include="trang-chu.aspx.designer.cs">
       <DependentUpon>trang-chu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="van-tai-logivan.aspx.cs">
+      <DependentUpon>van-tai-logivan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="van-tai-logivan.aspx.designer.cs">
+      <DependentUpon>van-tai-logivan.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
