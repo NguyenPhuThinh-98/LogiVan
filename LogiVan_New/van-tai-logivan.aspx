@@ -169,6 +169,40 @@
             padding-bottom:20px;
             padding-top:20px;
         }
+        #news table{
+            width:90%;
+            margin-left:5%;
+        }
+        #news table td{
+            width:33%;
+            height:400px;
+            vertical-align:top;
+            border:5px solid white;
+        }
+        .title{
+            color:lightblue;
+            text-decoration:none;
+        }
+        .readmore{
+            text-decoration:none;
+            color:orange;
+        }
+        #footer{
+            background-color:black;
+            color:white;
+        }
+        #footer table{
+            width:100%;
+        }
+        #footer table td{
+            padding-top:25px;
+            padding-bottom:10px;
+            border-bottom:1px solid white;
+        }
+        .img2{
+            margin-right:10px;
+            border:1px solid white;
+        }
     </style>
 </head>
 <body>
@@ -514,8 +548,180 @@
                 </table>
             </div>
             <div id="news">
-
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Image ID="Image14" runat="server" Width="300px" Height="200px" 
+                                ImageUrl="~/HinhAnh/HinhAnhBlog/Plastic-boxes.jpeg" />
+                            <br />
+                            <a href="#" class="title">
+                                Cách đóng gói hàng hóa an toàn khi vận chuyển – Phần 2
+                            </a>
+                            <p>
+                                12/11/2021 /// Không có phản hồi
+                            </p>
+                            <p>
+                                Ở bài trước, chúng ta đã tìm hiểu về cách đóng gói hàng hóa sử dụng thùng carton và thùng gỗ. 
+                                Ở bài này, chúng
+                            </p>
+                            <a href="#" class="readmore">Read More >></a>
+                        </td>
+                        <td>
+                            <asp:Image ID="Image15" runat="server" Width="300px" Height="200px" 
+                                ImageUrl="~/HinhAnh/HinhAnhBlog/wooden-crates-1536x1024.jpg" />
+                            <br />
+                            <a href="#" class="title">
+                                Cách đóng gói hàng hóa an toàn khi vận chuyển – Phần 1
+                            </a>
+                            <p>
+                                12/11/2021 /// Không có phản hồi
+                            </p>
+                            <p>
+                                Đóng gói hàng hóa (Packaging) thực sự quan trọng và cần thiết đối với hầu hết mọi sản phẩm. 
+                                Việc đóng gói hàng hóa giúp
+                            </p>
+                            <a href="#" class="readmore">Read More >></a>
+                        </td>
+                        <td>
+                            <asp:Image ID="Image16" runat="server" Width="300px" Height="200px" 
+                                ImageUrl="~/HinhAnh/HinhAnhBlog/excavator-1536x1052.jpg" />
+                            <br />
+                            <a href="#" class="title">
+                                4 cách phân loại hàng hóa trong ngành vận tải – Phần 1
+                            </a>
+                            <p>
+                                05/11/2021 /// Không có phản hồi
+                            </p>
+                            <p>
+                                Trong vận tải, đặc biệt là vận tải đường bộ, 
+                                người ta thường chia hàng hóa thành nhiều nhóm khác nhau để giúp cho các
+                            </p>
+                            <a href="#" class="readmore">Read More >></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Image ID="Image17" runat="server" Width="300px" Height="200px" 
+                                ImageUrl="~/HinhAnh/HinhAnhBlog/frozen-fish-1536x1024.jpg" />
+                            <br />
+                            <a href="#" class="title">
+                                4 cách phân loại hàng hóa trong ngành vận tải – Phần 2
+                            </a>
+                            <p>
+                                05/11/2021 /// Không có phản hồi
+                            </p>
+                            <p>
+                                Ở bài trước, chúng ta đã tìm hiểu về cách phân loại hàng hóa theo khối lượng riêng và kích thước. 
+                                Ở bài này, chúng
+                            </p>
+                            <a href="#" class="readmore">Read More >></a>
+                        </td>
+                        <td>
+                            <asp:Image ID="Image18" runat="server" Width="300px" Height="200px" 
+                                ImageUrl="~/HinhAnh/HinhAnhBlog/xe-tai-hang-trung.jpg" />
+                            <br />
+                            <a href="#" class="title">
+                                Tổng hợp các chành xe chuyên hàng ghép chuyến TP HCM – Tây Nguyên.
+                            </a>
+                            <p>
+                                01/11/2021 /// Không có phản hồi
+                            </p>
+                            <p>
+                                1. Chành xe Tây Nguyên chuyến HCM – Đăk Lăk Phương Trang FUTA Express Đăk Lăk Được thành lập từ năm 2012, 
+                                FUTA Express là
+                            </p>
+                            <a href="#" class="readmore">Read More >></a>
+                        </td>
+                        <td>
+                            <asp:Image ID="Image19" runat="server" Width="300px" Height="200px" 
+                                ImageUrl="~/HinhAnh/HinhAnhBlog/Xe-tai-Daehan-Tera-co-100-tai-Hai-Phong-5-2.jpg" />
+                            <br />
+                            <a href="#" class="title">
+                                Tổng hợp các chành xe gửi hàng TP HCM – 7 tỉnh miền Đông
+                            </a>
+                            <p>
+                                01/11/2021 /// Không có phản hồi
+                            </p>
+                            <p>
+                                Nhu cầu vận chuyển hàng hóa tăng cao nhưng việc tìm kiếm chành xe gửi hàng TP HCM – 7 tỉnh miền Đông Nam Bộ
+                            </p>
+                            <a href="#" class="readmore">Read More >></a>
+                        </td>
+                    </tr>
+                </table>
             </div>
+        </div>
+        <div id="footer">
+            <table>
+                <tr>
+                    <td style="padding-left:50px; width:70%;">
+                        <a href="#">
+                            <asp:Image ID="Image20" runat="server" ImageUrl="~/HinhAnh/HinhAnhMasterPage/logo.png" Width="200px" />
+                        </a>
+                        <p>
+                            CÔNG TY TNHH CÔNG NGHỆ LOGIVAN VIỆT NAM
+                        </p>
+                        <p>
+                            ĐKKD Số: 0108054755
+                            <br />
+                            Do Sở kế hoạch và đầu tư Thành phố Hà Nội cấp ngày 27 tháng 09 năm 2018
+                        </p>
+                        <p>
+                            Địa chỉ giao dịch:
+                            <br />
+                            Ô 10, Tầng 3, D2 Giảng Võ, Ba Đình, Hà Nội.
+                            <br />
+                            Lầu 5, 16 Nguyễn Trường Tộ, Tòa nhà Phượng Long 2, Phường 12, Quận 4, Thành phố Hồ Chí Minh
+                        </p>
+                    </td>
+                    <td>
+                        <h3>
+                            KẾT NỐI VỚI CHÚNG TÔI
+                        </h3>
+                        <a href="https://www.facebook.com/logivan.asia/">
+                            <asp:Image ID="Image21" runat="server" Width="50px" Height="50px" CssClass="img2" 
+                            ImageUrl="~/HinhAnh/HinhAnhBlog/facebook.png" />
+                        </a>
+                        <a href="https://twitter.com/vantailogivan">
+                            <asp:Image ID="Image22" runat="server" Width="50px" Height="50px" CssClass="img2" 
+                            ImageUrl="~/HinhAnh/HinhAnhBlog/twitter.png" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/v%E1%BA%ADn-t%E1%BA%A3i-logivan-964a8418b/">
+                            <asp:Image ID="Image23" runat="server" Width="50px" Height="50px" CssClass="img2" 
+                            ImageUrl="~/HinhAnh/HinhAnhBlog/linkedin.png" />
+                        </a>
+                        <a href="https://zalo.me/3184476164558146652">
+                            <asp:Image ID="Image24" runat="server" Width="50px" Height="50px" CssClass="img2" 
+                            ImageUrl="~/HinhAnh/HinhAnhBlog/zalo.png" />
+                        </a>
+                        <br />
+                        <h3>
+                            KHÁCH HÀNG LIÊN HỆ
+                        </h3>
+                        <p>
+                            <asp:Image ID="Image25" runat="server" Height="20px" CssClass="img2" 
+                                ImageUrl="~/HinhAnh/HinhAnhLienHe/icon-phone.svg" BorderStyle="None" />
+                            Tổng Đài: 0822 13 16 18
+                        </p>
+                        <p>
+                            <asp:Image ID="Image26" runat="server" Height="20px" CssClass="img2" 
+                                ImageUrl="~/HinhAnh/HinhAnhLienHe/icon-mail.svg" BorderStyle="None" />
+                            Email: hotro@logivan.com
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="padding-left:50px; border-bottom-style:none;">Copyright ©2019 by Logivan</td>
+                    <td style="text-align:right; border-bottom-style:none; padding-right:50px;">
+                        <a href="https://www.dmca.com/Protection/Status.aspx?ID=4f615dbb-3977-4457-83d7-ccc73c1bb387&refurl=
+                            https://vantailogivan.com/">
+                            <asp:Image ID="Image27" runat="server" ImageUrl="~/HinhAnh/HinhAnhBlog/dmca-badge-w250-5x1-06.png" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>

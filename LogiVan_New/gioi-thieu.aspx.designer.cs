@@ -31,60 +31,6 @@ namespace LogiVan_New {
         protected global::System.Web.UI.WebControls.Image imgTruck_1;
         
         /// <summary>
-        /// imgTruck_2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTruck_2;
-        
-        /// <summary>
-        /// imgTruck_3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTruck_3;
-        
-        /// <summary>
-        /// imgTruck_4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTruck_4;
-        
-        /// <summary>
-        /// imgTruck_5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTruck_5;
-        
-        /// <summary>
-        /// imgTruck_6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTruck_6;
-        
-        /// <summary>
-        /// imgTruck_7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTruck_7;
-        
-        /// <summary>
         /// ImageButton15 control.
         /// </summary>
         /// <remarks>

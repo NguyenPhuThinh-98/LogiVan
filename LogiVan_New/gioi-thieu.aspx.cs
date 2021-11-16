@@ -133,6 +133,10 @@ namespace LogiVan_New
             {
                 MultiView2.ActiveViewIndex = i + 1;
             }
+
+            int s = 50 * (MultiView2.ActiveViewIndex + 1);
+            string str_s = s + "px";
+            imgTruck_1.Attributes["margin-left"]= str_s;
         }
 
         protected void ImageButton22_Click(object sender, ImageClickEventArgs e)
@@ -142,6 +146,10 @@ namespace LogiVan_New
             {
                 MultiView2.ActiveViewIndex = i - 1;
             }
+
+            int s = 50 * (MultiView2.ActiveViewIndex + 1);
+            string str_s = s + "px";
+            imgTruck_1.Attributes["margin-left"] = str_s;
         }
 
         protected void ImageButton25_Click(object sender, ImageClickEventArgs e)

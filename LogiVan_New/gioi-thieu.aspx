@@ -61,32 +61,8 @@
                 <td>
                     <table style="width:100%;">
                         <tr>
-                            <td colspan="7" style="background-image:url(HinhAnh/HinhAnhTrangChu/truck-background.png); height:180px; width:100%; border-bottom:5px dashed black; vertical-align:bottom;">
-                                <table style="width: 100%; margin: 0;">
-                                    <tr style="vertical-align: bottom;">
-                                        <td>
-                                            <asp:Image ID="imgTruck_1" runat="server" Width="100px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/truck.svg" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_2" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_3" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_4" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_5" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_6" runat="server" Width="100px" />
-                                        </td>
-                                        <td>
-                                            <asp:Image ID="imgTruck_7" runat="server" Width="100px" />
-                                        </td>
-                                    </tr>
-                                </table>
+                            <td colspan="7" style="background-image:url(HinhAnh/HinhAnhTrangChu/truck-background.png); height:180px; width:100%; border-bottom:5px dashed black; vertical-align:bottom; text-align:left;">
+                                <asp:Image ID="imgTruck_1" runat="server" Width="100px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/truck.svg" style="margin-left:50px;"/>
                             </td>
                         </tr>
                         <tr>
