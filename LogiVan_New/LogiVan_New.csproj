@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23771AD8-7FF8-43F2-9C8F-5A61F3098638}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogiVan_New</RootNamespace>
+    <AssemblyName>LogiVan_New</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="LogiVan.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin-chi-tiet-don-hang.aspx" />
+    <Content Include="admin-chi-tiet-loai-tin-tuc.aspx" />
+    <Content Include="admin-chu-hang.aspx" />
+    <Content Include="admin-dich-vu.aspx" />
+    <Content Include="admin-don-hang.aspx" />
+    <Content Include="admin-hang.aspx" />
+    <Content Include="admin-khuyen-mai.aspx" />
+    <Content Include="admin-loai-chu-hang.aspx" />
+    <Content Include="admin-loai-hang.aspx" />
+    <Content Include="admin-loai-tin-tuc.aspx" />
+    <Content Include="admin-loai-xe.aspx" />
+    <Content Include="admin-login.aspx" />
+    <Content Include="admin-menu.aspx" />
+    <Content Include="admin-tai-xe.aspx" />
+    <Content Include="admin-tin-tuc.aspx" />
+    <Content Include="admin-xe.aspx" />
+    <Content Include="cam-nang-bac-tai-5-sao.aspx" />
+    <Content Include="chinh-sach-bao-mat.aspx" />
+    <Content Include="chu-hang.aspx" />
+    <Content Include="chu-xe.aspx" />
+    <Content Include="dieu-khoan-su-dung.aspx" />
+    <Content Include="gioi-thieu.aspx" />
+    <Content Include="HinhAnh\HinhAnhBlog\banner-tra-cuu-sidebar-2.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\Chu-Hang-Android-1639x2048.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\clock.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\facebook.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\img6.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\img7.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\linkedin.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\loginow2h-banner-mobile.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\logo.jpg" />
+    <Content Include="HinhAnh\HinhAnhBlog\map.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\search-icon.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\twitter.png" />
+    <Content Include="HinhAnh\HinhAnhBlog\van-tai-logivan.mp4" />
+    <Content Include="HinhAnh\HinhAnhBlog\xe-tai-cho-hang-di-tinh-4.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\1-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\2.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\2639.svg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\3.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\4.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\5.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\6.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\7.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\9.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\arrow.png" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\cam-nang-bac-tai-5-sao-banner.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\truck.png" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\WEB_A.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\WEB_B.jpg" />
+    <Content Include="HinhAnh\HinhAnhCamNangBacTai\WEB_C.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\Chu-Hang-Android.png" />
+    <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-gia-minh-bach.png" />
+    <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-on.svg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-theo-doi.png" />
+    <Content Include="HinhAnh\HinhAnhChuHang\chu-hang-tim-gia-de.png" />
+    <Content Include="HinhAnh\HinhAnhChuHang\chu-xe-off.svg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\HAQ_3577.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\img10.png" />
+    <Content Include="HinhAnh\HinhAnhChuHang\IMG_0128.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\IMG_0768.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\IMG_1350.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\shutterstock_567105931_huge-2.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuHang\video-chu-hang.mp4" />
+    <Content Include="HinhAnh\HinhAnhChuXe\1-1-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuXe\chu-hang-off.svg" />
+    <Content Include="HinhAnh\HinhAnhChuXe\Chu-Xe-Android.png" />
+    <Content Include="HinhAnh\HinhAnhChuXe\chu-xe-can-la-co-don.png" />
+    <Content Include="HinhAnh\HinhAnhChuXe\chu-xe-on.svg" />
+    <Content Include="HinhAnh\HinhAnhChuXe\chu-xe-tang-thu-nhap.png" />
+    <Content Include="HinhAnh\HinhAnhChuXe\chu-xe-thoai-mai-chon-lua.png" />
+    <Content Include="HinhAnh\HinhAnhChuXe\chu-xe.mp4" />
+    <Content Include="HinhAnh\HinhAnhChuXe\img10.png" />
+    <Content Include="HinhAnh\HinhAnhChuXe\IMG_0053-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuXe\IMG_1353.jpg" />
+    <Content Include="HinhAnh\HinhAnhChuXe\qr-chu-xe.png" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image1.jpg" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image2.jpg" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image3.png" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image4.jpg" />
+    <Content Include="HinhAnh\HinhAnhDieuKhoanSuDung\image5.jpg" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\anh-team.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\background.jpg" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\bao-tien-phong.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\cafebiz.jpg" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\cover.jpg" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\deal-street-asia.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\e27.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\forbes.jpg" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\gen-k.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\Mockup-7-copy-1-e1559134259763.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\tech-in-asia.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\the-leader.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\vnexpress.jpg" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\vtv1.png" />
+    <Content Include="HinhAnh\HinhAnhGioiThieu\world-economic-forum.png" />
+    <Content Include="HinhAnh\HinhAnhHoTro\698627.png" />
+    <Content Include="HinhAnh\HinhAnhHoTro\img1.jpg" />
+    <Content Include="HinhAnh\HinhAnhLienHe\bg-top-landing.png" />
+    <Content Include="HinhAnh\HinhAnhLienHe\icon-locate.svg" />
+    <Content Include="HinhAnh\HinhAnhLienHe\icon-mail.svg" />
+    <Content Include="HinhAnh\HinhAnhLienHe\icon-phone.svg" />
+    <Content Include="HinhAnh\HinhAnhLoginow\bg_newsletter.png" />
+    <Content Include="HinhAnh\HinhAnhLoginow\facebook.png" />
+    <Content Include="HinhAnh\HinhAnhLoginow\loginow-banner-web-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhLoginow\loginow.mp4" />
+    <Content Include="HinhAnh\HinhAnhLoginow\shutterstock_1450022900_huge.jpg" />
+    <Content Include="HinhAnh\HinhAnhLoginow\twitter-icon.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\app_android.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\app_ios.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\bct.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\logo.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\mail.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\phone.png" />
+    <Content Include="HinhAnh\HinhAnhMasterPage\qrcode.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\2021927-111325.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\arrow-left.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\arrow-right.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\binh-duong.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\but-pha.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\cam-nang-bac-tai-5-sao-banner.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\chi-phi-dich-vu-cong-khai.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\chinh-phuc.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\chuhang-copy-1.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\circle.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\dinh-vi.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\dong-nai.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\HUONG-DAN-CHO-TX-SU-DUNG-APP-LOGIVAN-CHU-XE-FILE-TONG-1.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\img13.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\khoi-nghiep.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\lan-toa.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\lien-tuc-kiem-tra-an-toan.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\loginow-banner-web-1.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\loginow2h.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\mr-ta-quoc-loi.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\mr-tran-van-tuan.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\ms-bui-truc-quynh.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\ms-do-phuong-thao.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\nang-tam.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\nen-tang-cua-khau-so.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\new-normal4.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\quotes-png-20050.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\tang-toc.svg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\tim-chu-hang-voi-gia-nhu-y.jpg" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\truck-background.png" />
+    <Content Include="HinhAnh\HinhAnhTrangChu\truck.svg" />
+    <Content Include="ho-tro.aspx" />
+    <Content Include="khuyen-mai.aspx" />
+    <Content Include="lien-he.aspx" />
+    <Content Include="loginow.aspx" />
+    <Content Include="tin-tuc-logivan.aspx" />
+    <Content Include="tin-tuc.aspx" />
+    <Content Include="trang-chu.aspx" />
+    <Content Include="van-tai-logivan.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="tin-tuc-logivan.aspx.cs">
+      <DependentUpon>tin-tuc-logivan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tin-tuc-logivan.aspx.designer.cs">
+      <DependentUpon>tin-tuc-logivan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tin-tuc.aspx.cs">
+      <DependentUpon>tin-tuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tin-tuc.aspx.designer.cs">
+      <DependentUpon>tin-tuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trang-chu.aspx.cs">
+      <DependentUpon>trang-chu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trang-chu.aspx.designer.cs">
+      <DependentUpon>trang-chu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="van-tai-logivan.aspx.cs">
+      <DependentUpon>van-tai-logivan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="van-tai-logivan.aspx.designer.cs">
+      <DependentUpon>van-tai-logivan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Alert.cs" />
+    <Compile Include="admin-chi-tiet-don-hang.aspx.cs">
+      <DependentUpon>admin-chi-tiet-don-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-chi-tiet-don-hang.aspx.designer.cs">
+      <DependentUpon>admin-chi-tiet-don-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-chi-tiet-loai-tin-tuc.aspx.cs">
+      <DependentUpon>admin-chi-tiet-loai-tin-tuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-chi-tiet-loai-tin-tuc.aspx.designer.cs">
+      <DependentUpon>admin-chi-tiet-loai-tin-tuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-chu-hang.aspx.cs">
+      <DependentUpon>admin-chu-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-chu-hang.aspx.designer.cs">
+      <DependentUpon>admin-chu-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-dich-vu.aspx.cs">
+      <DependentUpon>admin-dich-vu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-dich-vu.aspx.designer.cs">
+      <DependentUpon>admin-dich-vu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-don-hang.aspx.cs">
+      <DependentUpon>admin-don-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-don-hang.aspx.designer.cs">
+      <DependentUpon>admin-don-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-hang.aspx.cs">
+      <DependentUpon>admin-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-hang.aspx.designer.cs">
+      <DependentUpon>admin-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-khuyen-mai.aspx.cs">
+      <DependentUpon>admin-khuyen-mai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-khuyen-mai.aspx.designer.cs">
+      <DependentUpon>admin-khuyen-mai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-loai-chu-hang.aspx.cs">
+      <DependentUpon>admin-loai-chu-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-loai-chu-hang.aspx.designer.cs">
+      <DependentUpon>admin-loai-chu-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-loai-hang.aspx.cs">
+      <DependentUpon>admin-loai-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-loai-hang.aspx.designer.cs">
+      <DependentUpon>admin-loai-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-loai-tin-tuc.aspx.cs">
+      <DependentUpon>admin-loai-tin-tuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-loai-tin-tuc.aspx.designer.cs">
+      <DependentUpon>admin-loai-tin-tuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-loai-xe.aspx.cs">
+      <DependentUpon>admin-loai-xe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-loai-xe.aspx.designer.cs">
+      <DependentUpon>admin-loai-xe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-login.aspx.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-login.aspx.designer.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-menu.aspx.cs">
+      <DependentUpon>admin-menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-menu.aspx.designer.cs">
+      <DependentUpon>admin-menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-tai-xe.aspx.cs">
+      <DependentUpon>admin-tai-xe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-tai-xe.aspx.designer.cs">
+      <DependentUpon>admin-tai-xe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-tin-tuc.aspx.cs">
+      <DependentUpon>admin-tin-tuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-tin-tuc.aspx.designer.cs">
+      <DependentUpon>admin-tin-tuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-xe.aspx.cs">
+      <DependentUpon>admin-xe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-xe.aspx.designer.cs">
+      <DependentUpon>admin-xe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cam-nang-bac-tai-5-sao.aspx.cs">
+      <DependentUpon>cam-nang-bac-tai-5-sao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cam-nang-bac-tai-5-sao.aspx.designer.cs">
+      <DependentUpon>cam-nang-bac-tai-5-sao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chinh-sach-bao-mat.aspx.cs">
+      <DependentUpon>chinh-sach-bao-mat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chinh-sach-bao-mat.aspx.designer.cs">
+      <DependentUpon>chinh-sach-bao-mat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chu-hang.aspx.cs">
+      <DependentUpon>chu-hang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chu-hang.aspx.designer.cs">
+      <DependentUpon>chu-hang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chu-xe.aspx.cs">
+      <DependentUpon>chu-xe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chu-xe.aspx.designer.cs">
+      <DependentUpon>chu-xe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dieu-khoan-su-dung.aspx.cs">
+      <DependentUpon>dieu-khoan-su-dung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dieu-khoan-su-dung.aspx.designer.cs">
+      <DependentUpon>dieu-khoan-su-dung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gioi-thieu.aspx.cs">
+      <DependentUpon>gioi-thieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gioi-thieu.aspx.designer.cs">
+      <DependentUpon>gioi-thieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ho-tro.aspx.cs">
+      <DependentUpon>ho-tro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ho-tro.aspx.designer.cs">
+      <DependentUpon>ho-tro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="khuyen-mai.aspx.cs">
+      <DependentUpon>khuyen-mai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="khuyen-mai.aspx.designer.cs">
+      <DependentUpon>khuyen-mai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lien-he.aspx.cs">
+      <DependentUpon>lien-he.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lien-he.aspx.designer.cs">
+      <DependentUpon>lien-he.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginow.aspx.cs">
+      <DependentUpon>loginow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginow.aspx.designer.cs">
+      <DependentUpon>loginow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogiVan.Master.cs">
+      <DependentUpon>LogiVan.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogiVan.Master.designer.cs">
+      <DependentUpon>LogiVan.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54144</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54144/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
