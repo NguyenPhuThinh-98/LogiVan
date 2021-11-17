@@ -61,9 +61,9 @@
                 <td>
                     <table style="width:100%;">
                         <tr>
-                            <td colspan="7" style="background-image:url(HinhAnh/HinhAnhTrangChu/truck-background.png); height:180px; width:100%; border-bottom:5px dashed black; vertical-align:bottom; text-align:left;">
-                                <asp:Image ID="imgTruck_1" runat="server" Width="100px" ImageUrl="~/HinhAnh/HinhAnhTrangChu/truck.svg" style="margin-left:50px;"/>
-                            </td>
+                            <th colspan="7" style="background-image:url(HinhAnh/HinhAnhTrangChu/truck-background.png); background-repeat:no-repeat; background-size:cover; height:180px; width:100%; border-bottom:1px dashed black; vertical-align:bottom; text-align:left;">
+                                <asp:Image ID="imgTruck" runat="server" ImageUrl="~/HinhAnh/HinhAnhTrangChu/truck.svg" Width="150px" />
+                            </th>
                         </tr>
                         <tr>
                             <td>
