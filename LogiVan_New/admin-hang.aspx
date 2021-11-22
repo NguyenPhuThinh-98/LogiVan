@@ -13,7 +13,7 @@
 
             .table th {
                 text-align: left;
-                width: 15%;
+                width: 20%;
             }
 
         .dropdownlist {
@@ -67,7 +67,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Kích thước</th>
+                        <th>Kích thước (dài - rộng - cao)</th>
                         <td>
                             <asp:TextBox ID="insertKichThuoc" runat="server" CssClass="textbox"></asp:TextBox>
                         </td>
@@ -106,7 +106,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Kích thước</th>
+                        <th>Kích thước (dài - rộng - cao)</th>
                         <td>
                             <asp:TextBox ID="delKichThuoc" runat="server" CssClass="textbox" ReadOnly="true"></asp:TextBox>
                         </td>
@@ -145,7 +145,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Kích thước</th>
+                        <th>Kích thước (dài - rộng - cao)</th>
                         <td colspan="3">
                             <asp:TextBox ID="updateKichThuoc" runat="server" CssClass="textbox"></asp:TextBox>
                         </td>

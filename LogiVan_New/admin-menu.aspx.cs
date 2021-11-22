@@ -42,6 +42,7 @@ namespace LogiVan_New
             catch(SqlException ex)
             {
                 Alert.Show(ex.Message);
+                return;
             }
         }
 

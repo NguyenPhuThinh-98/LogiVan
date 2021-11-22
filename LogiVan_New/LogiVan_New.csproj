@@ -48,6 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,6 +67,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin-thong-ke.aspx" />
     <Content Include="HinhAnh\HinhAnhBlog\dmca-badge-w250-5x1-06.png" />
     <Content Include="HinhAnh\HinhAnhBlog\excavator-1536x1052.jpg" />
     <Content Include="HinhAnh\HinhAnhBlog\frozen-fish-1536x1024.jpg" />
@@ -258,6 +260,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-thong-ke.aspx.cs">
+      <DependentUpon>admin-thong-ke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-thong-ke.aspx.designer.cs">
+      <DependentUpon>admin-thong-ke.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tin-tuc-logivan.aspx.cs">
       <DependentUpon>tin-tuc-logivan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
