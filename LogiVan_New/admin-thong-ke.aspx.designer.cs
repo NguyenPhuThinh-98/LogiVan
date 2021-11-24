@@ -49,85 +49,184 @@ namespace LogiVan_New {
         protected global::System.Web.UI.WebControls.View ViewThongKe;
         
         /// <summary>
-        /// lbChuHang_Tong control.
+        /// lbChuHang_Count control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_Tong;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_Count;
         
         /// <summary>
-        /// lbChuHang_TongDoanhNghiep control.
+        /// lbChuHang_Count_CaNhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongDoanhNghiep;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_Count_CaNhan;
         
         /// <summary>
-        /// lbChuHang_TongCaNhan control.
+        /// lbChuHang_Count_DoanhNghiep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongCaNhan;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_Count_DoanhNghiep;
         
         /// <summary>
-        /// lbChuHang_TongSoLuong_DonHang control.
+        /// lbChuHang_DonHang_Count control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongSoLuong_DonHang;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_Count;
         
         /// <summary>
-        /// lbChuHang_TongSoLuong_DonHang_DoanhNghiep control.
+        /// lbChuHang_DonHang_Count_CaNhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongSoLuong_DonHang_DoanhNghiep;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_Count_CaNhan;
         
         /// <summary>
-        /// lbChuHang_TongSoLuong_DonHang_CaNhan control.
+        /// lbChuHang_DonHang_Count_DoanhNghiep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongSoLuong_DonHang_CaNhan;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_Count_DoanhNghiep;
         
         /// <summary>
-        /// lbChuHang_TongGiaTri_DonHang control.
+        /// lbChuHang_DonHang_ThanhTien_Sum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongGiaTri_DonHang;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Sum;
         
         /// <summary>
-        /// lbChuHang_TongGiaTri_DonHang_DoanhNghiep control.
+        /// lbChuHang_DonHang_ThanhTien_Sum_CaNhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongGiaTri_DonHang_DoanhNghiep;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Sum_CaNhan;
         
         /// <summary>
-        /// lbChuHang_TongGiaTri_DonHang_CaNhan control.
+        /// lbChuHang_DonHang_ThanhTien_Sum_DoanhNghiep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChuHang_TongGiaTri_DonHang_CaNhan;
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Sum_DoanhNghiep;
+        
+        /// <summary>
+        /// lbChuHang_DonHang_ThanhTien_Max_CaNhan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Max_CaNhan;
+        
+        /// <summary>
+        /// lbChuHang_DonHang_ThanhTien_Max_DoanhNghiep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Max_DoanhNghiep;
+        
+        /// <summary>
+        /// lbChuHang_DonHang_ThanhTien_Min_CaNhan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Min_CaNhan;
+        
+        /// <summary>
+        /// lbChuHang_DonHang_ThanhTien_Min_DoanhNghiep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DonHang_ThanhTien_Min_DoanhNghiep;
+        
+        /// <summary>
+        /// lbChuHang_DichVu_ThanhTien_Sum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DichVu_ThanhTien_Sum;
+        
+        /// <summary>
+        /// lbChuHang_DichVu_ThanhTien_Sum_CaNhan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DichVu_ThanhTien_Sum_CaNhan;
+        
+        /// <summary>
+        /// lbChuHang_DichVu_ThanhTien_Sum_DoanhNghiep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbChuHang_DichVu_ThanhTien_Sum_DoanhNghiep;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
         /// ViewBaoCao control.

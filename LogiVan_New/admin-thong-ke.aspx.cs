@@ -30,17 +30,27 @@ namespace LogiVan_New
         {
             try
             {
-                lbChuHang_Tong.Text = storeProcedure("sp_ThongKe_ChuHang_Tong");
-                lbChuHang_TongCaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_Tong_TungLoai", 1);
-                lbChuHang_TongDoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_Tong_TungLoai", 2);
+                lbChuHang_Count.Text = storeProcedure("sp_ThongKe_ChuHang_Count");
+                lbChuHang_Count_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_Count_Each", 1);
+                lbChuHang_Count_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_Count_Each", 2);
 
-                lbChuHang_TongSoLuong_DonHang.Text = storeProcedure("sp_ThongKe_ChuHang_TongSoLuong_DonHang");
-                lbChuHang_TongSoLuong_DonHang_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_TongSoLuong_DonHang_TungLoai", 1);
-                lbChuHang_TongSoLuong_DonHang_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_TongSoLuong_DonHang_TungLoai", 2);
+                lbChuHang_DonHang_Count.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_Count");
+                lbChuHang_DonHang_Count_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_Count_Each", 1);
+                lbChuHang_DonHang_Count_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_Count_Each", 2);
 
-                lbChuHang_TongGiaTri_DonHang.Text = storeProcedure("sp_ThongKe_ChuHang_TongGiaTri_DonHang");
-                lbChuHang_TongGiaTri_DonHang_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_TongGiaTri_DonHang_TungLoai", 1);
-                lbChuHang_TongGiaTri_DonHang_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_TongGiaTri_DonHang_TungLoai", 2);
+                lbChuHang_DonHang_ThanhTien_Sum.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Sum");
+                lbChuHang_DonHang_ThanhTien_Sum_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Sum_Each", 1);
+                lbChuHang_DonHang_ThanhTien_Sum_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Sum_Each", 2);
+
+                lbChuHang_DonHang_ThanhTien_Max_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Max_Each", 1);
+                lbChuHang_DonHang_ThanhTien_Max_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Max_Each", 2);
+
+                lbChuHang_DonHang_ThanhTien_Min_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Min_Each", 1);
+                lbChuHang_DonHang_ThanhTien_Min_DoanhNghiep.Text = storeProcedure("sp_ThongKe_ChuHang_DonHang_ThanhTien_Min_Each", 2);
+
+                lbChuHang_DichVu_ThanhTien_Sum.Text = storeProcedure("sp_ThongKe_ChuHang_DichVu_ThanhTien_Sum");
+                lbChuHang_DichVu_ThanhTien_Sum_CaNhan.Text = storeProcedure("sp_ThongKe_ChuHang_DichVu_ThanhTien_Sum_Each", 1);
+                lbChuHang_DichVu_ThanhTien_Sum_DoanhNghiep.Text= storeProcedure("sp_ThongKe_ChuHang_DichVu_ThanhTien_Sum_Each", 2);
             }
             catch(Exception ex)
             {
@@ -58,7 +68,7 @@ namespace LogiVan_New
                 cmd = new SqlCommand(tenSP, cnn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@loai", SqlDbType.Int).Value = loai;
-                SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.Int);
+                SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.NVarChar);
                 returnParameter.Direction = ParameterDirection.ReturnValue;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
@@ -80,7 +90,7 @@ namespace LogiVan_New
                 cnn.Open();
                 cmd = new SqlCommand(tenSP, cnn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.Int);
+                SqlParameter returnParameter = cmd.Parameters.Add("RetVal", SqlDbType.NVarChar);
                 returnParameter.Direction = ParameterDirection.ReturnValue;
                 cmd.ExecuteNonQuery();
                 cnn.Close();
