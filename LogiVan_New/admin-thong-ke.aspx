@@ -110,6 +110,20 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>
+                            Tổng số xe :
+                            <asp:Label ID="lbXe_Count" runat="server" Text="0" CssClass="label"></asp:Label>
+                        </td>
+                        <td>
+                            Loại xe sử dụng nhiều nhất :
+                            <asp:Label ID="lbXe_Loai_Most" runat="server" Text="0" CssClass="label"></asp:Label>
+                        </td>
+                        <td>
+                            Loại xe sử dụng ít nhất :
+                            <asp:Label ID="lbXe_Loai_Least" runat="server" Text="0" CssClass="label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
                         <th colspan="3">
                             <h2>Thống kê dịch vụ</h2>
                         </th>
@@ -304,21 +318,26 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <asp:Panel ID="Panel1" runat="server" ScrollBars="Both" Height="500px" Width="1250">
-                                <asp:GridView ID="gvBaoCao" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-                                <AlternatingRowStyle BackColor="White" />
-                                <EditRowStyle BackColor="#2461BF" />
-                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                <RowStyle BackColor="#EFF3FB" />
-                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                            </asp:GridView>
+                            <asp:Panel ID="Panel1" runat="server" ScrollBars="Both" Width="1250">
+                                <asp:GridView ID="gvBaoCao" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <EditRowStyle BackColor="#2461BF" />
+                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#EFF3FB" />
+                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                </asp:GridView>
                             </asp:Panel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <asp:Button ID="btnExportExcel" runat="server" Text="Xuất báo cáo ra file Excel" Width="100%" OnClick="btnExportExcel_Click" />
                         </td>
                     </tr>
                 </table>

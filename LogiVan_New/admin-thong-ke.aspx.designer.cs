@@ -139,6 +139,33 @@ namespace LogiVan_New {
         protected global::System.Web.UI.WebControls.Label lbChuXe_DiaChi_Least;
         
         /// <summary>
+        /// lbXe_Count control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbXe_Count;
+        
+        /// <summary>
+        /// lbXe_Loai_Most control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbXe_Loai_Most;
+        
+        /// <summary>
+        /// lbXe_Loai_Least control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbXe_Loai_Least;
+        
+        /// <summary>
         /// lbDichVu_ThanhTien_Sum control.
         /// </summary>
         /// <remarks>
@@ -488,5 +515,14 @@ namespace LogiVan_New {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvBaoCao;
+        
+        /// <summary>
+        /// btnExportExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportExcel;
     }
 }

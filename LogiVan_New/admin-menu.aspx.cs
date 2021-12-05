@@ -31,7 +31,7 @@ namespace LogiVan_New
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "select table_name from information_schema.tables where table_name not like 'sys%' order by 1";
+                cmd.CommandText = "select table_name from information_schema.tables where table_name not like 'sys%' and table_name not like 'view%' order by 1";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

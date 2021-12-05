@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using LogiVan_New.App_Code;
+using System.IO;
 
 namespace LogiVan_New
 {
@@ -111,10 +112,37 @@ namespace LogiVan_New
 
                 lbChuXe_DiaChi_Least.Text = getTenThanhPho("sp_ThongKe_ChuXe_DiaChi_Least");
                 lbChuXe_DiaChi_Most.Text = getTenThanhPho("sp_ThongKe_ChuXe_DiaChi_Most");
+
+                lbXe_Count.Text = storeProcedure("sp_ThongKe_Xe_Count");
+                lbXe_Loai_Least.Text = getName("sp_ThongKe_Xe_Loai_Least");
+                lbXe_Loai_Most.Text = getName("sp_ThongKe_Xe_Loai_Most");
             }
             catch(Exception ex)
             {
                 Alert.Show(ex.Message);
+            }
+        }
+
+        private string getName(string proc)
+        {
+            string name = null;
+            try
+            {
+                cnn = new SqlConnection(Session["admin"].ToString());
+                cnn.Open();
+                cmd = new SqlCommand(proc, cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@name", SqlDbType.NVarChar, 255);
+                cmd.Parameters["@name"].Direction = ParameterDirection.Output;
+                cmd.ExecuteNonQuery();
+                name = cmd.Parameters["@name"].Value.ToString();
+                cnn.Close();
+                return name;
+            }
+            catch (Exception ex)
+            {
+                Alert.Show(ex.Message);
+                return null;
             }
         }
 
@@ -332,7 +360,7 @@ namespace LogiVan_New
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                TenCot(dt);
                 gvBaoCao.DataSource = dt;
                 gvBaoCao.DataBind();
             }
@@ -379,7 +407,7 @@ namespace LogiVan_New
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                TenCot(dt);
                 gvBaoCao.DataSource = dt;
                 gvBaoCao.DataBind();
             }
@@ -396,13 +424,14 @@ namespace LogiVan_New
             {
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
-                string query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year + " order by ThoiGianNhanHang desc";
+                string query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year 
+                    + " order by ThoiGianNhanHang desc";
                 cmd = new SqlCommand(query, cnn);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 cnn.Close();
-
+                TenCot(dt);
                 gvBaoCao.DataSource = dt;
                 gvBaoCao.DataBind();
             }
@@ -410,6 +439,78 @@ namespace LogiVan_New
             {
                 Alert.Show(ex.Message);
                 return;
+            }
+        }
+
+        private void TenCot(DataTable dt)
+        {
+            dt.Columns[00].ColumnName = "Mã đơn hàng";
+            dt.Columns[01].ColumnName = "Nơi lấy hàng";
+            dt.Columns[02].ColumnName = "Nơi giao hàng";
+            dt.Columns[03].ColumnName = "Thời gian nhận hàng";
+            dt.Columns[04].ColumnName = "Tổng khối lượng";
+            dt.Columns[05].ColumnName = "Người liên hệ";
+            dt.Columns[06].ColumnName = "SDT liên hệ";
+            dt.Columns[07].ColumnName = "Thành tiền";
+            dt.Columns[08].ColumnName = "Tên dịch vụ";
+            dt.Columns[09].ColumnName = "Giá dịch vụ";
+            dt.Columns[10].ColumnName = "Hàng";
+            dt.Columns[11].ColumnName = "Kích thước";
+            dt.Columns[12].ColumnName = "Khối lượng";
+            dt.Columns[13].ColumnName = "Loại hàng";
+            dt.Columns[14].ColumnName = "Chủ hàng";
+            dt.Columns[15].ColumnName = "Địa chỉ chủ hàng";
+            dt.Columns[16].ColumnName = "SDT chủ hàng";
+            dt.Columns[17].ColumnName = "CMND chủ hàng";
+            dt.Columns[18].ColumnName = "Loại chủ hàng";
+            dt.Columns[19].ColumnName = "Xe";
+            dt.Columns[20].ColumnName = "Biển số";
+            dt.Columns[21].ColumnName = "Trọng tải";
+            dt.Columns[22].ColumnName = "Kích thước thùng";
+            dt.Columns[23].ColumnName = "Loại xe";
+            dt.Columns[24].ColumnName = "Tài xế";
+            dt.Columns[25].ColumnName = "Ngày sinh";
+            dt.Columns[26].ColumnName = "SDT tài xế";
+            dt.Columns[27].ColumnName = "Địa chỉ tài xế";
+            dt.Columns[28].ColumnName = "CMND tài xế";
+            dt.Columns[29].ColumnName = "Tỉnh";
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            //required to avoid the runtime error "  
+            //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."  
+        }
+
+        protected void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ExportToExcel();
+        }
+
+        private void ExportToExcel()
+        {
+            try
+            {
+                Response.Clear();
+                Response.Buffer = true;
+                Response.ClearContent();
+                Response.ClearHeaders();
+                Response.Charset = "";
+                string FileName = "BaoCaoLogivan" + DateTime.Now + ".xls";
+                StringWriter strwritter = new StringWriter();
+                HtmlTextWriter htmltextwrtter = new HtmlTextWriter(strwritter);
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.ContentType = "application/vnd.ms-excel";
+                Response.AddHeader("Content-Disposition", "attachment;filename=" + FileName);
+                gvBaoCao.GridLines = GridLines.Both;
+                gvBaoCao.HeaderStyle.Font.Bold = true;
+                gvBaoCao.RenderControl(htmltextwrtter);
+                Response.Write(strwritter.ToString());
+                Response.End();
+            }
+            catch(Exception ex)
+            {
+                Alert.Show(ex.Message);
             }
         }
     }
