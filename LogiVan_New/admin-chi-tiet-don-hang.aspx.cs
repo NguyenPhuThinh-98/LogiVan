@@ -27,7 +27,9 @@ namespace LogiVan_New
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from ChiTietDonHang";
+                cmd.CommandText = "select MaDonHang, TenHang, TenDV from ChiTietDonHang ct "
+                    + "join Hang h on ct.MaHang = h.MaHang " 
+                    + "join DichVu dv on ct.MaDV = dv.MaDV";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -45,9 +47,9 @@ namespace LogiVan_New
 
         private void TenCot(DataTable dt)
         {
-            dt.Columns[0].ColumnName = "Mã Đơn Hàng";
-            dt.Columns[1].ColumnName = "Mã Hàng";
-            dt.Columns[2].ColumnName = "Mã Dịch Vụ";
+            dt.Columns[0].ColumnName = "Đơn Hàng";
+            dt.Columns[1].ColumnName = "Hàng Hóa";
+            dt.Columns[2].ColumnName = "Dịch Vụ";
         }
 
         protected void btnSelect_Click(object sender, EventArgs e)
