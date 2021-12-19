@@ -60,8 +60,8 @@ namespace LogiVan_New
         private void TenCot(DataTable dt)
         {
             dt.Columns[0].ColumnName = "Mã Dịch Vụ";
-            dt.Columns[0].ColumnName = "Tên Dịch Vụ";
-            dt.Columns[0].ColumnName = "Giá Dịch Vụ";
+            dt.Columns[1].ColumnName = "Tên Dịch Vụ";
+            dt.Columns[2].ColumnName = "Giá Dịch Vụ";
         }
 
         protected void btnOpenViewInsert_Click(object sender, EventArgs e)

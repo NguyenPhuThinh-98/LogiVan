@@ -38,7 +38,9 @@ namespace LogiVan_New
             {
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from ChiTietLoaiTinTuc";
+                cmd.CommandText = "select TieuDe, TenLoai from ChiTietLoaiTinTuc ct " 
+                    + "join TinTuc tt on ct.MaTinTuc = tt.MaTinTuc " 
+                    + "join LoaiTinTuc ltt on ltt.MaLoai = ct.MaLoai";
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -56,8 +58,8 @@ namespace LogiVan_New
 
         private void TenCot(DataTable dt)
         {
-            dt.Columns[0].ColumnName = "Mã Tin Tức";
-            dt.Columns[1].ColumnName = "Mã Loại Tin Tức";
+            dt.Columns[0].ColumnName = "Tin Tức";
+            dt.Columns[1].ColumnName = "Loại Tin Tức";
         }
 
         protected void btnViewInsert_Click(object sender, EventArgs e)
