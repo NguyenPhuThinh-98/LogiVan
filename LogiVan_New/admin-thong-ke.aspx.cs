@@ -352,7 +352,7 @@ namespace LogiVan_New
             {
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
-                string query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year
+                string query = "select * from viewBaoCaoTongQuan where year(ThoiGianNhanHang) = " + year
                     + " and month(ThoiGianNhanHang) = " + month 
                     + " order by ThoiGianNhanHang desc";
                 cmd = new SqlCommand(query, cnn);
@@ -380,25 +380,25 @@ namespace LogiVan_New
                 string query = null;
                 if (quarter == "1")
                 {
-                    query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year
+                    query = "select * from viewBaoCaoTongQuan where year(ThoiGianNhanHang) = " + year
                     + " and month(ThoiGianNhanHang) between " + 1 + " and " + 3
                     + " order by ThoiGianNhanHang desc";
                 }
                 else if (quarter == "2")
                 {
-                    query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year
+                    query = "select * from viewBaoCaoTongQuan where year(ThoiGianNhanHang) = " + year
                     + " and month(ThoiGianNhanHang) between " + 4 + " and " + 6
                     + " order by ThoiGianNhanHang desc";
                 }
                 else if (quarter == "3")
                 {
-                    query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year
+                    query = "select * from viewBaoCaoTongQuan where year(ThoiGianNhanHang) = " + year
                     + " and month(ThoiGianNhanHang) between " + 7 + " and " + 9
                     + " order by ThoiGianNhanHang desc";
                 }
                 else
                 {
-                    query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year
+                    query = "select * from viewBaoCaoTongQuan where year(ThoiGianNhanHang) = " + year
                     + " and month(ThoiGianNhanHang) between " + 10 + " and " + 12
                     + " order by ThoiGianNhanHang desc";
                 }
@@ -424,7 +424,7 @@ namespace LogiVan_New
             {
                 cnn = new SqlConnection(Session["admin"].ToString());
                 cnn.Open();
-                string query = "select * from viewBaoCao where year(ThoiGianNhanHang) = " + year 
+                string query = "select * from viewBaoCaoTongQuan where year(ThoiGianNhanHang) = " + year 
                     + " order by ThoiGianNhanHang desc";
                 cmd = new SqlCommand(query, cnn);
                 da = new SqlDataAdapter(cmd);
@@ -444,36 +444,16 @@ namespace LogiVan_New
 
         private void TenCot(DataTable dt)
         {
-            dt.Columns[00].ColumnName = "Mã đơn hàng";
-            dt.Columns[01].ColumnName = "Nơi lấy hàng";
-            dt.Columns[02].ColumnName = "Nơi giao hàng";
-            dt.Columns[03].ColumnName = "Thời gian nhận hàng";
-            dt.Columns[04].ColumnName = "Tổng khối lượng";
-            dt.Columns[05].ColumnName = "Người liên hệ";
-            dt.Columns[06].ColumnName = "SDT liên hệ";
-            dt.Columns[07].ColumnName = "Thành tiền";
-            dt.Columns[08].ColumnName = "Tên dịch vụ";
-            dt.Columns[09].ColumnName = "Giá dịch vụ";
-            dt.Columns[10].ColumnName = "Hàng";
-            dt.Columns[11].ColumnName = "Kích thước";
-            dt.Columns[12].ColumnName = "Khối lượng";
-            dt.Columns[13].ColumnName = "Loại hàng";
-            dt.Columns[14].ColumnName = "Chủ hàng";
-            dt.Columns[15].ColumnName = "Địa chỉ chủ hàng";
-            dt.Columns[16].ColumnName = "SDT chủ hàng";
-            dt.Columns[17].ColumnName = "CMND chủ hàng";
-            dt.Columns[18].ColumnName = "Loại chủ hàng";
-            dt.Columns[19].ColumnName = "Xe";
-            dt.Columns[20].ColumnName = "Biển số";
-            dt.Columns[21].ColumnName = "Trọng tải";
-            dt.Columns[22].ColumnName = "Kích thước thùng";
-            dt.Columns[23].ColumnName = "Loại xe";
-            dt.Columns[24].ColumnName = "Tài xế";
-            dt.Columns[25].ColumnName = "Ngày sinh";
-            dt.Columns[26].ColumnName = "SDT tài xế";
-            dt.Columns[27].ColumnName = "Địa chỉ tài xế";
-            dt.Columns[28].ColumnName = "CMND tài xế";
-            dt.Columns[29].ColumnName = "Tỉnh";
+            dt.Columns[0].ColumnName = "Mã đơn hàng";
+            dt.Columns[1].ColumnName = "Nơi lấy hàng";
+            dt.Columns[2].ColumnName = "Nơi giao hàng";
+            dt.Columns[3].ColumnName = "Thời gian nhận hàng";
+            dt.Columns[4].ColumnName = "Tổng khối lượng";
+            dt.Columns[5].ColumnName = "Thành tiền";
+            dt.Columns[6].ColumnName = "Tổng dịch vụ";
+            dt.Columns[7].ColumnName = "Giá dịch vụ";
+            dt.Columns[8].ColumnName = "Số hàng hóa";
+            dt.Columns[9].ColumnName = "Số loại hàng";
         }
 
         public override void VerifyRenderingInServerForm(Control control)

@@ -318,7 +318,7 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <asp:Panel ID="Panel1" runat="server" ScrollBars="Both" Width="1250">
+                            <asp:Panel ID="Panel1" runat="server" ScrollBars="Both" Height="500">
                                 <asp:GridView ID="gvBaoCao" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                     <AlternatingRowStyle BackColor="White" />
                                     <EditRowStyle BackColor="#2461BF" />
