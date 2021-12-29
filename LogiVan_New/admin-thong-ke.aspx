@@ -264,6 +264,56 @@
                         </td>
                     </tr>
                 </table>
+                <table class="table">
+                    <tr>
+                        <td class="td">
+                            Chủ hàng có số lượng đơn hàng từ  
+                            <asp:TextBox ID="txtChuHang" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:Button ID="btnViewChuHang" runat="server" Text="tìm" OnClick="btnViewChuHang_Click" />
+                            <br />
+                            <asp:Panel ID="Panel2" runat="server" ScrollBars="Both" Height="300">
+                                <asp:GridView ID="gvChuHang" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <AlternatingRowStyle BackColor="White" />
+                                <EditRowStyle BackColor="#2461BF" />
+                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#EFF3FB" />
+                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                            </asp:GridView>
+                            </asp:Panel>                            
+                            <br />
+                            <asp:Button ID="btnExcelChuHang" runat="server" Text="xuất ra file excel" Width="100%" OnClick="btnExcelChuHang_Click" />
+                        </td>
+                        <td class="td">
+                            Chủ xe có số lượng đơn hàng từ  
+                            <asp:TextBox ID="txtChuXe" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:Button ID="btnViewChuXe" runat="server" Text="tìm" OnClick="btnViewChuXe_Click" />
+                            <br />
+                            <asp:Panel ID="Panel3" runat="server" ScrollBars="Both" Height="300">
+                                <asp:GridView ID="gvChuXe" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <AlternatingRowStyle BackColor="White" />
+                                <EditRowStyle BackColor="#2461BF" />
+                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#EFF3FB" />
+                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                            </asp:GridView>
+                            </asp:Panel>                            
+                            <br />
+                            <asp:Button ID="btnExcelChuXe" runat="server" Text="xuất ra file excel" Width="100%" OnClick="btnExcelChuXe_Click" />
+                        </td>
+                    </tr>
+                </table>
             </asp:View>
             <asp:View ID="ViewBaoCao" runat="server">
                 <table id="tblBaoCao">

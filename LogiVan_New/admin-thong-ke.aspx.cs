@@ -464,10 +464,10 @@ namespace LogiVan_New
 
         protected void btnExportExcel_Click(object sender, EventArgs e)
         {
-            ExportToExcel();
+            ExportToExcel(gvBaoCao);
         }
 
-        private void ExportToExcel()
+        private void ExportToExcel(GridView gridview)
         {
             try
             {
@@ -482,15 +482,70 @@ namespace LogiVan_New
                 Response.Cache.SetCacheability(HttpCacheability.NoCache);
                 Response.ContentType = "application/vnd.ms-excel";
                 Response.AddHeader("Content-Disposition", "attachment;filename=" + FileName);
-                gvBaoCao.GridLines = GridLines.Both;
-                gvBaoCao.HeaderStyle.Font.Bold = true;
-                gvBaoCao.RenderControl(htmltextwrtter);
+                gridview.GridLines = GridLines.Both;
+                gridview.HeaderStyle.Font.Bold = true;
+                gridview.RenderControl(htmltextwrtter);
                 Response.Write(strwritter.ToString());
                 Response.End();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        protected void btnExcelChuHang_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(gvChuHang);
+        }
+
+        protected void btnExcelChuXe_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(gvChuXe);
+        }
+
+        protected void btnViewChuHang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn = new SqlConnection(Session["admin"].ToString());
+                cnn.Open();
+                string query = "select * from viewChuHang where SoDonHang >=" + txtChuHang.Text;
+                cmd = new SqlCommand(query, cnn);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cnn.Close();
+                gvChuHang.DataSource = dt;
+                gvChuHang.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Alert.Show(ex.Message);
+                return;
+            }
+        }
+
+        protected void btnViewChuXe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn = new SqlConnection(Session["admin"].ToString());
+                cnn.Open();
+                string query = "select * from viewChuxe where SoDonHang >=" + txtChuXe.Text;
+                cmd = new SqlCommand(query, cnn);
+                da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cnn.Close();
+                gvChuXe.DataSource = dt;
+                gvChuXe.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Alert.Show(ex.Message);
+                return;
             }
         }
     }
