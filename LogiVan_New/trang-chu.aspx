@@ -68,12 +68,13 @@
             width: 100%;
         }
 
-        #div-6{
-            background-color:#f3f4f8;
-            background-image:url(/HinhAnh/HinhAnhTrangChu/img13.png);
-            background-repeat:no-repeat;
-            background-size:cover;
+        #div-6 {
+            background-color: #f3f4f8;
+            background-image: url(/HinhAnh/HinhAnhTrangChu/img13.png);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
+
         #div-6-table-1 {
             margin-top: 100px;
             margin-bottom: 100px;
@@ -97,21 +98,51 @@
             #div-8 a:hover {
                 color: orange;
             }
-            .btn{
-                border:none;
-                width:20px;
-                height:20px;
-                border-radius:50%;
+
+        .btn {
+            border: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+            .btn:hover {
+                background-color: black;
             }
-            .btn:hover{
-                background-color:black;
-            }
+
         .auto-style1 {
             width: 30%;
         }
+
+        .cta-bottom {
+            position: fixed;
+            right: 0;
+            top: 30%;
+        }
+
+            .cta-bottom a {
+                padding: 40px 8px;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #e56f2d;
+                font-size: 19px;
+                color: #fff;
+                text-decoration: none;
+                border-right: 1px #fcfcfc solid;
+                float: right;
+                width: 100%;
+                display: flex;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="cta-bottom">
+        <a href="https://h4ovo.app.link/awMDe2rVO9">            
+            Tra Cước Ngay
+        </a>
+    </div>
     <div id="div-1">
         <asp:ScriptManager ID="ScriptManager1" runat="server" ></asp:ScriptManager>
         <asp:Timer ID="Timer1" runat="server" Interval="10000" OnTick="Timer1_Tick"></asp:Timer>

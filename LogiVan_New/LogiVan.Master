@@ -182,7 +182,7 @@
                     </ul>
                 </li>
                 <li>
-                    <asp:Button ID="btnTraCuuGiaCuoc" runat="server" Text="Tra cứu giá cước" Width="200px" Height="50px" />
+                    <asp:Button ID="btnTraCuuGiaCuoc" runat="server" Text="Tra cứu giá cước" Width="200px" Height="50px" PostBackUrl="https://h4ovo.app.link/awMDe2rVO9" />
                 </li>
             </ul>
         </div>
