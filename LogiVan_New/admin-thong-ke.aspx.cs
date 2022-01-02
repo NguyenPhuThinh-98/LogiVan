@@ -454,6 +454,8 @@ namespace LogiVan_New
             dt.Columns[7].ColumnName = "Giá dịch vụ";
             dt.Columns[8].ColumnName = "Số hàng hóa";
             dt.Columns[9].ColumnName = "Số loại hàng";
+            dt.Columns[10].ColumnName = "Chủ hàng";
+            dt.Columns[11].ColumnName = "Chủ xe";
         }
 
         public override void VerifyRenderingInServerForm(Control control)
