@@ -32,6 +32,11 @@
         .ver-aln-top{
             vertical-align:top;
         }
+        .btn{
+            background-color: orange;
+            height: 50px;
+            font-size: large;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -39,10 +44,10 @@
         <table>
             <tr>
                 <td style="width:50%;">
-                    <asp:Button ID="btnThongKe" runat="server" Text="THỐNG KÊ" Width="100%" OnClick="btnThongKe_Click" />
+                    <asp:Button ID="btnThongKe" runat="server" Text="THỐNG KÊ" Width="100%" OnClick="btnThongKe_Click" CssClass="btn" />
                 </td>
                 <td>
-                    <asp:Button ID="btnBaoCao" runat="server" Text="BÁO CÁO" Width="100%" OnClick="btnBaoCao_Click" />
+                    <asp:Button ID="btnBaoCao" runat="server" Text="BÁO CÁO" Width="100%" OnClick="btnBaoCao_Click" CssClass="btn" />
                 </td>
             </tr>
         </table>
@@ -269,7 +274,7 @@
                         <td class="td">
                             Chủ hàng có số lượng đơn hàng từ  
                             <asp:TextBox ID="txtChuHang" runat="server" TextMode="Number"></asp:TextBox>
-                            <asp:Button ID="btnViewChuHang" runat="server" Text="tìm" OnClick="btnViewChuHang_Click" />
+                            <asp:Button ID="btnViewChuHang" runat="server" Text="Tìm" OnClick="btnViewChuHang_Click" />
                             <br />
                             <asp:Panel ID="Panel2" runat="server" ScrollBars="Both" Height="300">
                                 <asp:GridView ID="gvChuHang" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -287,12 +292,12 @@
                             </asp:GridView>
                             </asp:Panel>                            
                             <br />
-                            <asp:Button ID="btnExcelChuHang" runat="server" Text="xuất ra file excel" Width="100%" OnClick="btnExcelChuHang_Click" />
+                            <asp:Button ID="btnExcelChuHang" runat="server" Text="Xuất ra file excel" Width="99%" OnClick="btnExcelChuHang_Click" CssClass="btn" />
                         </td>
                         <td class="td">
                             Chủ xe có số lượng đơn hàng từ  
                             <asp:TextBox ID="txtChuXe" runat="server" TextMode="Number"></asp:TextBox>
-                            <asp:Button ID="btnViewChuXe" runat="server" Text="tìm" OnClick="btnViewChuXe_Click" />
+                            <asp:Button ID="btnViewChuXe" runat="server" Text="Tìm" OnClick="btnViewChuXe_Click" />
                             <br />
                             <asp:Panel ID="Panel3" runat="server" ScrollBars="Both" Height="300">
                                 <asp:GridView ID="gvChuXe" runat="server" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -310,7 +315,7 @@
                             </asp:GridView>
                             </asp:Panel>                            
                             <br />
-                            <asp:Button ID="btnExcelChuXe" runat="server" Text="xuất ra file excel" Width="100%" OnClick="btnExcelChuXe_Click" />
+                            <asp:Button ID="btnExcelChuXe" runat="server" Text="Xuất ra file excel" Width="99%" OnClick="btnExcelChuXe_Click" CssClass="btn" />
                         </td>
                     </tr>
                 </table>
@@ -330,7 +335,7 @@
                         <td class="td">
                             <asp:Button ID="btnLastYear" runat="server" Text="-" Width="33%" OnClick="btnLastYear_Click" />
                             <asp:Button ID="btnNextYear" runat="server" Text="+" Width="33%" OnClick="btnNextYear_Click" />
-                            <asp:Button ID="btnThisYear" runat="server" Text="năm hiện tại" Width="32%" OnClick="btnThisYear_Click" />
+                            <asp:Button ID="btnThisYear" runat="server" Text="Năm hiện tại" Width="32%" OnClick="btnThisYear_Click" />
                         </td>
                     </tr>
                     <tr>
@@ -363,7 +368,7 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <asp:Button ID="btnXemBaoCao" runat="server" Text="Xem báo cáo" Width="100%" OnClick="btnXemBaoCao_Click" />
+                            <asp:Button ID="btnXemBaoCao" runat="server" Text="Xem báo cáo" Width="100%" OnClick="btnXemBaoCao_Click" CssClass="btn" />
                         </td>
                     </tr>
                     <tr>
@@ -387,7 +392,7 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <asp:Button ID="btnExportExcel" runat="server" Text="Xuất báo cáo ra file Excel" Width="100%" OnClick="btnExportExcel_Click" />
+                            <asp:Button ID="btnExportExcel" runat="server" Text="Xuất báo cáo ra file Excel" Width="100%" OnClick="btnExportExcel_Click" CssClass="btn" />
                         </td>
                     </tr>
                 </table>
